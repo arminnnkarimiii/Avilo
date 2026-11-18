@@ -77,7 +77,22 @@ this.setState({ toast: false, hop: false });
 setTimeout(() => this.setState({ toast: text, hop: true }), 20);
 this.t = setTimeout(() => this.setState({ toast: false, hop: false }), 2300);
 }
+kidNames() {
+let v = '';
+try { v = (localStorage.getItem('avilo.kid') || '').trim(); } catch (e) {}
+const has = !!v;
+const K = has ? v : 'your child';
+const KC = has ? v : 'Your child';
+const KP = has ? v + (/s$/i.test(v) ? "'" : "'s") : "your child's";
+const KPC = has ? KP : "Your child's";
+return { K: K, KC: KC, KP: KP, KPC: KPC, KPU: KP.toUpperCase(), KI: has ? v.charAt(0).toUpperCase() : '?' };
+}
 renderVals() {
+const n = this.kidNames();
+return Object.assign({ kid: n.K, kidCap: n.KC, kidPos: n.KP, kidPosCap: n.KPC, kidPosUpper: n.KPU, kidInitial: n.KI }, this._rv());
+}
+_rv() {
+const { K, KC, KP, KPC } = this.kidNames();
 const s = this.state || {};
 const I = [
 { id: 'fedora', name: 'Fedora', slot: 'head', src: '/_blob/7fb17821dfd6dd71cde50a5bc0035546', l: 9.2, t: -2.01, w: 82.76, price: 0, from: 'Starter' },
@@ -106,7 +121,7 @@ const isOwned = !!owned[i.id], isOn = eq[i.slot] === i.id;
 if (tab === 'wardrobe') {
 return { ...i, op: 1, border: isOn ? '3px solid #D63B2F' : '2px solid #EED9BF', bg: isOn ? '#FCE4EB' : '#FFF6E8',
 tag: isOn ? 'Wearing' : 'Tap to wear', tagFg: isOn ? '#A8281E' : '#7A5A45', aria: (isOn ? 'Take off ' : 'Wear ') + i.name,
-act: () => { const n = { ...eq }; if (isOn) delete n[i.slot]; else n[i.slot] = i.id; this.setState({ eq: n }); this.flash(isOn ? 'Taken off. Saved for Mila.' : 'Saved! Avi wears it everywhere.'); } };
+act: () => { const n = { ...eq }; if (isOn) delete n[i.slot]; else n[i.slot] = i.id; this.setState({ eq: n }); this.flash(isOn ? 'Taken off. Saved for ' + K + '.' : 'Saved! Avi wears it everywhere.'); } };
 }
 if (i.chest) return { ...i, op: .55, border: '2px dashed #C9AE92', bg: '#FFF6E8', tag: 'From ' + i.chest, tagFg: '#7A5A45', aria: i.name + ', from ' + i.chest, act: () => this.flash('Find it in the ' + i.chest + '!') };
 if (isOwned) return { ...i, op: 1, border: '2px solid #4E9F3D', bg: '#E3F3DD', tag: 'Owned', tagFg: '#2F6B23', aria: i.name + ', owned', act: () => this.setState({ tab: 'wardrobe' }) };

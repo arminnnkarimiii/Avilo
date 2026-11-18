@@ -56,7 +56,22 @@ componentDidMount() {
 this.setState({ loading: true });
 fetch('content/activities.json').then((r) => r.json()).then((d) => this.setState({ data: d, loading: false })).catch(() => this.setState({ failed: true, loading: false }));
 }
+kidNames() {
+let v = '';
+try { v = (localStorage.getItem('avilo.kid') || '').trim(); } catch (e) {}
+const has = !!v;
+const K = has ? v : 'your child';
+const KC = has ? v : 'Your child';
+const KP = has ? v + (/s$/i.test(v) ? "'" : "'s") : "your child's";
+const KPC = has ? KP : "Your child's";
+return { K: K, KC: KC, KP: KP, KPC: KPC, KPU: KP.toUpperCase(), KI: has ? v.charAt(0).toUpperCase() : '?' };
+}
 renderVals() {
+const n = this.kidNames();
+return Object.assign({ kid: n.K, kidCap: n.KC, kidPos: n.KP, kidPosCap: n.KPC, kidPosUpper: n.KPU, kidInitial: n.KI }, this._rv());
+}
+_rv() {
+const { K, KC, KP, KPC } = this.kidNames();
 const s = this.state || {};
 const W = [
 { id: 'math', name: 'Math Meadow', c: '#4E9F3D', soft: '#E3F3DD' }, { id: 'reading', name: 'Reading Forest', c: '#2F86C9', soft: '#DDEEFB' },

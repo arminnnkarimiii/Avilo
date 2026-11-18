@@ -35,7 +35,7 @@ body{margin:0}
 <div style="width: 390px; height: 844px; box-sizing: border-box; background: #FFF6E8; font-family: Nunito, ui-rounded, system-ui, sans-serif; color: #3B2418; display: flex; flex-direction: column; position: relative; overflow: hidden">
   <div style="display: flex; align-items: center; gap: 12px; padding: 54px 18px 12px; background: #FFF6E8; position: relative; z-index: 2">
     <a href="KidHome.dc.html" aria-label="Back home" style="width: 44px; height: 44px; border-radius: 999px; background: #FFFFFF; border: 2px solid #EED9BF; display: grid; place-items: center; flex: none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3B2418" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></a>
-    <div style="display: flex; flex-direction: column; flex-grow: 1"><span style="font-size: 24px; line-height: 28px; font-weight: 900">Mila's road</span><span style="font-size: 13px; font-weight: 800; color: #7A5A45">Level 11 · Pancake Valley</span></div>
+    <div style="display: flex; flex-direction: column; flex-grow: 1"><span style="font-size: 24px; line-height: 28px; font-weight: 900">{{kidPosCap}} road</span><span style="font-size: 13px; font-weight: 800; color: #7A5A45">Level 11 · Pancake Valley</span></div>
     <span style="display: flex; align-items: center; gap: 5px; padding: 6px 11px; border-radius: 999px; background: #FFFFFF; border: 2px solid #EED9BF; font-size: 17px; font-weight: 900"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#F5B53D" d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.9L12 17.6 5.9 20.9l1.2-6.9-5-4.8 6.9-.9z"/></svg>128</span>
   </div>
   <div style="flex-grow: 1; min-height: 0; overflow-y: auto; padding-bottom: 30px">
@@ -90,7 +90,22 @@ body{margin:0}
 <script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
 class Component extends DCLogic {
 componentWillUnmount() { clearTimeout(this.t); }
+kidNames() {
+let v = '';
+try { v = (localStorage.getItem('avilo.kid') || '').trim(); } catch (e) {}
+const has = !!v;
+const K = has ? v : 'your child';
+const KC = has ? v : 'Your child';
+const KP = has ? v + (/s$/i.test(v) ? "'" : "'s") : "your child's";
+const KPC = has ? KP : "Your child's";
+return { K: K, KC: KC, KP: KP, KPC: KPC, KPU: KP.toUpperCase(), KI: has ? v.charAt(0).toUpperCase() : '?' };
+}
 renderVals() {
+const n = this.kidNames();
+return Object.assign({ kid: n.K, kidCap: n.KC, kidPos: n.KP, kidPosCap: n.KPC, kidPosUpper: n.KPU, kidInitial: n.KI }, this._rv());
+}
+_rv() {
+const { K, KC, KP, KPC } = this.kidNames();
 const s = this.state || {};
 const current = 11;
 const zones = [

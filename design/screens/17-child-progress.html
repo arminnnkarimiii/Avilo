@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Mila's progress</title>
+<title>{{kidPosCap}} progress</title>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -30,7 +30,7 @@ body{margin:0}
         </div>
       </div>
       <div style="display: flex; flex-direction: column; gap: 4px; position: relative; padding-bottom: 4px">
-        <span style="font-size: 28px; line-height: 30px; font-weight: 900">Mila, age 5</span>
+        <span style="font-size: 28px; line-height: 30px; font-weight: 900">{{kidCap}}</span>
         <span style="font-size: 14px; font-weight: 800; color: #F3EEFF">Little Cubs path · The Curious Builder</span>
         <span style="align-self: flex-start; margin-top: 4px; padding: 5px 10px; border-radius: 999px; background: #FFF6E8; color: #5A40A8; font-size: 13px; font-weight: 900">Road level 11 · Pancake Valley</span>
       </div>
@@ -73,7 +73,22 @@ body{margin:0}
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
 class Component extends DCLogic {
+kidNames() {
+let v = '';
+try { v = (localStorage.getItem('avilo.kid') || '').trim(); } catch (e) {}
+const has = !!v;
+const K = has ? v : 'your child';
+const KC = has ? v : 'Your child';
+const KP = has ? v + (/s$/i.test(v) ? "'" : "'s") : "your child's";
+const KPC = has ? KP : "Your child's";
+return { K: K, KC: KC, KP: KP, KPC: KPC, KPU: KP.toUpperCase(), KI: has ? v.charAt(0).toUpperCase() : '?' };
+}
 renderVals() {
+const n = this.kidNames();
+return Object.assign({ kid: n.K, kidCap: n.KC, kidPos: n.KP, kidPosCap: n.KPC, kidPosUpper: n.KPU, kidInitial: n.KI }, this._rv());
+}
+_rv() {
+const { K, KC, KP, KPC } = this.kidNames();
 return {
 stats: [{ v: '5', l: 'day streak', c: '#D63B2F' }, { v: '128', l: 'stars', c: '#A0531C' }, { v: '61', l: 'activities', c: '#3B2418' }, { v: '48m', l: 'this week', c: '#3B2418' }],
 worlds: [

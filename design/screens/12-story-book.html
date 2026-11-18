@@ -27,7 +27,7 @@ body{margin:0}
     <a href="KidHome.dc.html" aria-label="Close book" style="width: 44px; height: 44px; border-radius: 999px; background: #35261C; display: grid; place-items: center; flex: none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FCEFDF" stroke-width="2.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></a>
     <div style="display: flex; flex-direction: column; flex-grow: 1; min-width: 0">
       <span style="font-size: 12px; font-weight: 900; letter-spacing: 1px; color: #F7C25A">WRITTEN FOR MILA BY AVI</span>
-      <span style="font-size: 16px; font-weight: 900; line-height: 20px">Mila and the Star-Counting Dinosaur</span>
+      <span style="font-size: 16px; font-weight: 900; line-height: 20px">{{kidCap}} and the Star-Counting Dinosaur</span>
     </div>
   </div>
   <sc-if value="{{cover}}" hint-placeholder-val="{{true}}">
@@ -35,7 +35,7 @@ body{margin:0}
       <div style="position: absolute; left: -40px; bottom: -40px; width: 200px; height: 200px; border-radius: 999px; background: #9B7BE0"></div>
       <div style="position: absolute; right: -30px; top: 60px; width: 120px; height: 120px; border-radius: 999px; background: #F5B53D"></div>
       <span style="position: relative; padding: 6px 12px; border-radius: 999px; background: #FFF6E8; color: #5A40A8; font-size: 13px; font-weight: 900">10 pages · 5 min · Little Cubs</span>
-      <h2 style="position: relative; margin: 0; font-size: 34px; line-height: 38px; font-weight: 900; color: #FFFFFF; text-align: center; text-wrap: balance">Mila and the Star-Counting Dinosaur</h2>
+      <h2 style="position: relative; margin: 0; font-size: 34px; line-height: 38px; font-weight: 900; color: #FFFFFF; text-align: center; text-wrap: balance">{{kidCap}} and the Star-Counting Dinosaur</h2>
       <div style="position: relative; width: 220px; height: 220px; border-radius: 999px; background: #FCEBD3; display: grid; place-items: center; margin-top: 4px"><img class="avi" src="/_blob/4b387dc2f7645d73c6b33a6ed6c14a18" alt="Avi reading" style="width: 196px; height: 196px"></div>
       <div style="position: relative; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px">
         <span style="padding: 5px 10px; border-radius: 999px; background: #5A40A8; font-size: 12px; font-weight: 800; color: #FFFFFF">Dinosaurs</span><span style="padding: 5px 10px; border-radius: 999px; background: #5A40A8; font-size: 12px; font-weight: 800; color: #FFFFFF">Space</span><span style="padding: 5px 10px; border-radius: 999px; background: #5A40A8; font-size: 12px; font-weight: 800; color: #FFFFFF">Pepper the cat</span><span style="padding: 5px 10px; border-radius: 999px; background: #5A40A8; font-size: 12px; font-weight: 800; color: #FFFFFF">Counting to 5</span>
@@ -79,21 +79,36 @@ body{margin:0}
 class Component extends DCLogic {
 componentDidMount() { this.iv = setInterval(() => { const s = this.state || {}; if (s.reading && s.playing !== false) this.setState({ w: (s.w || 0) + 1 }); }, 420); }
 componentWillUnmount() { clearInterval(this.iv); }
+kidNames() {
+let v = '';
+try { v = (localStorage.getItem('avilo.kid') || '').trim(); } catch (e) {}
+const has = !!v;
+const K = has ? v : 'your child';
+const KC = has ? v : 'Your child';
+const KP = has ? v + (/s$/i.test(v) ? "'" : "'s") : "your child's";
+const KPC = has ? KP : "Your child's";
+return { K: K, KC: KC, KP: KP, KPC: KPC, KPU: KP.toUpperCase(), KI: has ? v.charAt(0).toUpperCase() : '?' };
+}
 renderVals() {
+const n = this.kidNames();
+return Object.assign({ kid: n.K, kidCap: n.KC, kidPos: n.KP, kidPosCap: n.KPC, kidPosUpper: n.KPU, kidInitial: n.KI }, this._rv());
+}
+_rv() {
+const { K, KC, KP, KPC } = this.kidNames();
 const night = { sky: '#3B4F8F', hill: '#2F6B23', hill2: '#4E9F3D', moon: '#F7C25A' };
 const dusk = { sky: '#E9A263', hill: '#B8692F', hill2: '#D9894A', moon: '#FFF6E8' };
 const space = { sky: '#2A2340', hill: '#5A40A8', hill2: '#8466D6', moon: '#F7C25A' };
 const pages = [
-{ t: 'Mila lived in a cozy house with her cat, Pepper. Every night, she looked up at the stars.', art: true, ...dusk, prompt: 'Soft storybook painting: a girl with her cat at a bedroom window at dusk, warm lamp light, first stars.' },
+{ t: '' + KC + ' lived in a cozy house with a cat named Pepper. Every night, ' + K + ' looked up at the stars.', art: true, ...dusk, prompt: 'Soft storybook painting: a child with a cat at a bedroom window at dusk, warm lamp light, first stars.' },
 { t: 'One night, a little green dinosaur peeked through her window. "Hello! I’m Tops," he whispered.', art: false },
 { t: '"I fell from Star Valley in the sky," said Tops. "Can you help me get home?"', art: true, ...night, prompt: 'A small friendly green triceratops in a moonlit garden, looking up at the sky, gentle watercolor.' },
-{ t: 'Mila grabbed her crayons. "Let’s draw a rocket!" Pepper meowed, "Me too!"', art: false, skill: 'New word: rocket' },
-{ t: 'Swoosh! The rocket zoomed up, up, up, past one, two, three fluffy clouds.', art: true, ...night, prompt: 'A crayon-drawn rocket with a girl, a cat and a dinosaur flying past three fluffy clouds at night.', skill: 'Counting to 3' },
+{ t: '' + KC + ' grabbed some crayons. "Let’s draw a rocket!" Pepper meowed, "Me too!"', art: false, skill: 'New word: rocket' },
+{ t: 'Swoosh! The rocket zoomed up, up, up, past one, two, three fluffy clouds.', art: true, ...night, prompt: 'A crayon-drawn rocket with a child, a cat and a dinosaur flying past three fluffy clouds at night.', skill: 'Counting to 3' },
 { t: 'In space, the stars twinkled. "My home has five stars in a row," said Tops.', art: false },
-{ t: 'Mila counted: one, two, three, four... "Only four! Where is the fifth star?"', art: true, ...space, prompt: 'Four bright stars in a row in a purple galaxy, the rocket floating nearby, cozy and magical.', skill: 'Counting to 5' },
+{ t: '' + KC + ' counted: one, two, three, four... "Only four! Where is the fifth star?"', art: true, ...space, prompt: 'Four bright stars in a row in a purple galaxy, the rocket floating nearby, cozy and magical.', skill: 'Counting to 5' },
 { t: 'Pepper pointed her paw. A tiny star was hiding behind the moon. "Five!"', art: false, skill: 'Counting to 5' },
-{ t: 'Tops hugged Mila. "Thank you! You are the best star-counter in the whole sky."', art: true, ...space, prompt: 'The dinosaur hugging the girl on a glowing star path, the cat smiling, warm golden light.' },
-{ t: 'Back in bed, Mila smiled. Up above, five stars twinkled, just for her. The end.', art: false, skill: 'Feeling: proud' }
+{ t: 'Tops hugged ' + K + '. "Thank you! You are the best star-counter in the whole sky."', art: true, ...space, prompt: 'The dinosaur hugging the child on a glowing star path, the cat smiling, warm golden light.' },
+{ t: 'Back in bed, ' + K + ' smiled. Up above, five stars twinkled, just for ' + K + '. The end.', art: false, skill: 'Feeling: proud' }
 ];
 const st = this.state || {};
 const i = st.i || 0;

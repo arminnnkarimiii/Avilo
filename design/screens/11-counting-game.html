@@ -70,7 +70,7 @@ body{margin:0}
     <div class="up" style="position: absolute; left: 0; right: 0; bottom: 0; background: #FFFFFF; border-radius: 28px 28px 0 0; padding: 18px 20px 32px; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 -8px 24px rgba(59, 36, 24, 0.12)">
       <div style="display: flex; align-items: center; gap: 12px">
         <div style="width: 96px; height: 96px; border-radius: 999px; background: #FCEBD3; display: grid; place-items: center; flex: none"><img class="avi mul" src="/_blob/02ed70c93c5cdb78ced2aded4bf8695b" alt="Avi cheering" style="width: 90px; height: 90px"></div>
-        <div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 26px; font-weight: 900; color: #2F6B23">You did it, Mila!</span><span style="font-size: 16px; font-weight: 800">4 eggs. <span style="color: #A0531C">+3 stars</span></span></div>
+        <div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 26px; font-weight: 900; color: #2F6B23">You did it, {{kid}}!</span><span style="font-size: 16px; font-weight: 800">4 eggs. <span style="color: #A0531C">+3 stars</span></span></div>
       </div>
       <a href="KidHome.dc.html" style="display: flex; align-items: center; justify-content: center; height: 60px; border-radius: 999px; background: #4E9F3D; color: #FFFFFF; font-size: 20px; font-weight: 900; text-decoration: none; box-shadow: 0 5px 0 #2F6B23">Next</a>
     </div>
@@ -102,7 +102,22 @@ this.setState({ burst: false });
 setTimeout(() => this.setState({ burst: true, gentle: gentle }), 20);
 this.t = setTimeout(() => this.setState({ burst: false }), 2000);
 }
+kidNames() {
+let v = '';
+try { v = (localStorage.getItem('avilo.kid') || '').trim(); } catch (e) {}
+const has = !!v;
+const K = has ? v : 'your child';
+const KC = has ? v : 'Your child';
+const KP = has ? v + (/s$/i.test(v) ? "'" : "'s") : "your child's";
+const KPC = has ? KP : "Your child's";
+return { K: K, KC: KC, KP: KP, KPC: KPC, KPU: KP.toUpperCase(), KI: has ? v.charAt(0).toUpperCase() : '?' };
+}
 renderVals() {
+const n = this.kidNames();
+return Object.assign({ kid: n.K, kidCap: n.KC, kidPos: n.KP, kidPosCap: n.KPC, kidPosUpper: n.KPU, kidInitial: n.KI }, this._rv());
+}
+_rv() {
+const { K, KC, KP, KPC } = this.kidNames();
 const st = this.state || {};
 const picked = st.picked;
 const answers = [3, 4, 5].map((n) => {
