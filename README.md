@@ -22,3 +22,5 @@ Avilo is an educational SaaS app for children, built as a native iOS app.
 - Child safety and privacy first (COPPA, Apple Kids Category guidelines).
 - Simple, playful, accessible UI.
 - Small, reviewed PRs.
+
+Armin was here
