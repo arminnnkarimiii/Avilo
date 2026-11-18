@@ -57,7 +57,7 @@ textarea:focus{outline:3px solid #D9894A;outline-offset:2px}
     </sc-if>
     <sc-if value="{{q.isText}}" hint-placeholder-val="{{false}}">
       <label for="special" style="position: absolute; width: 1px; height: 1px; overflow: hidden">Tell Avi about Mila</label>
-      <textarea id="special" rows="5" style="width: 100%; box-sizing: border-box; border-radius: 18px; border: 2px solid #EED9BF; background: #FFFFFF; padding: 14px; font: 700 16px/23px Nunito, ui-rounded, system-ui, sans-serif; color: #3B2418; resize: none">She names every toy, sings in the bath and asks why the moon follows the car.</textarea>
+      <textarea id="special" rows="5" style="width: 100%; box-sizing: border-box; border-radius: 18px; border: 2px solid #EED9BF; background: #FFFFFF; padding: 14px; font: 700 16px/23px Nunito, ui-rounded, system-ui, sans-serif; color: #3B2418; resize: none" value="{{special}}" onChange="{{onSpecial}}" placeholder="Pets, siblings, favourite toys, funny habits…"></textarea>
     </sc-if>
   </div>
   <div style="flex-grow: 1"></div>
@@ -77,6 +77,8 @@ textarea:focus{outline:3px solid #D9894A;outline-offset:2px}
 class Component extends DCLogic {
 renderVals() {
 const st = this.state || {};
+const special = typeof st.special === 'string' ? st.special : 'She names every toy, sings in the bath and asks why the moon follows the car.';
+const onSpecial = (e) => this.setState({ special: e.target.value });
 const i = st.i || 0;
 const ans = st.ans || { personality: { curious: 1, creative: 1 }, learn: { stories: 1 }, animal: { dino: 1 }, color: { purple: 1 } };
 const Q = [
@@ -108,6 +110,7 @@ dot: on ? '7px solid #D63B2F' : '2px solid #C9AE92', ring: on ? '4px solid #3B24
 });
 const n = i + 4;
 return {
+special: special, onSpecial: onSpecial,
 q: { ...q, opts: opts, isChips: q.kind === 'chips', isCards: q.kind === 'cards', isColors: q.kind === 'colors', isText: q.kind === 'text' },
 n: n, pct: Math.round(n / 15 * 100),
 last: i === Q.length - 1, notLast: i < Q.length - 1,

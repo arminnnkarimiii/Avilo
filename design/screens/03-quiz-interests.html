@@ -39,7 +39,7 @@ input:focus{outline:3px solid #D9894A;outline-offset:2px}
   </div>
   <div style="display: flex; flex-direction: column; gap: 6px">
     <label for="other" style="font-size: 15px; font-weight: 800">Something else Mila loves?</label>
-    <input id="other" type="text" value="Volcanoes and her cat Pepper" style="height: 50px; border-radius: 16px; border: 2px solid #EED9BF; background: #FFFFFF; padding: 0 14px; font: 700 16px Nunito, ui-rounded, system-ui, sans-serif; color: #3B2418; box-sizing: border-box">
+    <input id="other" type="text" value="{{other}}" onChange="{{onOther}}" placeholder="For example: volcanoes, her cat Pepper" style="height: 50px; border-radius: 16px; border: 2px solid #EED9BF; background: #FFFFFF; padding: 0 14px; font: 700 16px Nunito, ui-rounded, system-ui, sans-serif; color: #3B2418; box-sizing: border-box">
   </div>
   <div style="flex-grow: 1"></div>
   <a href="QuizMore.dc.html" style="display: flex; align-items: center; justify-content: center; height: 56px; border-radius: 999px; background: #D63B2F; color: #FFFFFF; font-size: 19px; font-weight: 800; text-decoration: none; box-shadow: 0 5px 0 #A8281E">Continue · {{count}} picked</a>
@@ -71,7 +71,8 @@ const items = defs.map((x) => {
 const on = !!picked[x.id];
 return { ...x, on: on, pressed: on ? 'true' : 'false', border: on ? '3px solid #D9894A' : '2px solid #EED9BF', bg: on ? '#FCEBD3' : '#FFFFFF', pick: () => this.setState({ picked: { ...picked, [x.id]: !on } }) };
 });
-return { items: items, count: items.filter((x) => x.on).length };
+const other = this.state && typeof this.state.other === 'string' ? this.state.other : 'Volcanoes and her cat Pepper';
+return { items: items, count: items.filter((x) => x.on).length, other: other, onOther: (e) => this.setState({ other: e.target.value }) };
 }
 }
 </script>

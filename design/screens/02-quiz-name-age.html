@@ -27,11 +27,11 @@ input:focus{outline:3px solid #D9894A;outline-offset:2px}
   </div>
   <div style="display: flex; flex-direction: column; gap: 10px">
     <label for="kidname" style="font-size: 24px; font-weight: 900; line-height: 30px">What's your child's name?</label>
-    <input id="kidname" type="text" value="Mila" style="height: 58px; border-radius: 20px; border: 2px solid #D9894A; background: #FFFFFF; padding: 0 18px; font: 800 20px Nunito, ui-rounded, system-ui, sans-serif; color: #3B2418; box-sizing: border-box">
+    <input id="kidname" type="text" value="{{name}}" onChange="{{onName}}" placeholder="Your child's name" maxlength="20" autocomplete="off" style="height: 58px; border-radius: 20px; border: 2px solid #D9894A; background: #FFFFFF; padding: 0 18px; font: 800 20px Nunito, ui-rounded, system-ui, sans-serif; color: #3B2418; box-sizing: border-box">
     <span style="font-size: 13px; font-weight: 600; color: #7A5A45">A first name or nickname is perfect. We never ask for a last name.</span>
   </div>
   <div style="display: flex; flex-direction: column; gap: 12px">
-    <span style="font-size: 24px; font-weight: 900; line-height: 30px">How old is Mila?</span>
+    <span style="font-size: 24px; font-weight: 900; line-height: 30px">How old is {{who}}?</span>
     <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px">
       <sc-for list="{{ages}}" as="a" hint-placeholder-count="10">
         <sc-if value="{{a.on}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{a.pick}}" aria-pressed="true" style="height: 52px; border-radius: 16px; font: 900 20px Nunito, ui-rounded, system-ui, sans-serif; cursor: pointer; width: 100%; background: #D9894A; color: #FFFFFF; border: 2px solid #A0531C">{{a.n}}</button></sc-if>
@@ -55,7 +55,8 @@ off: n !== sel,
 pick: () => this.setState({ age: n })
 }));
 const band = sel <= 5 ? 'Little Cubs path (ages 3–5)' : sel <= 8 ? 'Explorers path (ages 6–8)' : 'Trailblazers path (ages 9–12)';
-return { ages: ages, band: band };
+const name = this.state && typeof this.state.name === 'string' ? this.state.name : 'Mila';
+return { ages: ages, band: band, name: name, who: name.trim() || 'your child', onName: (e) => this.setState({ name: e.target.value }) };
 }
 }
 </script>
