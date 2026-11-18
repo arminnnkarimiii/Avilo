@@ -2,6 +2,13 @@
 
 Educational SaaS iOS app for children. README must keep the line "(road to 100 million evaluation)".
 
+**Read `docs/PLAN.md` first.** It holds all product decisions (funnel, age bands, AI, paywall, palette).
+Mascot art lives in `Design/Avi/` (pixel-art bear; `avi-logo-head.webp` is the logo).
+
+## UI skills
+For UI work use: `beautiful-ui`, `platform-ios-ui`, `ui-ux-pro-max`, `frontend-design`, `ui-verification`.
+Skip web-only skills (Vercel, React, shadcn, taste-skill), because this is a native SwiftUI app.
+
 ## Stack
 - Swift + SwiftUI, iOS 17+, MVVM, Swift Concurrency (async/await)
 - Supabase backend; StoreKit 2 for subscriptions
