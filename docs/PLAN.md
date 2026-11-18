@@ -135,7 +135,7 @@ Avi placement: every screen uses the pose that fits it (see `Design/Avi/`). Neve
 
 ## 11. Game engines (each powers many activities)
 
-1. **Count & tap** (numbers, objects) 2. **Match pairs** (memory, letters, shapes) 3. **Sort & drag** (categories, sizes, colours) 4. **Trace** (letters, numbers, shapes; scores precision) 5. **Sound it out** (phonics with narration) 6. **Pick the answer** (quiz with picture choices) 7. **Pattern builder** (logic, sequences) 8. **What changed?** (focus) 9. **Pop & catch** (reaction time, motor) 10. **Story choice** (feelings, decisions) 11. **Build a scene** (creativity, science) 12. **Draw it, Avi guesses** (a word prompt; the child draws; AI looks at the drawing and makes kid-friendly guesses) 13. **Rhythm tap** (music, timing)
+1. **Count & tap** (numbers, objects) 2. **Match pairs** (memory, letters, shapes) 3. **Sort & drag** (categories, sizes, colours) 4. **Trace** (letters, numbers, shapes; scores precision) 5. **Sound it out** (phonics with narration) 6. **Pick the answer** (quiz with picture choices) 7. **Pattern builder** (logic, sequences) 8. **What changed?** (focus) 9. **Pop & catch** (reaction time, motor) 10. **Story choice** (feelings, decisions) 11. **Build a scene** (creativity, science) 12. **Draw it, Avi guesses** (a word prompt; the child draws; AI looks at the drawing and makes kid-friendly guesses) 13. **Rhythm tap** (music, timing) 14. **Move** (shake and tilt the phone, motor control)
 
 Every activity is data: `{world, band, engine, skill, difficulty, content, themeSlots}`. Themes are filled from interests (dinosaurs → dino eggs to count).
 
@@ -148,7 +148,7 @@ Every activity is data: `{world, band, engine, skill, difficulty, content, theme
 
 ## 13. Build order (v2)
 
-1. **Canvas v2:**
+1. **Canvas v2** (done, in the [canvas](https://claude.ai/artifact/BZJyrBo6UDQA6NaEGRfWNv)):
    - fix the feedback: pacing and confetti on the profile builder, the stuck 4th step, the pixel "5", and the dead streak and star buttons
    - add: trophy road, Avi's room dress-up, child profile, streak sheet ("You've learned 5 days in a row!"), stars sheet, tip pop-up, Avi peek, all 8 worlds filled, wrong-answer shake + confetti, chest unlock animation, a longer quiz, a book cover + illustrated pages
 2. **Content catalog in the repo:** `content/activities/*.json` (~480 activities), book prompt templates, road zones and rewards.
@@ -159,3 +159,10 @@ Every activity is data: `{world, band, engine, skill, difficulty, content, theme
 - Which AI image model for book illustrations (e.g. OpenAI image, Flux): pick on quality and cost once the backend starts.
 - The ElevenLabs voice: you choose it in ElevenLabs (we can test 3).
 - Road zone list after Fruit Forest, and the item for each chest.
+
+
+## 15. Art files
+
+- `Design/Avi/*.webp`: the original poses (white background).
+- `Design/Avi/transparent/`: the same poses with transparent backgrounds (use these in the app and in dark mode).
+- `Design/Avi/wardrobe/`: `avi-base.png` + 14 accessories. `placements.json` gives each item's position as a percent of `avi-base.png`, plus its slot (head, face, ears, neck, body, side). One item per slot.
