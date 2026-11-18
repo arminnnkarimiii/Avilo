@@ -112,3 +112,50 @@ Avi placement: every screen uses the pose that fits it (see `Design/Avi/`). Neve
 - Legal: privacy policy, terms (required for App Store and the paywall)
 - Apple Developer account ($99/yr) and App Store Connect products
 - More Avi poses later: celebrating, sleeping, sad/"try again", and for each subject world
+
+---
+
+# Plan v2 (2026-11-18): content, road, Avi's room, tracking
+
+## 10. Decisions locked (v2)
+
+| Topic | Decision |
+|---|---|
+| Worlds | **8:** Math Meadow, Reading Forest, Science Sky, Feelings Cottage, **Logic Lane** (puzzles), **Memory Pond** (memory & focus), **Creativity Studio** (draw, color, music), **Wiggle Park** (motor & tap skills, mostly 3–5) |
+| Activities | **20+ per world per age band (~480)**, built as ~12 reusable game engines + content data. AI re-themes them to the child's interests |
+| Voice | Warm female narrator via **ElevenLabs** (not Avi's voice), generated server-side once and cached. Parent creates the ElevenLabs account and picks the voice |
+| Books | AI-written from the child's onboarding profile. **10 / 16 / 24 pages** by band, a soft storybook-painting illustration about every 2 pages, made by an AI image model server-side and cached |
+| Feedback | Right: subtle confetti + happy sound. Wrong: gentle confetti ("great try!") + the button turns red and shakes, then Avi encourages |
+| Tips | Every question has a **Tip** button. Avi pops up with a hint, never the answer |
+| Trophy road | Zones of 10 levels (Rainbow Hills → Pancake Valley → Fruit Forest → …). Stars each level, a sticker or room decoration every 3rd level, a **treasure chest** at each zone end unlocks an outfit with a big reveal animation |
+| Avi's room | Real dress-up with the wardrobe (`Design/Avi/wardrobe/`, 14 items). Outfits come from road chests + a small **star shop** for basics. The chosen outfit is saved to the database and Avi wears it **everywhere** in the app (not before onboarding) |
+| Avi peek | Every 3–6 min at random, his head slides out of a random corner for ~1.5 s, no words, then he ducks away. Never during timers or page turns |
+| Onboarding quiz | ~15 skippable questions (~3 min): name, age, broad interests (+ "other"), favourite animals/characters/colours, personality, how they learn, what's hard, routines, goals, quick skill checks |
+| Tracking (for insights) | Accuracy & speed · persistence & focus · tap & trace precision · memory over time (spaced review at 1, 3, 7 days). No photos, voice recordings or location |
+
+## 11. Game engines (each powers many activities)
+
+1. **Count & tap** (numbers, objects) 2. **Match pairs** (memory, letters, shapes) 3. **Sort & drag** (categories, sizes, colours) 4. **Trace** (letters, numbers, shapes; scores precision) 5. **Sound it out** (phonics with narration) 6. **Pick the answer** (quiz with picture choices) 7. **Pattern builder** (logic, sequences) 8. **What changed?** (focus) 9. **Pop & catch** (reaction time, motor) 10. **Story choice** (feelings, decisions) 11. **Build a scene** (creativity, science) 12. **Draw it, Avi guesses** (a word prompt; the child draws; AI looks at the drawing and makes kid-friendly guesses) 13. **Rhythm tap** (music, timing)
+
+Every activity is data: `{world, band, engine, skill, difficulty, content, themeSlots}`. Themes are filled from interests (dinosaurs → dino eggs to count).
+
+## 12. Tracking model
+
+- Per attempt: correct, time, hints used, retries, and for motor games tap error in pts and trace deviation.
+- Per skill: mastery 0–100 (weighted recent accuracy + speed), review due date (spaced repetition).
+- The child profile (tap the avatar, top left) shows the current band and path, road position, world progress, streak and stars.
+- Parent insights: AI summarises the week from these numbers. No raw data leaves the backend except to the AI, with minimal fields.
+
+## 13. Build order (v2)
+
+1. **Canvas v2:**
+   - fix the feedback: pacing and confetti on the profile builder, the stuck 4th step, the pixel "5", and the dead streak and star buttons
+   - add: trophy road, Avi's room dress-up, child profile, streak sheet ("You've learned 5 days in a row!"), stars sheet, tip pop-up, Avi peek, all 8 worlds filled, wrong-answer shake + confetti, chest unlock animation, a longer quiz, a book cover + illustrated pages
+2. **Content catalog in the repo:** `content/activities/*.json` (~480 activities), book prompt templates, road zones and rewards.
+3. **SwiftUI app** built from the design system, canvas and catalog. Then backend (Supabase + Claude + ElevenLabs + image model).
+
+## 14. Still to decide
+
+- Which AI image model for book illustrations (e.g. OpenAI image, Flux): pick on quality and cost once the backend starts.
+- The ElevenLabs voice: you choose it in ElevenLabs (we can test 3).
+- Road zone list after Fruit Forest, and the item for each chest.
