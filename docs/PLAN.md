@@ -100,7 +100,7 @@ Avi placement: every screen uses the pose that fits it (see `Design/Avi/`). Neve
 ## 8. Milestones
 
 1. **M0 Plan** ✅ (this doc)
-2. **M1 Design:** Avilo Design System + a Design canvas with welcome, quiz, profile reveal, paywall, sign in, kid home, a game, a story, rewards and parent dashboard
+2. **M1 Design** (v1 ready for review): [Avilo Design System](https://claude.ai/artifact/N7TC8gcLqnGgG4VnR2LDom) and the [Avilo App Screens canvas](https://claude.ai/artifact/BZJyrBo6UDQA6NaEGRfWNv) with 12 iPhone screens: welcome, 2 quiz steps, profile building, profile reveal, paywall, sign in, trial started, kid home, counting game, bedtime story and parent dashboard. Rewards (Avi's room) are still to design. The links are private until shared from each page's Share menu.
 3. **M2 App shell:** SwiftUI project, design tokens, navigation, onboarding quiz, paywall (StoreKit sandbox)
 4. **M3 Backend + AI:** Supabase, Apple auth, profile/story/question Edge Functions, TTS
 5. **M4 Content:** games for all 4 subjects × 3 age bands, stories, rewards
