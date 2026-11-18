@@ -1,0 +1,1659 @@
+<!-- Avilo App Screens: source of all 17 canvas screens, in canvas order.
+     Each section is one screen's full .dc.html file. Design mockups only, not app code. -->
+
+
+<!-- ==================== Main.dc.html ==================== -->
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Welcome to Avilo</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&amp;family=Pixelify+Sans:wght@600&amp;display=swap">
+<style>
+body{margin:0}
+.avi{image-rendering:pixelated;mix-blend-mode:multiply;object-fit:contain}
+a{color:#A0531C}a:hover{color:#3B2418}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FFF6E8; font-family: Nunito, ui-rounded, system-ui, sans-serif; color: #3B2418; display: flex; flex-direction: column; padding: 64px 24px 40px; gap: 24px; position: relative; overflow: hidden">
+  <div style="position: absolute; right: -60px; top: -40px; width: 220px; height: 220px; border-radius: 999px; background: #FCEBD3"></div>
+  <div style="position: absolute; left: -80px; bottom: 150px; width: 180px; height: 180px; border-radius: 999px; background: #FCEBD3"></div>
+  <div style="display: flex; align-items: center; gap: 10px; position: relative">
+    <img class="avi" src="/_blob/161ae7725de7dae184ec81becdbbf165" alt="" style="width: 40px; height: 40px">
+    <span style="font-size: 24px; font-weight: 900; letter-spacing: -0.5px">Avilo</span>
+  </div>
+  <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; position: relative">
+    <div style="position: relative; background: #FFFFFF; border: 2px solid #EED9BF; border-radius: 20px; padding: 14px 18px; font-size: 20px; font-weight: 800; line-height: 26px; text-align: center; align-self: center">Hi! I'm Avi.<br>Let's build a learning adventure just for your child.</div>
+    <div style="width: 0; height: 0; border-left: 12px solid transparent; border-right: 12px solid transparent; border-top: 12px solid #EED9BF"></div>
+    <div style="width: 280px; height: 280px; border-radius: 999px; background: #FCEBD3; display: grid; place-items: center">
+      <img class="avi" src="/_blob/495653d7e20e317301bcab84f552ca87" alt="Avi the bear waving hello" style="width: 260px; height: 260px">
+    </div>
+  </div>
+  <div style="display: flex; flex-direction: column; gap: 14px; position: relative">
+    <h1 style="margin: 0; font-size: 30px; line-height: 36px; font-weight: 900; text-align: center; text-wrap: balance">Smarter from the very start</h1>
+    <p style="margin: 0; font-size: 16px; line-height: 23px; font-weight: 600; color: #7A5A45; text-align: center">Games, stories and skills for ages 3–12, shaped around who your child is.</p>
+    <a href="QuizName.dc.html" style="display: flex; align-items: center; justify-content: center; height: 56px; border-radius: 999px; background: #D63B2F; color: #FFFFFF; font-size: 19px; font-weight: 800; text-decoration: none; box-shadow: 0 5px 0 #A8281E">Get started</a>
+    <a href="SignIn.dc.html" style="text-align: center; font-size: 15px; font-weight: 700; color: #A0531C; padding: 6px">I already have an account</a>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
+
+
+<!-- ==================== QuizName.dc.html ==================== -->
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Quiz: about your child</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&amp;display=swap">
+<style>
+body{margin:0}
+.avi{image-rendering:pixelated;mix-blend-mode:multiply;object-fit:contain}
+input:focus{outline:3px solid #D9894A;outline-offset:2px}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FFF6E8; font-family: Nunito, ui-rounded, system-ui, sans-serif; color: #3B2418; display: flex; flex-direction: column; padding: 60px 20px 36px; gap: 22px">
+  <div style="display: flex; align-items: center; gap: 14px">
+    <a href="Main.dc.html" aria-label="Back" style="width: 44px; height: 44px; border-radius: 999px; background: #FFFFFF; border: 2px solid #EED9BF; display: grid; place-items: center; flex: none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3B2418" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></a>
+    <div style="flex-grow: 1; height: 14px; border-radius: 999px; background: #EED9BF; overflow: hidden"><div style="width: 7%; height: 100%; border-radius: 999px; background: #D9894A"></div></div>
+    <span style="font-size: 14px; font-weight: 800; color: #7A5A45">1/15</span>
+  </div>
+  <div style="display: flex; align-items: flex-end; gap: 12px">
+    <div style="width: 104px; height: 104px; border-radius: 999px; background: #FCEBD3; display: grid; place-items: center; flex: none"><img class="avi" src="/_blob/2689b009c7d552d9f0bd44bebc7b4054" alt="Avi thinking" style="width: 96px; height: 96px"></div>
+    <div style="background: #FFFFFF; border: 2px solid #EED9BF; border-radius: 20px 20px 20px 6px; padding: 12px 14px; font-size: 16px; font-weight: 700; line-height: 22px">Tell me about your little one so I can make everything just for them!</div>
+  </div>
+  <div style="display: flex; flex-direction: column; gap: 10px">
+    <label for="kidname" style="font-size: 24px; font-weight: 900; line-height: 30px">What's your child's name?</label>
+    <input id="kidname" type="text" value="Mila" style="height: 58px; border-radius: 20px; border: 2px solid #D9894A; background: #FFFFFF; padding: 0 18px; font: 800 20px Nunito, ui-rounded, system-ui, sans-serif; color: #3B2418; box-sizing: border-box">
+    <span style="font-size: 13px; font-weight: 600; color: #7A5A45">A first name or nickname is perfect. We never ask for a last name.</span>
+  </div>
+  <div style="display: flex; flex-direction: column; gap: 12px">
+    <span style="font-size: 24px; font-weight: 900; line-height: 30px">How old is Mila?</span>
+    <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px">
+      <sc-for list="{{ages}}" as="a" hint-placeholder-count="10">
+        <sc-if value="{{a.on}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{a.pick}}" aria-pressed="true" style="height: 52px; border-radius: 16px; font: 900 20px Nunito, ui-rounded, system-ui, sans-serif; cursor: pointer; width: 100%; background: #D9894A; color: #FFFFFF; border: 2px solid #A0531C">{{a.n}}</button></sc-if>
+        <sc-if value="{{a.off}}" hint-placeholder-val="{{true}}"><button type="button" onClick="{{a.pick}}" aria-pressed="false" style="height: 52px; width: 100%; border-radius: 16px; font: 900 20px Nunito, ui-rounded, system-ui, sans-serif; cursor: pointer; background: #FFFFFF; color: #3B2418; border: 2px solid #EED9BF">{{a.n}}</button></sc-if>
+      </sc-for>
+    </div>
+    <div style="display: flex; align-items: center; gap: 8px; background: #E3F3DD; border-radius: 12px; padding: 10px 12px; font-size: 14px; font-weight: 700; color: #2F6B23"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2F6B23" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>{{band}}</div>
+  </div>
+  <div style="flex-grow: 1"></div>
+  <a href="QuizInterests.dc.html" style="display: flex; align-items: center; justify-content: center; height: 56px; border-radius: 999px; background: #D63B2F; color: #FFFFFF; font-size: 19px; font-weight: 800; text-decoration: none; box-shadow: 0 5px 0 #A8281E">Continue</a>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+const sel = (this.state && this.state.age) || 5;
+const ages = [3,4,5,6,7,8,9,10,11,12].map((n) => ({
+n: n,
+on: n === sel,
+off: n !== sel,
+pick: () => this.setState({ age: n })
+}));
+const band = sel <= 5 ? 'Little Cubs path (ages 3–5)' : sel <= 8 ? 'Explorers path (ages 6–8)' : 'Trailblazers path (ages 9–12)';
+return { ages: ages, band: band };
+}
+}
+</script>
+</body>
+</html>
+
+
+<!-- ==================== QuizInterests.dc.html ==================== -->
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Quiz: interests</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&amp;display=swap">
+<style>
+body{margin:0}
+.avi{image-rendering:pixelated;mix-blend-mode:multiply;object-fit:contain}
+input:focus{outline:3px solid #D9894A;outline-offset:2px}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FFF6E8; font-family: Nunito, ui-rounded, system-ui, sans-serif; color: #3B2418; display: flex; flex-direction: column; padding: 58px 18px 30px; gap: 16px">
+  <div style="display: flex; align-items: center; gap: 14px">
+    <a href="QuizName.dc.html" aria-label="Back" style="width: 44px; height: 44px; border-radius: 999px; background: #FFFFFF; border: 2px solid #EED9BF; display: grid; place-items: center; flex: none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3B2418" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></a>
+    <div style="flex-grow: 1; height: 14px; border-radius: 999px; background: #EED9BF; overflow: hidden"><div style="width: 20%; height: 100%; border-radius: 999px; background: #D9894A"></div></div>
+    <span style="font-size: 14px; font-weight: 800; color: #7A5A45">3/15</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 12px">
+    <div style="width: 76px; height: 76px; border-radius: 999px; background: #FCEBD3; display: grid; place-items: center; flex: none"><img class="avi" src="/_blob/8a179e8ed31ad24d65845f676910d08e" alt="Avi with an idea" style="width: 70px; height: 70px"></div>
+    <div style="display: flex; flex-direction: column; gap: 3px">
+      <h1 style="margin: 0; font-size: 23px; font-weight: 900; line-height: 28px">What does Mila love?</h1>
+      <span style="font-size: 14px; line-height: 19px; font-weight: 600; color: #7A5A45">Pick as many as you like. They go into her stories and games.</span>
+    </div>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px">
+    <sc-for list="{{items}}" as="i" hint-placeholder-count="16">
+      <button type="button" onClick="{{i.pick}}" aria-pressed="{{i.pressed}}" style="width: 100%; height: 84px; border-radius: 18px; border: {{i.border}}; background: {{i.bg}}; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 6px 2px; box-sizing: border-box; cursor: pointer; font: 800 12.5px/15px Nunito, ui-rounded, system-ui, sans-serif; color: #3B2418; position: relative">
+        <span style="width: 34px; height: 34px; border-radius: 999px; background: {{i.color}}; display: grid; place-items: center"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{i.d}}"/></svg></span>
+        <span>{{i.label}}</span>
+        <sc-if value="{{i.on}}" hint-placeholder-val="{{false}}"><span style="position: absolute; right: 5px; top: 5px; width: 18px; height: 18px; border-radius: 999px; background: #D63B2F; display: grid; place-items: center"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span></sc-if>
+      </button>
+    </sc-for>
+  </div>
+  <div style="display: flex; flex-direction: column; gap: 6px">
+    <label for="other" style="font-size: 15px; font-weight: 800">Something else Mila loves?</label>
+    <input id="other" type="text" value="Volcanoes and her cat Pepper" style="height: 50px; border-radius: 16px; border: 2px solid #EED9BF; background: #FFFFFF; padding: 0 14px; font: 700 16px Nunito, ui-rounded, system-ui, sans-serif; color: #3B2418; box-sizing: border-box">
+  </div>
+  <div style="flex-grow: 1"></div>
+  <a href="QuizMore.dc.html" style="display: flex; align-items: center; justify-content: center; height: 56px; border-radius: 999px; background: #D63B2F; color: #FFFFFF; font-size: 19px; font-weight: 800; text-decoration: none; box-shadow: 0 5px 0 #A8281E">Continue · {{count}} picked</a>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+const picked = (this.state && this.state.picked) || { dino: true, space: true, animals: true, art: true };
+const defs = [
+{ id: 'dino', label: 'Dinosaurs', color: '#4E9F3D', d: 'M4 17c0-5 3-9 8-9 2 0 3-2 5-2s3 1 3 3-2 2-3 2c0 4-2 6-5 6v2M8 17v2' },
+{ id: 'space', label: 'Space', color: '#8466D6', d: 'M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z' },
+{ id: 'animals', label: 'Animals', color: '#D9894A', d: 'M7 11a2 2 0 1 0 0-.1M17 11a2 2 0 1 0 0-.1M10 7a2 2 0 1 0 0-.1M14 7a2 2 0 1 0 0-.1M8 18c0-3 2-5 4-5s4 2 4 5c0 1.5-2 1.5-4 1s-4 .5-4-1z' },
+{ id: 'ocean', label: 'Ocean', color: '#2F86C9', d: 'M3 15c2 0 2-2 4.5-2s2.5 2 4.5 2 2-2 4.5-2 2.5 2 4.5 2M3 19c2 0 2-2 4.5-2s2.5 2 4.5 2 2-2 4.5-2 2.5 2 4.5 2M12 4v6' },
+{ id: 'vehicles', label: 'Cars & trains', color: '#A0531C', d: 'M3 15V11l2-4h10l3 4h3v4M3 15h18M7 18a2 2 0 1 0 0-.1M17 18a2 2 0 1 0 0-.1' },
+{ id: 'music', label: 'Music', color: '#E46A8E', d: 'M9 18V5l11-2v13M9 18a3 3 0 1 1-3-3 3 3 0 0 1 3 3zM20 16a3 3 0 1 1-3-3 3 3 0 0 1 3 3z' },
+{ id: 'art', label: 'Drawing', color: '#D9894A', d: 'M4 20l4-1 11-11-3-3L5 16zM14 7l3 3' },
+{ id: 'sports', label: 'Sports', color: '#D63B2F', d: 'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18' },
+{ id: 'fairy', label: 'Fairy tales', color: '#8466D6', d: 'M4 18h16l1-10-5 4-4-7-4 7-5-4z' },
+{ id: 'robots', label: 'Robots', color: '#2F86C9', d: 'M6 8h12v10H6zM9 12h.01M15 12h.01M10 15h4M12 8V5M12 5h.01' },
+{ id: 'cooking', label: 'Cooking', color: '#A0531C', d: 'M6 13h12v4a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3zM6 13a6 6 0 0 1 12 0M12 4v3' },
+{ id: 'nature', label: 'Plants & bugs', color: '#4E9F3D', d: 'M12 21V11M12 11c0-4 3-7 8-7 0 5-3 7-8 7zM12 14c0-3-2-5-6-5 0 4 2 5 6 5z' },
+{ id: 'building', label: 'Building', color: '#D63B2F', d: 'M4 20h16M6 20V10h5v10M13 20V5h5v15' },
+{ id: 'superheroes', label: 'Superheroes', color: '#E46A8E', d: 'M12 3l8 3v6c0 5-4 8-8 9-4-1-8-4-8-9V6zM9 12l2 2 4-4' },
+{ id: 'dance', label: 'Dancing', color: '#8466D6', d: 'M12 5a2 2 0 1 0 0-.1M12 8v6l-3 6M12 14l3 6M8 10l4-2 4 2' },
+{ id: 'pets', label: 'Pets', color: '#D9894A', d: 'M5 9l2-5 3 4h4l3-4 2 5v5a7 7 0 0 1-14 0zM10 13h.01M14 13h.01' }
+];
+const items = defs.map((x) => {
+const on = !!picked[x.id];
+return { ...x, on: on, pressed: on ? 'true' : 'false', border: on ? '3px solid #D9894A' : '2px solid #EED9BF', bg: on ? '#FCEBD3' : '#FFFFFF', pick: () => this.setState({ picked: { ...picked, [x.id]: !on } }) };
+});
+return { items: items, count: items.filter((x) => x.on).length };
+}
+}
+</script>
+</body>
+</html>
+
+
+<!-- ==================== QuizMore.dc.html ==================== -->
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Quiz: personality, learning and goals</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&amp;display=swap">
+<style>
+body{margin:0}
+.avi{image-rendering:pixelated;mix-blend-mode:multiply;object-fit:contain}
+@keyframes slidein{from{transform:translateX(24px);opacity:0}to{transform:none;opacity:1}}
+.slidein{animation:slidein .3s ease-out both}
+.bar{transition:width .4s ease}
+textarea:focus{outline:3px solid #D9894A;outline-offset:2px}
+@media (prefers-reduced-motion: reduce){.slidein{animation:none}.bar{transition:none}}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FFF6E8; font-family: Nunito, ui-rounded, system-ui, sans-serif; color: #3B2418; display: flex; flex-direction: column; padding: 58px 18px 30px; gap: 18px">
+  <div style="display: flex; align-items: center; gap: 14px">
+    <button type="button" onClick="{{back}}" aria-label="Back" style="width: 44px; height: 44px; border-radius: 999px; background: #FFFFFF; border: 2px solid #EED9BF; display: grid; place-items: center; flex: none; cursor: pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3B2418" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <div style="flex-grow: 1; height: 14px; border-radius: 999px; background: #EED9BF; overflow: hidden"><div class="bar" style="width: {{pct}}%; height: 100%; border-radius: 999px; background: #D9894A"></div></div>
+    <span style="font-size: 14px; font-weight: 800; color: #7A5A45">{{n}}/15</span>
+  </div>
+  <div class="slidein" style="display: flex; flex-direction: column; gap: 16px">
+    <div style="display: flex; align-items: flex-end; gap: 10px">
+      <div style="width: 84px; height: 84px; border-radius: 999px; background: #FCEBD3; display: grid; place-items: center; flex: none"><img class="avi" src="/_blob/2689b009c7d552d9f0bd44bebc7b4054" alt="Avi thinking" style="width: 78px; height: 78px"></div>
+      <div style="background: #FFFFFF; border: 2px solid #EED9BF; border-radius: 18px 18px 18px 6px; padding: 10px 12px; font-size: 14px; line-height: 19px; font-weight: 700">{{q.why}}</div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 4px">
+      <h1 style="margin: 0; font-size: 24px; line-height: 30px; font-weight: 900; text-wrap: balance">{{q.title}}</h1>
+      <span style="font-size: 14px; font-weight: 600; color: #7A5A45">{{q.sub}}</span>
+    </div>
+    <sc-if value="{{q.isChips}}" hint-placeholder-val="{{true}}">
+      <div style="display: flex; flex-wrap: wrap; gap: 9px">
+        <sc-for list="{{q.opts}}" as="o" hint-placeholder-count="8">
+          <button type="button" onClick="{{o.pick}}" aria-pressed="{{o.pressed}}" style="padding: 12px 16px; border-radius: 999px; border: {{o.border}}; background: {{o.bg}}; color: {{o.fg}}; font: 800 16px Nunito, ui-rounded, system-ui, sans-serif; cursor: pointer">{{o.label}}</button>
+        </sc-for>
+      </div>
+    </sc-if>
+    <sc-if value="{{q.isCards}}" hint-placeholder-val="{{false}}">
+      <div style="display: flex; flex-direction: column; gap: 9px">
+        <sc-for list="{{q.opts}}" as="o" hint-placeholder-count="4">
+          <button type="button" onClick="{{o.pick}}" aria-pressed="{{o.pressed}}" style="display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-radius: 18px; border: {{o.border}}; background: {{o.bg}}; color: #3B2418; font: 800 17px Nunito, ui-rounded, system-ui, sans-serif; text-align: left; cursor: pointer"><span style="width: 22px; height: 22px; border-radius: 999px; border: {{o.dot}}; box-sizing: border-box; flex: none"></span>{{o.label}}</button>
+        </sc-for>
+      </div>
+    </sc-if>
+    <sc-if value="{{q.isColors}}" hint-placeholder-val="{{false}}">
+      <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px">
+        <sc-for list="{{q.opts}}" as="o" hint-placeholder-count="8">
+          <button type="button" onClick="{{o.pick}}" aria-label="{{o.label}}" aria-pressed="{{o.pressed}}" style="height: 72px; border-radius: 20px; border: {{o.ring}}; background: {{o.swatch}}; cursor: pointer; box-sizing: border-box"></button>
+        </sc-for>
+      </div>
+    </sc-if>
+    <sc-if value="{{q.isText}}" hint-placeholder-val="{{false}}">
+      <label for="special" style="position: absolute; width: 1px; height: 1px; overflow: hidden">Tell Avi about Mila</label>
+      <textarea id="special" rows="5" style="width: 100%; box-sizing: border-box; border-radius: 18px; border: 2px solid #EED9BF; background: #FFFFFF; padding: 14px; font: 700 16px/23px Nunito, ui-rounded, system-ui, sans-serif; color: #3B2418; resize: none">She names every toy, sings in the bath and asks why the moon follows the car.</textarea>
+    </sc-if>
+  </div>
+  <div style="flex-grow: 1"></div>
+  <div style="display: flex; flex-direction: column; gap: 6px">
+    <sc-if value="{{notLast}}" hint-placeholder-val="{{true}}">
+      <button type="button" onClick="{{next}}" style="height: 56px; border-radius: 999px; border: 0; background: #D63B2F; color: #FFFFFF; font: 800 19px Nunito, ui-rounded, system-ui, sans-serif; box-shadow: 0 5px 0 #A8281E; cursor: pointer">Continue</button>
+      <button type="button" onClick="{{next}}" style="height: 40px; border: 0; background: none; color: #A0531C; font: 800 15px Nunito, ui-rounded, system-ui, sans-serif; cursor: pointer">Skip this one</button>
+    </sc-if>
+    <sc-if value="{{last}}" hint-placeholder-val="{{false}}">
+      <a href="Building.dc.html" style="display: flex; align-items: center; justify-content: center; height: 56px; border-radius: 999px; background: #D63B2F; color: #FFFFFF; font-size: 19px; font-weight: 800; text-decoration: none; box-shadow: 0 5px 0 #A8281E">Make Mila's plan</a>
+      <span style="height: 40px; display: grid; place-items: center; font-size: 13px; font-weight: 700; color: #7A5A45">Optional. You can change all answers later.</span>
+    </sc-if>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+const st = this.state || {};
+const i = st.i || 0;
+const ans = st.ans || { personality: { curious: 1, creative: 1 }, learn: { stories: 1 }, animal: { dino: 1 }, color: { purple: 1 } };
+const Q = [
+{ id: 'personality', kind: 'chips', multi: true, title: 'Which words sound like Mila?', sub: 'Pick all that fit.', why: 'This helps me pick the right kind of games for her.', opts: [['curious','Curious'],['energetic','Full of energy'],['shy','Shy at first'],['creative','Creative'],['chatty','Chatty'],['careful','Careful'],['silly','Silly'],['determined','Determined'],['gentle','Gentle'],['leader','Likes to lead']] },
+{ id: 'learn', kind: 'chips', multi: true, title: 'How does Mila learn best?', sub: 'Think of when she gets really into something.', why: 'Some kids love stories, others love to move. I will mix in more of what works.', opts: [['stories','Stories'],['puzzles','Puzzles'],['moving','Moving around'],['making','Drawing and making'],['songs','Songs and music'],['talking','Talking it through'],['screens','Watching first']] },
+{ id: 'animal', kind: 'chips', multi: false, title: "What's her favourite animal?", sub: 'It may star in her stories.', why: 'Her favourite animal can be her story sidekick!', opts: [['dino','Dinosaur'],['cat','Cat'],['dog','Dog'],['bunny','Bunny'],['lion','Lion'],['penguin','Penguin'],['unicorn','Unicorn'],['octopus','Octopus'],['horse','Horse']] },
+{ id: 'color', kind: 'colors', multi: false, title: "What's her favourite colour?", sub: 'Tap one.', why: 'I will use it for her avatar and her road.', opts: [['red','Red','#D63B2F'],['orange','Orange','#E9873A'],['yellow','Yellow','#F5B53D'],['green','Green','#4E9F3D'],['blue','Blue','#2F86C9'],['purple','Purple','#8466D6'],['pink','Pink','#E46A8E'],['brown','Brown','#A0531C']] },
+{ id: 'characters', kind: 'chips', multi: true, title: 'Which kinds of characters does she like?', sub: 'Pick any.', why: 'Characters make every lesson feel like an adventure.', opts: [['heroes','Superheroes'],['royals','Princesses and knights'],['pirates','Pirates'],['robots','Robots'],['fairies','Fairies'],['detectives','Detectives'],['astronauts','Astronauts'],['chefs','Chefs'],['explorers','Explorers']] },
+{ id: 'tricky', kind: 'chips', multi: true, title: 'What feels tricky for Mila right now?', sub: 'No wrong answers. This stays private.', why: 'I will make these extra fun and go slowly.', opts: [['still','Sitting still'],['letters','Letters'],['numbers','Numbers'],['feelings','Big feelings'],['sharing','Sharing'],['new','Trying new things'],['sleep','Bedtime'],['nothing','Nothing really']] },
+{ id: 'letters', kind: 'cards', multi: false, title: 'Does Mila know her letters?', sub: 'A rough guess is fine.', why: 'This tells me where to start reading.', opts: [['no','Not yet'],['some','Some letters'],['most','Most letters'],['words','She reads simple words']] },
+{ id: 'count', kind: 'cards', multi: false, title: 'How high can Mila count?', sub: 'Out loud, without help.', why: 'This tells me where to start math.', opts: [['5','Up to 5'],['10','Up to 10'],['20','Up to 20'],['more','Beyond 20']] },
+{ id: 'when', kind: 'cards', multi: false, title: 'When will Mila usually play?', sub: 'I will send gentle reminders then.', why: 'Calmer games before bed, energetic ones in the morning.', opts: [['morning','In the morning'],['after','After school or daycare'],['evening','Before bed'],['varies','It varies']] },
+{ id: 'minutes', kind: 'cards', multi: false, title: 'How long each day?', sub: 'You can change this any time.', why: 'Short and regular beats long and rare.', opts: [['5','5 minutes'],['10','10 minutes'],['15','15 minutes'],['20','20 minutes']] },
+{ id: 'goals', kind: 'chips', multi: true, title: 'What matters most to you?', sub: 'Pick up to 3.', why: 'I will focus her path and your reports on these.', opts: [['school','Ready for school'],['reading','Reading confidence'],['math','Math confidence'],['focus','Focus and memory'],['feelings','Feelings and friends'],['creative','Creativity'],['motor','Fine motor skills']] },
+{ id: 'special', kind: 'text', multi: false, title: 'Anything that makes Mila special?', sub: 'Optional. Pets, siblings, favourite toys, funny habits.', why: 'Little details make her stories feel like hers.', opts: [] }
+];
+const q = Q[i];
+const sel = ans[q.id] || {};
+const set = (id) => {
+const cur = { ...(ans[q.id] || {}) };
+if (q.multi) { cur[id] = !cur[id]; } else { Object.keys(cur).forEach((k) => delete cur[k]); cur[id] = 1; }
+this.setState({ ans: { ...ans, [q.id]: cur } });
+};
+const opts = q.opts.map((o) => {
+const on = !!sel[o[0]];
+return { label: o[1], swatch: o[2], pressed: on ? 'true' : 'false', pick: () => set(o[0]),
+border: on ? '3px solid #D9894A' : '2px solid #EED9BF', bg: on ? '#FCEBD3' : '#FFFFFF', fg: '#3B2418',
+dot: on ? '7px solid #D63B2F' : '2px solid #C9AE92', ring: on ? '4px solid #3B2418' : '4px solid #FFF6E8' };
+});
+const n = i + 4;
+return {
+q: { ...q, opts: opts, isChips: q.kind === 'chips', isCards: q.kind === 'cards', isColors: q.kind === 'colors', isText: q.kind === 'text' },
+n: n, pct: Math.round(n / 15 * 100),
+last: i === Q.length - 1, notLast: i < Q.length - 1,
+next: () => this.setState({ i: Math.min(Q.length - 1, i + 1) }),
+back: () => this.setState({ i: Math.max(0, i - 1) })
+};
+}
+}
+</script>
+</body>
+</html>
+
+
+<!-- ==================== Building.dc.html ==================== -->
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Avi builds the profile</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&amp;display=swap">
+<style>
+body{margin:0}
+.avi{image-rendering:pixelated;mix-blend-mode:multiply;object-fit:contain}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.bob{animation:bob 2.4s ease-in-out infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.spin{animation:spin .9s linear infinite}
+@keyframes popin{0%{transform:scale(.3)}70%{transform:scale(1.2)}100%{transform:scale(1)}}
+.popin{animation:popin .35s ease-out both}
+@keyframes cfa{0%{transform:translate(0,0) rotate(0);opacity:1}100%{transform:translate(-26px,-34px) rotate(200deg);opacity:0}}
+@keyframes cfb{0%{transform:translate(0,0) rotate(0);opacity:1}100%{transform:translate(4px,-44px) rotate(-160deg);opacity:0}}
+@keyframes cfc{0%{transform:translate(0,0) rotate(0);opacity:1}100%{transform:translate(30px,-30px) rotate(240deg);opacity:0}}
+.cf{position:absolute;left:14px;top:14px;width:6px;height:6px;border-radius:1px;opacity:0}
+.cfa{animation:cfa .8s ease-out forwards}.cfb{animation:cfb .8s ease-out forwards}.cfc{animation:cfc .8s ease-out forwards}
+.bar{transition:width .9s ease}
+@media (prefers-reduced-motion: reduce){.bob,.spin,.popin,.cfa,.cfb,.cfc{animation:none}.bar{transition:none}}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FFF6E8; font-family: Nunito, ui-rounded, system-ui, sans-serif; color: #3B2418; display: flex; flex-direction: column; align-items: center; padding: 84px 24px 40px; gap: 22px">
+  <div class="bob" style="width: 230px; height: 230px; border-radius: 999px; background: #FCEBD3; display: grid; place-items: center"><img class="avi" src="/_blob/ca58f1dd0f3c402ed2b8ec880944f2f4" alt="Avi reading a book" style="width: 206px; height: 206px"></div>
+  <div style="display: flex; flex-direction: column; gap: 8px; text-align: center">
+    <h1 style="margin: 0; font-size: 27px; line-height: 33px; font-weight: 900; text-wrap: balance">{{headline}}</h1>
+    <p style="margin: 0; font-size: 15px; font-weight: 600; color: #7A5A45">Matching 480 activities to her age, interests and personality.</p>
+  </div>
+  <div style="width: 100%; height: 16px; border-radius: 999px; background: #EED9BF; overflow: hidden"><div class="bar" style="width: {{pct}}%; height: 100%; border-radius: 999px; background: #D9894A"></div></div>
+  <div style="width: 100%; display: flex; flex-direction: column; gap: 10px">
+    <sc-for list="{{steps}}" as="s" hint-placeholder-count="4">
+      <div style="display: flex; align-items: center; gap: 12px; background: #FFFFFF; border: 2px solid {{s.border}}; border-radius: 16px; padding: 12px 14px; font-size: 16px; font-weight: 700; color: {{s.fg}}">
+        <span style="position: relative; width: 28px; height: 28px; flex: none">
+          <sc-if value="{{s.done}}" hint-placeholder-val="{{false}}">
+            <span class="popin" style="position: absolute; inset: 0; border-radius: 999px; background: #4E9F3D; display: grid; place-items: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+            <span class="cf cfa" style="background: #F5B53D"></span><span class="cf cfb" style="background: #D63B2F"></span><span class="cf cfc" style="background: #2F86C9"></span><span class="cf cfa" style="background: #8466D6; animation-delay: .08s"></span><span class="cf cfc" style="background: #4E9F3D; animation-delay: .1s"></span>
+          </sc-if>
+          <sc-if value="{{s.active}}" hint-placeholder-val="{{false}}"><span class="spin" style="position: absolute; inset: 2px; border-radius: 999px; border: 3px solid #EED9BF; border-top-color: #D9894A"></span></sc-if>
+          <sc-if value="{{s.waiting}}" hint-placeholder-val="{{true}}"><span style="position: absolute; inset: 2px; border-radius: 999px; border: 3px solid #EED9BF"></span></sc-if>
+        </span>
+        <span>{{s.label}}</span>
+      </div>
+    </sc-for>
+  </div>
+  <div style="flex-grow: 1"></div>
+  <sc-if value="{{finished}}" hint-placeholder-val="{{false}}">
+    <a href="Profile.dc.html" class="popin" style="width: 100%; display: flex; align-items: center; justify-content: center; height: 56px; border-radius: 999px; background: #D63B2F; color: #FFFFFF; font-size: 19px; font-weight: 800; text-decoration: none; box-shadow: 0 5px 0 #A8281E">See Mila's profile</a>
+    <button type="button" onClick="{{replay}}" style="border: 0; background: none; font: 800 14px Nunito, ui-rounded, system-ui, sans-serif; color: #A0531C; cursor: pointer">Replay</button>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+componentDidMount() { this.run(); }
+componentWillUnmount() { (this.timers || []).forEach(clearTimeout); }
+run() {
+(this.timers || []).forEach(clearTimeout);
+this.setState({ step: 0 });
+const at = [1600, 3300, 5100, 7200];
+this.timers = at.map((ms, i) => setTimeout(() => this.setState({ step: i + 1 }), ms));
+}
+renderVals() {
+const step = (this.state && this.state.step) || 0;
+const labels = ['Reading what makes Mila unique', 'Choosing her best ways to learn', 'Writing her first dinosaur story', 'Planning her first week'];
+const steps = labels.map((label, i) => ({
+label: label, done: i < step, active: i === step, waiting: i > step,
+border: i === step ? '#D9894A' : '#EED9BF',
+fg: i > step ? '#7A5A45' : '#3B2418'
+}));
+return {
+steps: steps, pct: step * 25, finished: step >= 4,
+headline: step >= 4 ? "Mila's plan is ready!" : "Avi is making Mila's learning plan…",
+replay: () => this.run()
+};
+}
+}
+</script>
+</body>
+</html>
+
+
+<!-- ==================== Profile.dc.html ==================== -->
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Mila's learning profile</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&amp;family=Pixelify+Sans:wght@600&amp;display=swap">
+<style>
+body{margin:0}
+.avi{image-rendering:pixelated;mix-blend-mode:multiply;object-fit:contain}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FFF6E8; font-family: Nunito, ui-rounded, system-ui, sans-serif; color: #3B2418; display: flex; flex-direction: column; padding: 56px 20px 32px; gap: 16px">
+  <div style="background: #A0531C; border-radius: 28px; padding: 18px; display: flex; align-items: center; gap: 12px; position: relative; overflow: hidden">
+    <div style="position: absolute; right: -30px; top: -30px; width: 120px; height: 120px; border-radius: 999px; background: #B8692F"></div>
+    <div style="display: flex; flex-direction: column; gap: 6px; flex-grow: 1; position: relative">
+      <span style="font-size: 13px; font-weight: 800; letter-spacing: 1px; color: #FFF6E8">MILA'S LEARNING PROFILE</span>
+      <span style="font-size: 30px; line-height: 32px; font-weight: 900; color: #FFFFFF">The Curious Builder</span>
+      <span style="font-size: 14px; line-height: 19px; font-weight: 700; color: #FFF6E8">Asks "why?", loves figuring out how things fit together.</span>
+    </div>
+    <div style="width: 112px; height: 112px; border-radius: 999px; background: #FCEBD3; display: grid; place-items: center; flex: none; position: relative"><img class="avi" src="/_blob/03ccb838521997548079d3118c523436" alt="Avi the explorer" style="width: 104px; height: 104px"></div>
+  </div>
+  <div style="display: flex; flex-wrap: wrap; gap: 8px">
+    <span style="padding: 7px 12px; border-radius: 999px; background: #E3F3DD; color: #2F6B23; font-size: 14px; font-weight: 800">Strong: counting to 20</span>
+    <span style="padding: 7px 12px; border-radius: 999px; background: #DDEEFB; color: #1F5F92; font-size: 14px; font-weight: 800">Next: letter sounds</span>
+    <span style="padding: 7px 12px; border-radius: 999px; background: #ECE6FB; color: #5A40A8; font-size: 14px; font-weight: 800">Loves: dinosaurs, space</span>
+    <span style="padding: 7px 12px; border-radius: 999px; background: #FCE4EB; color: #A3355A; font-size: 14px; font-weight: 800">Learns by: hands-on puzzles</span>
+  </div>
+  <div style="background: #FFFFFF; border: 2px solid #EED9BF; border-radius: 20px; padding: 14px 16px; display: flex; flex-direction: column; gap: 10px">
+    <span style="font-size: 17px; font-weight: 900">Mila's first week</span>
+    <sc-for list="{{week}}" as="d" hint-placeholder-count="3">
+      <div style="display: flex; align-items: center; gap: 12px">
+        <span style="width: 38px; height: 38px; border-radius: 12px; background: {{d.bg}}; color: {{d.fg}}; display: grid; place-items: center; font: 600 15px 'Pixelify Sans', ui-monospace, monospace; flex: none">{{d.day}}</span>
+        <div style="display: flex; flex-direction: column"><span style="font-size: 15px; font-weight: 800">{{d.title}}</span><span style="font-size: 13px; font-weight: 600; color: #7A5A45">{{d.sub}}</span></div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="position: relative; border-radius: 20px; overflow: hidden; background: #DDEEFB; padding: 14px 16px; display: flex; gap: 12px; align-items: center">
+    <div style="display: flex; flex-direction: column; gap: 4px; filter: blur(3px); flex-grow: 1">
+      <span style="font-size: 16px; font-weight: 900">Mila and the Dinosaur Who Lost His Numbers</span>
+      <span style="font-size: 13px; font-weight: 600">Once upon a time, in a valley full of ferns, a little triceratops named…</span>
+    </div>
+    <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 15px; font-weight: 900; color: #1F5F92; background: rgba(221, 238, 251, 0.35)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1F5F92" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Her first story is ready</div>
+  </div>
+  <div style="flex-grow: 1"></div>
+  <a href="Paywall.dc.html" style="display: flex; align-items: center; justify-content: center; height: 56px; border-radius: 999px; background: #D63B2F; color: #FFFFFF; font-size: 19px; font-weight: 800; text-decoration: none; box-shadow: 0 5px 0 #A8281E">Unlock Mila's plan</a>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+return { week: [
+{ day: 'M', title: 'Count the dino eggs', sub: 'Math Meadow · 5 min', bg: '#E3F3DD', fg: '#2F6B23' },
+{ day: 'T', title: 'Sounds of the planets', sub: 'Reading Forest · 5 min', bg: '#DDEEFB', fg: '#1F5F92' },
+{ day: 'W', title: 'How do volcanoes work?', sub: 'Science Sky · 6 min', bg: '#ECE6FB', fg: '#5A40A8' }
+] };
+}
+}
+</script>
+</body>
+</html>
+
+
+<!-- ==================== Paywall.dc.html ==================== -->
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Avilo Education+ paywall</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&amp;display=swap">
+<style>
+body{margin:0}
+.avi{image-rendering:pixelated;mix-blend-mode:multiply;object-fit:contain}
+a{color:#7A5A45}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FFF6E8; font-family: Nunito, ui-rounded, system-ui, sans-serif; color: #3B2418; display: flex; flex-direction: column; padding: 52px 20px 24px; gap: 14px">
+  <div style="display: flex; align-items: center; gap: 12px">
+    <div style="width: 96px; height: 96px; border-radius: 999px; background: #FCEBD3; display: grid; place-items: center; flex: none"><img class="avi" src="/_blob/02ed70c93c5cdb78ced2aded4bf8695b" alt="Avi giving a thumbs up" style="width: 90px; height: 90px"></div>
+    <div style="display: flex; flex-direction: column; gap: 4px">
+      <span style="font-size: 13px; font-weight: 900; letter-spacing: 1px; color: #A0531C">AVILO EDUCATION+</span>
+      <h1 style="margin: 0; font-size: 25px; line-height: 30px; font-weight: 900; text-wrap: balance">Mila's plan is ready. Try it free for 7 days.</h1>
+    </div>
+  </div>
+  <div style="display: flex; flex-direction: column; gap: 9px; padding: 4px 2px">
+    <sc-for list="{{perks}}" as="p" hint-placeholder-count="4">
+      <div style="display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 700"><span style="width: 24px; height: 24px; border-radius: 999px; background: #4E9F3D; display: grid; place-items: center; flex: none"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>{{p}}</div>
+    </sc-for>
+  </div>
+  <div style="display: flex; flex-direction: column; gap: 10px">
+    <sc-if value="{{yearly}}" hint-placeholder-val="{{true}}">
+      <button type="button" onClick="{{pickYear}}" aria-pressed="true" style="position: relative; display: flex; align-items: center; gap: 12px; padding: 16px; border-radius: 20px; border: 3px solid #D63B2F; background: #FFFFFF; text-align: left; font-family: inherit; color: #3B2418; cursor: pointer">
+        <span style="position: absolute; top: -11px; right: 16px; padding: 3px 10px; border-radius: 999px; background: #F5B53D; font-size: 12px; font-weight: 900; color: #3B2418">SAVE 37%</span>
+        <span style="width: 22px; height: 22px; border-radius: 999px; border: 7px solid #D63B2F; box-sizing: border-box; flex: none"></span>
+        <span style="display: flex; flex-direction: column; flex-grow: 1"><span style="font-size: 17px; font-weight: 900">Yearly</span><span style="font-size: 13px; font-weight: 700; color: #7A5A45">7 days free, then $59.99/year</span></span>
+        <span style="font-size: 17px; font-weight: 900">$5.00<span style="font-size: 12px; color: #7A5A45">/mo</span></span>
+      </button>
+      <button type="button" onClick="{{pickMonth}}" aria-pressed="false" style="display: flex; align-items: center; gap: 12px; padding: 17px; border-radius: 20px; border: 2px solid #EED9BF; background: #FFFFFF; text-align: left; font-family: inherit; color: #3B2418; cursor: pointer">
+        <span style="width: 22px; height: 22px; border-radius: 999px; border: 2px solid #C9AE92; box-sizing: border-box; flex: none"></span>
+        <span style="display: flex; flex-direction: column; flex-grow: 1"><span style="font-size: 17px; font-weight: 900">Monthly</span><span style="font-size: 13px; font-weight: 700; color: #7A5A45">7 days free, then $7.99/month</span></span>
+        <span style="font-size: 17px; font-weight: 900">$7.99<span style="font-size: 12px; color: #7A5A45">/mo</span></span>
+      </button>
+    </sc-if>
+    <sc-if value="{{monthly}}" hint-placeholder-val="{{false}}">
+      <button type="button" onClick="{{pickYear}}" aria-pressed="false" style="position: relative; display: flex; align-items: center; gap: 12px; padding: 17px; border-radius: 20px; border: 2px solid #EED9BF; background: #FFFFFF; text-align: left; font-family: inherit; color: #3B2418; cursor: pointer">
+        <span style="position: absolute; top: -11px; right: 16px; padding: 3px 10px; border-radius: 999px; background: #F5B53D; font-size: 12px; font-weight: 900; color: #3B2418">SAVE 37%</span>
+        <span style="width: 22px; height: 22px; border-radius: 999px; border: 2px solid #C9AE92; box-sizing: border-box; flex: none"></span>
+        <span style="display: flex; flex-direction: column; flex-grow: 1"><span style="font-size: 17px; font-weight: 900">Yearly</span><span style="font-size: 13px; font-weight: 700; color: #7A5A45">7 days free, then $59.99/year</span></span>
+        <span style="font-size: 17px; font-weight: 900">$5.00<span style="font-size: 12px; color: #7A5A45">/mo</span></span>
+      </button>
+      <button type="button" onClick="{{pickMonth}}" aria-pressed="true" style="display: flex; align-items: center; gap: 12px; padding: 16px; border-radius: 20px; border: 3px solid #D63B2F; background: #FFFFFF; text-align: left; font-family: inherit; color: #3B2418; cursor: pointer">
+        <span style="width: 22px; height: 22px; border-radius: 999px; border: 7px solid #D63B2F; box-sizing: border-box; flex: none"></span>
+        <span style="display: flex; flex-direction: column; flex-grow: 1"><span style="font-size: 17px; font-weight: 900">Monthly</span><span style="font-size: 13px; font-weight: 700; color: #7A5A45">7 days free, then $7.99/month</span></span>
+        <span style="font-size: 17px; font-weight: 900">$7.99<span style="font-size: 12px; color: #7A5A45">/mo</span></span>
+      </button>
+    </sc-if>
+  </div>
+  <div style="display: flex; align-items: center; gap: 10px; background: #FCEBD3; border-radius: 16px; padding: 10px 12px; font-size: 13px; line-height: 18px; font-weight: 700"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A0531C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg>We'll remind you 2 days before your trial ends. Cancel anytime in Settings.</div>
+  <div style="flex-grow: 1"></div>
+  <a href="SignIn.dc.html" style="display: flex; align-items: center; justify-content: center; height: 58px; border-radius: 999px; background: #D63B2F; color: #FFFFFF; font-size: 19px; font-weight: 800; text-decoration: none; box-shadow: 0 5px 0 #A8281E">Start 7-day free trial</a>
+  <div style="display: flex; justify-content: center; gap: 18px; font-size: 13px; font-weight: 700"><a href="#restore">Restore</a><a href="#terms">Terms</a><a href="#privacy">Privacy</a></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+const yearly = !this.state || this.state.plan !== 'month';
+return {
+yearly: yearly, monthly: !yearly,
+pickYear: () => this.setState({ plan: 'year' }),
+pickMonth: () => this.setState({ plan: 'month' }),
+perks: ['A path made for Mila, updated as she grows', 'New stories starring Mila every night', 'All 4 worlds: math, reading, science, feelings', 'Weekly progress reports for you']
+};
+}
+}
+</script>
+</body>
+</html>
+
+
+<!-- ==================== SignIn.dc.html ==================== -->
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sign in with Apple</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&amp;display=swap">
+<style>
+body{margin:0}
+.avi{image-rendering:pixelated;mix-blend-mode:multiply;object-fit:contain}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FFF6E8; font-family: Nunito, ui-rounded, system-ui, sans-serif; color: #3B2418; display: flex; flex-direction: column; align-items: center; padding: 88px 24px 40px; gap: 22px">
+  <div style="width: 270px; height: 270px; border-radius: 999px; background: #FCEBD3; display: grid; place-items: center"><img class="avi" src="/_blob/9efc244baecb32c521f55a7346dbd084" alt="Avi waving" style="width: 250px; height: 250px"></div>
+  <div style="display: flex; flex-direction: column; gap: 8px; text-align: center">
+    <h1 style="margin: 0; font-size: 28px; line-height: 34px; font-weight: 900; text-wrap: balance">Let's keep Mila's plan safe</h1>
+    <p style="margin: 0; font-size: 16px; line-height: 23px; font-weight: 600; color: #7A5A45">Create your parent account in one tap. Your child never needs an email or password.</p>
+  </div>
+  <div style="flex-grow: 1"></div>
+  <a href="TrialStarted.dc.html" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px; height: 56px; border-radius: 14px; background: #000000; color: #FFFFFF; font-family: -apple-system, system-ui, sans-serif; font-size: 19px; font-weight: 600; text-decoration: none"><svg width="20" height="24" viewBox="0 0 17 20" aria-hidden="true"><path fill="#FFFFFF" d="M14.1 10.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.7-4.1zM11.6 3c.7-.9 1.2-2 1-3.2-1 0-2.3.7-3 1.6-.7.8-1.3 2-1.1 3.1 1.1.1 2.3-.6 3.1-1.5z"/></svg>Sign in with Apple</a>
+  <p style="margin: 0; font-size: 13px; line-height: 18px; font-weight: 600; color: #7A5A45; text-align: center">You can hide your email with Apple. We store only Mila's first name and age, never photos or location.</p>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
+
+
+<!-- ==================== TrialStarted.dc.html ==================== -->
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Trial started</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&amp;display=swap">
+<style>
+body{margin:0}
+.avi{image-rendering:pixelated;mix-blend-mode:multiply;object-fit:contain}
+@keyframes pop{0%{transform:scale(.6);opacity:.4}60%{transform:scale(1.15)}100%{transform:scale(1);opacity:1}}
+.pop{animation:pop .7s ease-out both}
+@media (prefers-reduced-motion: reduce){.pop{animation:none}}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FFF6E8; font-family: Nunito, ui-rounded, system-ui, sans-serif; color: #3B2418; display: flex; flex-direction: column; align-items: center; padding: 96px 24px 40px; gap: 22px; position: relative; overflow: hidden">
+  <sc-for list="{{stars}}" as="s" hint-placeholder-count="10">
+    <span class="pop" style="position: absolute; left: {{s.x}}px; top: {{s.y}}px; width: {{s.size}}px; height: {{s.size}}px; background: {{s.c}}; animation-delay: {{s.d}}s"></span>
+  </sc-for>
+  <div class="pop" style="width: 280px; height: 280px; border-radius: 999px; background: #FCEBD3; display: grid; place-items: center; position: relative"><img class="avi" src="/_blob/906e3900b0bb3de6052376ac615ce99f" alt="Avi winking with a thumbs up" style="width: 260px; height: 260px"></div>
+  <div style="display: flex; flex-direction: column; gap: 8px; text-align: center; position: relative">
+    <h1 style="margin: 0; font-size: 30px; line-height: 36px; font-weight: 900">Yay! You're all set</h1>
+    <p style="margin: 0; font-size: 16px; line-height: 23px; font-weight: 600; color: #7A5A45">Your 7-day free trial has started. Mila's first adventure is waiting for her.</p>
+  </div>
+  <div style="width: 100%; display: flex; align-items: center; gap: 12px; background: #FFFFFF; border: 2px solid #EED9BF; border-radius: 20px; padding: 12px 14px; box-sizing: border-box; position: relative">
+    <span style="width: 40px; height: 40px; border-radius: 12px; background: #DDEEFB; display: grid; place-items: center; flex: none"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F5F92" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span>
+    <span style="font-size: 14px; line-height: 19px; font-weight: 700">Grown-up area is locked with a parent check, so Mila can't change settings or buy anything.</span>
+  </div>
+  <div style="flex-grow: 1"></div>
+  <a href="KidHome.dc.html" style="width: 100%; display: flex; align-items: center; justify-content: center; height: 58px; border-radius: 999px; background: #D63B2F; color: #FFFFFF; font-size: 19px; font-weight: 800; text-decoration: none; box-shadow: 0 5px 0 #A8281E; position: relative">Hand the phone to Mila</a>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+const c = ['#F5B53D', '#D63B2F', '#D9894A', '#4E9F3D', '#2F86C9'];
+const pts = [[38,70,12],[300,60,16],[340,180,10],[20,250,14],[60,410,10],[330,380,12],[180,40,10],[260,300,8],[110,140,8],[350,470,14]];
+return { stars: pts.map((p, i) => ({ x: p[0], y: p[1], size: p[2], c: c[i % c.length], d: (i * 0.08).toFixed(2) })) };
+}
+}
+</script>
+</body>
+</html>
+
+
+<!-- ==================== KidHome.dc.html ==================== -->
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kid home</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&amp;display=swap">
+<style>
+body{margin:0}
+.px{image-rendering:pixelated}
+.layer{position:absolute;image-rendering:pixelated}
+@keyframes pulse{0%,100%{box-shadow:0 6px 0 #A8281E,0 0 0 0 rgba(214,59,47,.35)}50%{box-shadow:0 6px 0 #A8281E,0 0 0 12px rgba(214,59,47,0)}}
+.pulse{animation:pulse 1.8s ease-in-out infinite}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.sway{animation:sway 3s ease-in-out infinite;transform-origin:50% 100%}
+@keyframes up{from{transform:translateY(100%)}to{transform:none}}
+.up{animation:up .32s cubic-bezier(.2,.9,.3,1.15) both}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.fade{animation:fade .2s ease-out both}
+@keyframes flick{0%,100%{transform:scale(1) rotate(-2deg)}50%{transform:scale(1.08) rotate(2deg)}}
+.flick{animation:flick 1.2s ease-in-out infinite;transform-origin:50% 90%}
+@keyframes pkR{0%,100%{transform:translateX(150px) rotate(-90deg)}25%,72%{transform:translateX(0) rotate(-90deg)}}
+@keyframes pkL{0%,100%{transform:translateX(-150px) rotate(90deg)}25%,72%{transform:translateX(0) rotate(90deg)}}
+@keyframes pkBR{0%,100%{transform:translate(120px,120px) rotate(-35deg)}25%,72%{transform:translate(0,0) rotate(-35deg)}}
+@keyframes pkBL{0%,100%{transform:translate(-120px,120px) rotate(35deg)}25%,72%{transform:translate(0,0) rotate(35deg)}}
+.pk{position:absolute;width:120px;height:82px;pointer-events:none;z-index:30;image-rendering:pixelated}
+.pkR{right:-34px;top:330px;animation:pkR 1.7s ease-in-out both}
+.pkL{left:-34px;top:430px;animation:pkL 1.7s ease-in-out both}
+.pkBR{right:-26px;bottom:70px;animation:pkBR 1.7s ease-in-out both}
+.pkBL{left:-26px;bottom:70px;animation:pkBL 1.7s ease-in-out both}
+@media (prefers-reduced-motion: reduce){.pulse,.sway,.up,.fade,.flick{animation:none}}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FFF6E8; font-family: Nunito, ui-rounded, system-ui, sans-serif; color: #3B2418; display: flex; flex-direction: column; position: relative; overflow: hidden">
+  <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 13px; padding: 54px 18px 0">
+    <div style="display: flex; align-items: center; gap: 8px">
+      <a href="ChildProfile.dc.html" aria-label="Mila's progress" style="display: flex; align-items: center; gap: 8px; padding: 5px 12px 5px 5px; border-radius: 999px; background: #FFFFFF; border: 2px solid #EED9BF; font-size: 16px; font-weight: 900; color: #3B2418; text-decoration: none"><span style="width: 30px; height: 30px; border-radius: 999px; background: #8466D6; color: #FFFFFF; display: grid; place-items: center; font-size: 15px">M</span>Mila</a>
+      <span style="flex-grow: 1"></span>
+      <button type="button" onClick="{{openStreak}}" aria-label="5 day streak" style="display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 2px solid #EED9BF; cursor: pointer; font: 900 18px Nunito, ui-rounded, system-ui, sans-serif; color: #3B2418"><svg width="18" height="20" viewBox="0 0 24 26" aria-hidden="true"><path fill="#D63B2F" d="M12 1c1 5 7 7 7 14a7 7 0 0 1-14 0c0-4 2-6 3-8 0 3 2 4 3 4-1-4 0-7 1-10z"/><path fill="#F5B53D" d="M12 13c0 2 3 3 3 6a3 3 0 0 1-6 0c0-2 2-3 3-6z"/></svg>5</button>
+      <button type="button" onClick="{{openStars}}" aria-label="128 stars" style="display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px; background: #FFFFFF; border: 2px solid #EED9BF; cursor: pointer; font: 900 18px Nunito, ui-rounded, system-ui, sans-serif; color: #3B2418"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#F5B53D" d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.9L12 17.6 5.9 20.9l1.2-6.9-5-4.8 6.9-.9z"/></svg>128</button>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px">
+      <div style="width: 100px; height: 120px; border-radius: 28px; background: #FCEBD3; display: grid; place-items: end center; flex: none; overflow: hidden; padding-bottom: 6px; box-sizing: border-box">
+        <div class="sway" style="position: relative; width: 62px; height: 107px">
+          <img class="layer" src="/_blob/7d9d62f29d7d04f9c3e6fc67ffe18fbe" alt="Avi wearing his fedora" style="left: 0; top: 0; width: 100%">
+          <img class="layer" src="/_blob/7fb17821dfd6dd71cde50a5bc0035546" alt="" style="left: 9.2%; top: -2.01%; width: 82.76%">
+        </div>
+      </div>
+      <div style="flex-grow: 1; background: #FFFFFF; border: 2px solid #EED9BF; border-radius: 20px 20px 20px 6px; padding: 12px 12px 12px 14px; display: flex; align-items: center; gap: 8px">
+        <span style="font-size: 19px; line-height: 24px; font-weight: 900; flex-grow: 1">Hi Mila! Let's count dino eggs today!</span>
+        <button type="button" aria-label="Hear Avi" style="width: 40px; height: 40px; border-radius: 999px; border: 0; background: #DDEEFB; display: grid; place-items: center; flex: none; cursor: pointer"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#2F86C9" d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 9a4 4 0 0 1 0 6" fill="none" stroke="#2F86C9" stroke-width="2.4" stroke-linecap="round"/></svg></button>
+      </div>
+    </div>
+    <div style="background: #FFFFFF; border: 2px solid #EED9BF; border-radius: 28px; padding: 13px 16px 15px; display: flex; flex-direction: column; gap: 10px">
+      <div style="display: flex; align-items: center; justify-content: space-between"><span style="font-size: 18px; font-weight: 900">Today's adventure</span><span style="font-size: 14px; font-weight: 800; color: #7A5A45">1 of 3 done</span></div>
+      <div style="display: flex; align-items: center; justify-content: space-between; position: relative; padding: 0 6px">
+        <div style="position: absolute; left: 40px; right: 40px; top: 36px; height: 8px; border-radius: 999px; background: #EED9BF"></div>
+        <div style="position: absolute; left: 40px; width: 130px; top: 36px; height: 8px; border-radius: 999px; background: #4E9F3D"></div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 6px; width: 76px; position: relative"><span style="width: 64px; height: 64px; border-radius: 999px; background: #4E9F3D; display: grid; place-items: center; margin-top: 8px"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span style="font-size: 13px; font-weight: 800; text-align: center">Shapes</span></div>
+        <a href="Game.dc.html" aria-label="Play: Count the dino eggs" style="display: flex; flex-direction: column; align-items: center; gap: 6px; width: 96px; position: relative; text-decoration: none; color: #3B2418"><span class="pulse" style="width: 80px; height: 80px; border-radius: 999px; background: #D63B2F; display: grid; place-items: center; box-shadow: 0 6px 0 #A8281E"><svg width="36" height="36" viewBox="0 0 24 24" aria-hidden="true"><path fill="#FFFFFF" d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg></span><span style="font-size: 13px; font-weight: 900; text-align: center">Dino eggs</span></a>
+        <a href="Story.dc.html" aria-label="Tonight's story" style="display: flex; flex-direction: column; align-items: center; gap: 6px; width: 76px; position: relative; text-decoration: none; color: #7A5A45"><span style="width: 64px; height: 64px; border-radius: 999px; background: #FCEBD3; border: 3px dashed #D9894A; box-sizing: border-box; display: grid; place-items: center; margin-top: 8px"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#A0531C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2zM4 19V5M8 7h6"/></svg></span><span style="font-size: 13px; font-weight: 800; text-align: center">Story</span></a>
+      </div>
+    </div>
+    <div style="display: flex; align-items: baseline; justify-content: space-between"><span style="font-size: 18px; font-weight: 900">Worlds</span><a href="World.dc.html" style="font-size: 14px; font-weight: 800; color: #A0531C">See all 160</a></div>
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px">
+      <sc-for list="{{worlds}}" as="w" hint-placeholder-count="8">
+        <a href="World.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 5px; padding: 10px 2px 9px; border-radius: 18px; background: {{w.soft}}; text-decoration: none; color: #3B2418">
+          <span style="width: 42px; height: 42px; border-radius: 999px; background: {{w.c}}; display: grid; place-items: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{w.d}}"/></svg></span>
+          <span style="font-size: 12px; line-height: 14px; font-weight: 900; text-align: center">{{w.name}}</span>
+          <span style="width: 70%; height: 6px; border-radius: 999px; background: #FFFFFF; overflow: hidden"><span style="display: block; width: {{w.p}}%; height: 100%; border-radius: 999px; background: {{w.c}}"></span></span>
+        </a>
+      </sc-for>
+    </div>
+  </div>
+  <nav aria-label="Main" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); height: 84px; padding: 8px 8px 20px; box-sizing: border-box; background: #FFFFFF; border-top: 2px solid #EED9BF">
+    <sc-for list="{{tabs}}" as="t" hint-placeholder-count="4">
+      <a href="{{t.href}}" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; text-decoration: none; font-size: 12px; font-weight: 900; color: {{t.fg}}"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="{{t.fg}}" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{t.d}}"/></svg>{{t.label}}</a>
+    </sc-for>
+  </nav>
+  <sc-if value="{{peekR}}" hint-placeholder-val="{{false}}"><img class="pk pkR" src="/_blob/485777b8dd40805eecc5714902d6151d" alt=""></sc-if>
+  <sc-if value="{{peekL}}" hint-placeholder-val="{{false}}"><img class="pk pkL" src="/_blob/485777b8dd40805eecc5714902d6151d" alt=""></sc-if>
+  <sc-if value="{{peekBR}}" hint-placeholder-val="{{false}}"><img class="pk pkBR" src="/_blob/485777b8dd40805eecc5714902d6151d" alt=""></sc-if>
+  <sc-if value="{{peekBL}}" hint-placeholder-val="{{false}}"><img class="pk pkBL" src="/_blob/485777b8dd40805eecc5714902d6151d" alt=""></sc-if>
+  <sc-if value="{{sheet}}" hint-placeholder-val="{{false}}">
+    <button type="button" class="fade" onClick="{{close}}" aria-label="Close" style="position: absolute; inset: 0; border: 0; background: rgba(59, 36, 24, 0.45); z-index: 40; cursor: pointer"></button>
+  </sc-if>
+  <sc-if value="{{streakOpen}}" hint-placeholder-val="{{false}}">
+    <div class="up" role="dialog" aria-label="Your streak" style="position: absolute; left: 0; right: 0; bottom: 0; z-index: 50; background: #FFFFFF; border-radius: 28px 28px 0 0; padding: 22px 20px 34px; display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center">
+      <span style="width: 44px; height: 5px; border-radius: 999px; background: #EED9BF"></span>
+      <svg class="flick" width="72" height="80" viewBox="0 0 24 26" aria-hidden="true"><path fill="#D63B2F" d="M12 1c1 5 7 7 7 14a7 7 0 0 1-14 0c0-4 2-6 3-8 0 3 2 4 3 4-1-4 0-7 1-10z"/><path fill="#F5B53D" d="M12 13c0 2 3 3 3 6a3 3 0 0 1-6 0c0-2 2-3 3-6z"/></svg>
+      <span style="font-size: 30px; font-weight: 900">5-day streak!</span>
+      <span style="font-size: 16px; line-height: 23px; font-weight: 700; color: #7A5A45">You have learned with Avi 5 days in a row. Play today to keep your flame going, and come back tomorrow for day 6!</span>
+      <div style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; width: 100%">
+        <sc-for list="{{week}}" as="d" hint-placeholder-count="7">
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 5px"><span style="width: 38px; height: 38px; border-radius: 999px; background: {{d.bg}}; border: {{d.border}}; box-sizing: border-box; display: grid; place-items: center; font-size: 14px; font-weight: 900; color: {{d.fg}}">{{d.mark}}</span><span style="font-size: 12px; font-weight: 800; color: #7A5A45">{{d.day}}</span></div>
+        </sc-for>
+      </div>
+      <span style="font-size: 14px; font-weight: 800; color: #A0531C">Longest streak: 9 days</span>
+      <button type="button" onClick="{{close}}" style="width: 100%; height: 56px; border-radius: 999px; border: 0; background: #D63B2F; color: #FFFFFF; font: 900 19px Nunito, ui-rounded, system-ui, sans-serif; box-shadow: 0 5px 0 #A8281E; cursor: pointer">Let's go!</button>
+    </div>
+  </sc-if>
+  <sc-if value="{{starsOpen}}" hint-placeholder-val="{{false}}">
+    <div class="up" role="dialog" aria-label="Your stars" style="position: absolute; left: 0; right: 0; bottom: 0; z-index: 50; background: #FFFFFF; border-radius: 28px 28px 0 0; padding: 22px 20px 34px; display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center">
+      <span style="width: 44px; height: 5px; border-radius: 999px; background: #EED9BF"></span>
+      <svg class="flick" width="76" height="76" viewBox="0 0 24 24" aria-hidden="true"><path fill="#F5B53D" d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.9L12 17.6 5.9 20.9l1.2-6.9-5-4.8 6.9-.9z"/></svg>
+      <span style="font-size: 30px; font-weight: 900">128 stars</span>
+      <span style="font-size: 16px; line-height: 23px; font-weight: 700; color: #7A5A45">Every activity gives you up to 3 stars. Spend them on clothes for Avi in his room!</span>
+      <div style="width: 100%; display: flex; flex-direction: column; gap: 8px; text-align: left">
+        <sc-for list="{{earned}}" as="e" hint-placeholder-count="3">
+          <div style="display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 14px; background: #FFF6E8; font-size: 15px; font-weight: 800"><span style="flex-grow: 1">{{e.what}}</span><span style="color: #A0531C">+{{e.n}}</span></div>
+        </sc-for>
+      </div>
+      <a href="AviRoom.dc.html" style="width: 100%; display: flex; align-items: center; justify-content: center; height: 56px; border-radius: 999px; background: #D63B2F; color: #FFFFFF; font-size: 19px; font-weight: 900; text-decoration: none; box-shadow: 0 5px 0 #A8281E">Visit Avi's room</a>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+componentDidMount() { this.schedule(6000); }
+componentWillUnmount() { clearTimeout(this.pt); clearTimeout(this.ht); }
+schedule(ms) {
+clearTimeout(this.pt);
+this.pt = setTimeout(() => {
+const corners = ['R', 'L', 'BR', 'BL'];
+const s = this.state || {};
+if (!s.sheet) this.setState({ peek: corners[Math.floor(Math.random() * corners.length)] });
+this.ht = setTimeout(() => this.setState({ peek: null }), 1800);
+this.schedule(180000 + Math.random() * 180000);
+}, ms);
+}
+renderVals() {
+const s = this.state || {};
+const done = ['M', 'T', 'W', 'T', 'F'];
+const week = ['M', 'T', 'W', 'T', 'F', 'S', 'S'].map((day, i) => {
+const isDone = i < 5, today = i === 5;
+return { day: day, mark: isDone ? '✓' : today ? '?' : '', bg: isDone ? '#D63B2F' : '#FFF6E8', fg: isDone ? '#FFFFFF' : '#A0531C', border: today ? '3px dashed #D63B2F' : '2px solid #EED9BF' };
+});
+return {
+peekR: s.peek === 'R', peekL: s.peek === 'L', peekBR: s.peek === 'BR', peekBL: s.peek === 'BL',
+sheet: !!s.sheet, streakOpen: s.sheet === 'streak', starsOpen: s.sheet === 'stars',
+openStreak: () => this.setState({ sheet: 'streak', peek: null }),
+openStars: () => this.setState({ sheet: 'stars', peek: null }),
+close: () => this.setState({ sheet: null }),
+week: week,
+earned: [{ what: 'Shape hunt: circles', n: 3 }, { what: 'Letter sounds A–E', n: 2 }, { what: 'Calm-down breathing', n: 3 }],
+worlds: [
+{ name: 'Math', c: '#4E9F3D', soft: '#E3F3DD', p: 62, d: 'M5 12h14M12 5v14' },
+{ name: 'Reading', c: '#2F86C9', soft: '#DDEEFB', p: 40, d: 'M4 5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2zM4 19V5' },
+{ name: 'Science', c: '#8466D6', soft: '#ECE6FB', p: 25, d: 'M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3' },
+{ name: 'Feelings', c: '#E46A8E', soft: '#FCE4EB', p: 50, d: 'M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z' },
+{ name: 'Logic', c: '#2F86C9', soft: '#DDEEFB', p: 30, d: 'M4 4h7v7H4zM13 13h7v7h-7zM13 4h7v7h-7z' },
+{ name: 'Memory', c: '#8466D6', soft: '#ECE6FB', p: 35, d: 'M7 4h10v16H7zM10 8h4M10 12h4' },
+{ name: 'Create', c: '#D63B2F', soft: '#FCE4EB', p: 45, d: 'M4 20l4-1 11-11-3-3L5 16zM14 7l3 3' },
+{ name: 'Wiggle', c: '#D9894A', soft: '#FCEBD3', p: 70, d: 'M9 11V5a1.5 1.5 0 0 1 3 0v5M12 10V4a1.5 1.5 0 0 1 3 0v6M15 10V6a1.5 1.5 0 0 1 3 0v8a6 6 0 0 1-12 0v-2a1.5 1.5 0 0 1 3 0' }
+],
+tabs: [
+{ label: 'Home', fg: '#D63B2F', href: '#home', d: 'M4 11l8-7 8 7v9h-5v-6H9v6H4z' },
+{ label: 'Road', fg: '#7A5A45', href: 'TrophyRoad.dc.html', d: 'M8 21l2-18M16 21l-2-18M12 6v2M12 12v2M12 18v2' },
+{ label: "Avi's room", fg: '#7A5A45', href: 'AviRoom.dc.html', d: 'M3 21h18M5 21V9l7-5 7 5v12M10 21v-5h4v5' },
+{ label: 'Grown-ups', fg: '#7A5A45', href: 'ParentDash.dc.html', d: 'M7 11V8a5 5 0 0 1 10 0v3M5 11h14v10H5z' }
+]
+};
+}
+}
+</script>
+</body>
+</html>
+
+
+<!-- ==================== Game.dc.html ==================== -->
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Counting game: dino eggs</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&amp;display=swap">
+<style>
+body{margin:0}
+.avi{image-rendering:pixelated;object-fit:contain}
+.mul{mix-blend-mode:multiply}
+@keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-9px)}40%{transform:translateX(8px)}60%{transform:translateX(-6px)}80%{transform:translateX(4px)}}
+.shake{animation:shake .45s ease-in-out}
+@keyframes up{from{transform:translateY(100%)}to{transform:none}}
+.up{animation:up .32s cubic-bezier(.2,.9,.3,1.2) both}
+@keyframes f1{0%{transform:translate(0,-10px) rotate(0);opacity:1}100%{transform:translate(-30px,300px) rotate(300deg);opacity:0}}
+@keyframes f2{0%{transform:translate(0,-10px) rotate(0);opacity:1}100%{transform:translate(20px,340px) rotate(-260deg);opacity:0}}
+@keyframes f3{0%{transform:translate(0,-10px) rotate(0);opacity:1}100%{transform:translate(40px,280px) rotate(200deg);opacity:0}}
+.cf{position:absolute;top:0;width:9px;height:9px;border-radius:2px;opacity:0;pointer-events:none}
+.f1{animation:f1 1.5s ease-in forwards}.f2{animation:f2 1.7s ease-in forwards}.f3{animation:f3 1.4s ease-in forwards}
+@keyframes tipin{0%{transform:translate(-120px,40px) rotate(-12deg)}70%{transform:translate(6px,0) rotate(3deg)}100%{transform:none}}
+.tipin{animation:tipin .45s ease-out both}
+@media (prefers-reduced-motion: reduce){.shake,.up,.f1,.f2,.f3,.tipin{animation:none}}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #E3F3DD; font-family: Nunito, ui-rounded, system-ui, sans-serif; color: #3B2418; display: flex; flex-direction: column; padding: 56px 20px 32px; gap: 18px; position: relative; overflow: hidden">
+  <div style="display: flex; align-items: center; gap: 12px">
+    <a href="KidHome.dc.html" aria-label="Close game" style="width: 44px; height: 44px; border-radius: 999px; background: #FFFFFF; display: grid; place-items: center; flex: none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3B2418" stroke-width="2.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></a>
+    <div style="flex-grow: 1; height: 16px; border-radius: 999px; background: #FFFFFF; overflow: hidden"><div style="width: 40%; height: 100%; border-radius: 999px; background: #4E9F3D"></div></div>
+    <span style="font-size: 17px; font-weight: 900; color: #2F6B23">2 of 5</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 8px">
+    <h1 style="margin: 0; font-size: 27px; line-height: 33px; font-weight: 900; flex-grow: 1">How many dino eggs are in the nest?</h1>
+    <div style="display: flex; flex-direction: column; gap: 8px; flex: none">
+      <button type="button" aria-label="Hear the question" style="width: 50px; height: 50px; border-radius: 999px; border: 0; background: #FFFFFF; display: grid; place-items: center; cursor: pointer"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path fill="#2F86C9" d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 9a4 4 0 0 1 0 6" fill="none" stroke="#2F86C9" stroke-width="2.4" stroke-linecap="round"/></svg></button>
+      <button type="button" onClick="{{showTip}}" aria-label="Get a tip from Avi" style="width: 50px; height: 50px; border-radius: 999px; border: 0; background: #F5B53D; display: grid; place-items: center; cursor: pointer; box-shadow: 0 4px 0 #C98A1C"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B2418" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg></button>
+    </div>
+  </div>
+  <div style="height: 240px; border-radius: 28px; background: #FFFFFF; position: relative; display: flex; align-items: flex-end; justify-content: center; overflow: hidden">
+    <div style="position: absolute; left: 30px; top: 26px; width: 70px; height: 70px; border-radius: 999px; background: #FCEBD3"></div>
+    <div style="position: absolute; right: 40px; top: 40px; width: 40px; height: 40px; border-radius: 999px; background: #FCEBD3"></div>
+    <div style="position: absolute; bottom: 22px; width: 270px; height: 70px; border-radius: 999px; background: #B8692F"></div>
+    <div style="position: absolute; bottom: 44px; width: 250px; height: 40px; border-radius: 999px; background: #D9894A"></div>
+    <div style="display: flex; gap: 10px; position: relative; margin-bottom: 54px">
+      <sc-for list="{{eggs}}" as="e" hint-placeholder-count="4">
+        <span style="width: 50px; height: 64px; border-radius: 50% 50% 46% 46% / 60% 60% 40% 40%; background: {{e.c}}; display: block; position: relative; box-shadow: inset -6px -6px 0 rgba(59, 36, 24, 0.12)"><span style="position: absolute; left: 12px; top: 16px; width: 10px; height: 10px; border-radius: 999px; background: rgba(255, 255, 255, 0.7)"></span></span>
+      </sc-for>
+    </div>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px">
+    <sc-for list="{{answers}}" as="a" hint-placeholder-count="3">
+      <button type="button" onClick="{{a.pick}}" class="{{a.cls}}" aria-label="{{a.n}} eggs" style="height: 96px; border-radius: 24px; border: 3px solid {{a.border}}; background: {{a.bg}}; box-shadow: 0 6px 0 {{a.shadow}}; font: 900 46px Nunito, ui-rounded, system-ui, sans-serif; color: {{a.fg}}; cursor: pointer">{{a.n}}</button>
+    </sc-for>
+  </div>
+  <div style="flex-grow: 1"></div>
+  <sc-if value="{{tip}}" hint-placeholder-val="{{false}}">
+    <div class="tipin" style="position: absolute; left: 14px; right: 14px; bottom: 30px; display: flex; align-items: flex-end; gap: 6px">
+      <img class="avi" src="/_blob/f44dde0afc81dc62738803f5cab9147e" alt="Avi with an idea" style="width: 120px; height: 110px; flex: none">
+      <div style="flex-grow: 1; background: #FFFFFF; border: 3px solid #F5B53D; border-radius: 20px 20px 20px 6px; padding: 12px 14px; display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px">
+        <span style="font-size: 17px; line-height: 23px; font-weight: 800">Touch each egg with your finger and say a number out loud!</span>
+        <button type="button" onClick="{{hideTip}}" style="align-self: flex-start; padding: 6px 12px; border-radius: 999px; border: 0; background: #FCEBD3; font: 800 14px Nunito, ui-rounded, system-ui, sans-serif; color: #A0531C; cursor: pointer">Got it</button>
+      </div>
+    </div>
+  </sc-if>
+  <sc-if value="{{right}}" hint-placeholder-val="{{false}}">
+    <div class="up" style="position: absolute; left: 0; right: 0; bottom: 0; background: #FFFFFF; border-radius: 28px 28px 0 0; padding: 18px 20px 32px; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 -8px 24px rgba(59, 36, 24, 0.12)">
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div style="width: 96px; height: 96px; border-radius: 999px; background: #FCEBD3; display: grid; place-items: center; flex: none"><img class="avi mul" src="/_blob/02ed70c93c5cdb78ced2aded4bf8695b" alt="Avi cheering" style="width: 90px; height: 90px"></div>
+        <div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 26px; font-weight: 900; color: #2F6B23">You did it, Mila!</span><span style="font-size: 16px; font-weight: 800">4 eggs. <span style="color: #A0531C">+3 stars</span></span></div>
+      </div>
+      <a href="KidHome.dc.html" style="display: flex; align-items: center; justify-content: center; height: 60px; border-radius: 999px; background: #4E9F3D; color: #FFFFFF; font-size: 20px; font-weight: 900; text-decoration: none; box-shadow: 0 5px 0 #2F6B23">Next</a>
+    </div>
+  </sc-if>
+  <sc-if value="{{wrong}}" hint-placeholder-val="{{false}}">
+    <div class="up" style="position: absolute; left: 0; right: 0; bottom: 0; background: #FFFFFF; border-radius: 28px 28px 0 0; padding: 18px 20px 32px; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 -8px 24px rgba(59, 36, 24, 0.12)">
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div style="width: 96px; height: 96px; border-radius: 999px; background: #FCEBD3; display: grid; place-items: center; flex: none"><img class="avi mul" src="/_blob/2689b009c7d552d9f0bd44bebc7b4054" alt="Avi thinking" style="width: 90px; height: 90px"></div>
+        <div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 26px; font-weight: 900; color: #A0531C">Great try!</span><span style="font-size: 16px; font-weight: 800">Let's count together one more time.</span></div>
+      </div>
+      <button type="button" onClick="{{retry}}" style="height: 60px; border-radius: 999px; border: 0; background: #D63B2F; color: #FFFFFF; font: 900 20px Nunito, ui-rounded, system-ui, sans-serif; box-shadow: 0 5px 0 #A8281E; cursor: pointer">Try again</button>
+    </div>
+  </sc-if>
+  <sc-if value="{{burst}}" hint-placeholder-val="{{false}}">
+    <div style="position: absolute; inset: 0; pointer-events: none">
+      <sc-for list="{{pieces}}" as="p" hint-placeholder-count="0">
+        <span class="cf {{p.k}}" style="left: {{p.x}}px; background: {{p.c}}; animation-delay: {{p.d}}s"></span>
+      </sc-for>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+componentWillUnmount() { clearTimeout(this.t); }
+fire(gentle) {
+clearTimeout(this.t);
+this.setState({ burst: false });
+setTimeout(() => this.setState({ burst: true, gentle: gentle }), 20);
+this.t = setTimeout(() => this.setState({ burst: false }), 2000);
+}
+renderVals() {
+const st = this.state || {};
+const picked = st.picked;
+const answers = [3, 4, 5].map((n) => {
+const isPicked = picked === n;
+const ok = n === 4;
+return {
+n: n,
+cls: isPicked && !ok ? 'shake' : '',
+pick: () => { this.setState({ picked: n, tip: false, tries: (st.tries || 0) + 1 }); this.fire(n !== 4); },
+bg: isPicked ? (ok ? '#4E9F3D' : '#D63B2F') : '#FFFFFF',
+fg: isPicked ? '#FFFFFF' : '#3B2418',
+border: isPicked ? (ok ? '#2F6B23' : '#A8281E') : '#FFFFFF',
+shadow: isPicked ? (ok ? '#2F6B23' : '#A8281E') : '#B9DDB0'
+};
+});
+const colors = st.gentle ? ['#F5B53D', '#FCEBD3', '#E9A263'] : ['#F5B53D', '#D63B2F', '#2F86C9', '#4E9F3D', '#8466D6', '#E46A8E'];
+const count = st.gentle ? 12 : 28;
+const pieces = [];
+for (let k = 0; k < count; k++) pieces.push({ x: (k * 53) % 380, c: colors[k % colors.length], k: ['f1', 'f2', 'f3'][k % 3], d: ((k * 7) % 10) / 25 });
+return {
+eggs: [{ c: '#F5B53D' }, { c: '#E46A8E' }, { c: '#2F86C9' }, { c: '#8466D6' }],
+answers: answers, pieces: pieces, burst: !!st.burst,
+right: picked === 4,
+wrong: picked !== undefined && picked !== null && picked !== 4,
+tip: !!st.tip,
+showTip: () => this.setState({ tip: true }),
+hideTip: () => this.setState({ tip: false }),
+retry: () => this.setState({ picked: null })
+};
+}
+}
+</script>
+</body>
+</html>
+
+
+<!-- ==================== Story.dc.html ==================== -->
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AI story book</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&amp;display=swap">
+<style>
+body{margin:0}
+.avi{image-rendering:pixelated;mix-blend-mode:multiply;object-fit:contain}
+@keyframes turn{from{transform:perspective(900px) rotateY(-14deg);opacity:.4}to{transform:none;opacity:1}}
+.turn{animation:turn .4s ease-out both}
+@keyframes tw{0%,100%{opacity:.35}50%{opacity:1}}
+.tw{animation:tw 2.2s ease-in-out infinite}
+@media (prefers-reduced-motion: reduce){.turn,.tw{animation:none}}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #2A1E17; font-family: Nunito, ui-rounded, system-ui, sans-serif; color: #FCEFDF; display: flex; flex-direction: column; padding: 56px 18px 28px; gap: 14px; position: relative; overflow: hidden">
+  <span class="tw" style="position: absolute; left: 40px; top: 30px; width: 6px; height: 6px; background: #F7C25A"></span>
+  <span class="tw" style="position: absolute; left: 300px; top: 44px; width: 8px; height: 8px; background: #F7C25A; animation-delay: .7s"></span>
+  <span class="tw" style="position: absolute; left: 210px; top: 20px; width: 5px; height: 5px; background: #FCEFDF; animation-delay: 1.3s"></span>
+  <div style="display: flex; align-items: center; gap: 12px; position: relative">
+    <a href="KidHome.dc.html" aria-label="Close book" style="width: 44px; height: 44px; border-radius: 999px; background: #35261C; display: grid; place-items: center; flex: none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FCEFDF" stroke-width="2.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></a>
+    <div style="display: flex; flex-direction: column; flex-grow: 1; min-width: 0">
+      <span style="font-size: 12px; font-weight: 900; letter-spacing: 1px; color: #F7C25A">WRITTEN FOR MILA BY AVI</span>
+      <span style="font-size: 16px; font-weight: 900; line-height: 20px">Mila and the Star-Counting Dinosaur</span>
+    </div>
+  </div>
+  <sc-if value="{{cover}}" hint-placeholder-val="{{true}}">
+    <div class="turn" style="flex-grow: 1; background: #8466D6; border-radius: 28px; display: flex; flex-direction: column; align-items: center; padding: 26px 22px; gap: 14px; position: relative; overflow: hidden">
+      <div style="position: absolute; left: -40px; bottom: -40px; width: 200px; height: 200px; border-radius: 999px; background: #9B7BE0"></div>
+      <div style="position: absolute; right: -30px; top: 60px; width: 120px; height: 120px; border-radius: 999px; background: #F5B53D"></div>
+      <span style="position: relative; padding: 6px 12px; border-radius: 999px; background: #FFF6E8; color: #5A40A8; font-size: 13px; font-weight: 900">10 pages · 5 min · Little Cubs</span>
+      <h2 style="position: relative; margin: 0; font-size: 34px; line-height: 38px; font-weight: 900; color: #FFFFFF; text-align: center; text-wrap: balance">Mila and the Star-Counting Dinosaur</h2>
+      <div style="position: relative; width: 220px; height: 220px; border-radius: 999px; background: #FCEBD3; display: grid; place-items: center; margin-top: 4px"><img class="avi" src="/_blob/4b387dc2f7645d73c6b33a6ed6c14a18" alt="Avi reading" style="width: 196px; height: 196px"></div>
+      <div style="position: relative; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px">
+        <span style="padding: 5px 10px; border-radius: 999px; background: #5A40A8; font-size: 12px; font-weight: 800; color: #FFFFFF">Dinosaurs</span><span style="padding: 5px 10px; border-radius: 999px; background: #5A40A8; font-size: 12px; font-weight: 800; color: #FFFFFF">Space</span><span style="padding: 5px 10px; border-radius: 999px; background: #5A40A8; font-size: 12px; font-weight: 800; color: #FFFFFF">Pepper the cat</span><span style="padding: 5px 10px; border-radius: 999px; background: #5A40A8; font-size: 12px; font-weight: 800; color: #FFFFFF">Counting to 5</span>
+      </div>
+      <div style="flex-grow: 1"></div>
+      <button type="button" onClick="{{open}}" style="position: relative; width: 100%; height: 58px; border-radius: 999px; border: 0; background: #D63B2F; color: #FFFFFF; font: 900 19px Nunito, ui-rounded, system-ui, sans-serif; box-shadow: 0 5px 0 #A8281E; cursor: pointer">Read with me</button>
+    </div>
+  </sc-if>
+  <sc-if value="{{reading}}" hint-placeholder-val="{{false}}">
+    <div class="turn" style="flex-grow: 1; background: #FFF6E8; border-radius: 28px; color: #3B2418; display: flex; flex-direction: column; overflow: hidden">
+      <sc-if value="{{page.art}}" hint-placeholder-val="{{true}}">
+        <div style="height: 290px; background: {{page.sky}}; position: relative; overflow: hidden">
+          <div style="position: absolute; left: -30px; bottom: -60px; width: 260px; height: 160px; border-radius: 999px; background: {{page.hill}}"></div>
+          <div style="position: absolute; right: -50px; bottom: -70px; width: 280px; height: 170px; border-radius: 999px; background: {{page.hill2}}"></div>
+          <div style="position: absolute; right: 40px; top: 34px; width: 56px; height: 56px; border-radius: 999px; background: {{page.moon}}"></div>
+          <span style="position: absolute; left: 14px; top: 14px; padding: 5px 10px; border-radius: 999px; background: rgba(255, 246, 232, 0.92); font-size: 12px; font-weight: 900; color: #5A40A8">AI painting</span>
+          <span style="position: absolute; left: 14px; right: 14px; bottom: 14px; padding: 8px 10px; border-radius: 12px; background: rgba(255, 246, 232, 0.92); font-size: 12px; line-height: 16px; font-weight: 700; font-style: italic; color: #3B2418">{{page.prompt}}</span>
+        </div>
+      </sc-if>
+      <div style="padding: 20px 20px 16px; display: flex; flex-direction: column; gap: 12px; flex-grow: 1">
+        <p style="margin: 0; font-size: 23px; line-height: 35px; font-weight: 800"><sc-for list="{{words}}" as="w" hint-placeholder-count="12"><span style="background: {{w.bg}}; border-radius: 6px; padding: 0 2px">{{w.t}}</span> </sc-for></p>
+        <div style="flex-grow: 1"></div>
+        <sc-if value="{{page.skill}}" hint-placeholder-val="{{false}}"><div style="display: flex; align-items: center; gap: 8px; background: #E3F3DD; border-radius: 14px; padding: 8px 12px; font-size: 13px; font-weight: 800; color: #2F6B23"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2F6B23" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5v14"/></svg>{{page.skill}}</div></sc-if>
+      </div>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: space-between; position: relative">
+      <button type="button" onClick="{{prev}}" aria-label="Previous page" style="width: 60px; height: 60px; border-radius: 999px; border: 0; background: #35261C; display: grid; place-items: center; cursor: pointer"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FCEFDF" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 6px">
+        <button type="button" onClick="{{toggle}}" aria-label="{{playLabel}}" style="width: 76px; height: 76px; border-radius: 999px; border: 0; background: #E8574A; display: grid; place-items: center; box-shadow: 0 5px 0 #B83A2F; cursor: pointer">
+          <sc-if value="{{playing}}" hint-placeholder-val="{{true}}"><svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1.5" fill="#FFFFFF"/><rect x="14" y="5" width="4" height="14" rx="1.5" fill="#FFFFFF"/></svg></sc-if>
+          <sc-if value="{{paused}}" hint-placeholder-val="{{false}}"><svg width="32" height="32" viewBox="0 0 24 24" aria-hidden="true"><path fill="#FFFFFF" d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg></sc-if>
+        </button>
+        <span style="font-size: 14px; font-weight: 800; color: #CDB39C">Page {{num}} of 10 · Narrator voice</span>
+      </div>
+      <button type="button" onClick="{{next}}" aria-label="Next page" style="width: 60px; height: 60px; border-radius: 999px; border: 0; background: #35261C; display: grid; place-items: center; cursor: pointer"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FCEFDF" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+componentDidMount() { this.iv = setInterval(() => { const s = this.state || {}; if (s.reading && s.playing !== false) this.setState({ w: (s.w || 0) + 1 }); }, 420); }
+componentWillUnmount() { clearInterval(this.iv); }
+renderVals() {
+const night = { sky: '#3B4F8F', hill: '#2F6B23', hill2: '#4E9F3D', moon: '#F7C25A' };
+const dusk = { sky: '#E9A263', hill: '#B8692F', hill2: '#D9894A', moon: '#FFF6E8' };
+const space = { sky: '#2A2340', hill: '#5A40A8', hill2: '#8466D6', moon: '#F7C25A' };
+const pages = [
+{ t: 'Mila lived in a cozy house with her cat, Pepper. Every night, she looked up at the stars.', art: true, ...dusk, prompt: 'Soft storybook painting: a girl with her cat at a bedroom window at dusk, warm lamp light, first stars.' },
+{ t: 'One night, a little green dinosaur peeked through her window. "Hello! I’m Tops," he whispered.', art: false },
+{ t: '"I fell from Star Valley in the sky," said Tops. "Can you help me get home?"', art: true, ...night, prompt: 'A small friendly green triceratops in a moonlit garden, looking up at the sky, gentle watercolor.' },
+{ t: 'Mila grabbed her crayons. "Let’s draw a rocket!" Pepper meowed, "Me too!"', art: false, skill: 'New word: rocket' },
+{ t: 'Swoosh! The rocket zoomed up, up, up, past one, two, three fluffy clouds.', art: true, ...night, prompt: 'A crayon-drawn rocket with a girl, a cat and a dinosaur flying past three fluffy clouds at night.', skill: 'Counting to 3' },
+{ t: 'In space, the stars twinkled. "My home has five stars in a row," said Tops.', art: false },
+{ t: 'Mila counted: one, two, three, four... "Only four! Where is the fifth star?"', art: true, ...space, prompt: 'Four bright stars in a row in a purple galaxy, the rocket floating nearby, cozy and magical.', skill: 'Counting to 5' },
+{ t: 'Pepper pointed her paw. A tiny star was hiding behind the moon. "Five!"', art: false, skill: 'Counting to 5' },
+{ t: 'Tops hugged Mila. "Thank you! You are the best star-counter in the whole sky."', art: true, ...space, prompt: 'The dinosaur hugging the girl on a glowing star path, the cat smiling, warm golden light.' },
+{ t: 'Back in bed, Mila smiled. Up above, five stars twinkled, just for her. The end.', art: false, skill: 'Feeling: proud' }
+];
+const st = this.state || {};
+const i = st.i || 0;
+const page = pages[i];
+const words = page.t.split(' ');
+const wi = (st.w || 0) % (words.length + 4);
+return {
+cover: !st.reading, reading: !!st.reading,
+page: page, num: i + 1,
+words: words.map((t, k) => ({ t: t, bg: k === wi ? '#F5B53D' : 'transparent' })),
+playing: st.playing !== false, paused: st.playing === false, playLabel: st.playing === false ? 'Play narration' : 'Pause narration',
+open: () => this.setState({ reading: true, i: 0, w: 0 }),
+toggle: () => this.setState({ playing: st.playing === false }),
+prev: () => (i === 0 ? this.setState({ reading: false }) : this.setState({ i: i - 1, w: 0 })),
+next: () => this.setState({ i: Math.min(pages.length - 1, i + 1), w: 0 })
+};
+}
+}
+</script>
+</body>
+</html>
+
+
+<!-- ==================== ParentDash.dc.html ==================== -->
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Parent dashboard</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&amp;family=Pixelify+Sans:wght@600&amp;display=swap">
+<style>
+body{margin:0}
+.avi{image-rendering:pixelated;mix-blend-mode:multiply;object-fit:contain}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FFF6E8; font-family: Nunito, ui-rounded, system-ui, sans-serif; color: #3B2418; display: flex; flex-direction: column; padding: 54px 18px 24px; gap: 14px">
+  <div style="display: flex; align-items: center; gap: 12px">
+    <a href="KidHome.dc.html" aria-label="Back to Mila's home" style="width: 44px; height: 44px; border-radius: 999px; background: #FFFFFF; border: 2px solid #EED9BF; display: grid; place-items: center; flex: none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3B2418" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></a>
+    <div style="display: flex; flex-direction: column; flex-grow: 1"><span style="font-size: 13px; font-weight: 800; color: #7A5A45">Grown-ups · Nov 11–17</span><span style="font-size: 24px; line-height: 28px; font-weight: 900">Mila's week</span></div>
+    <div style="width: 64px; height: 64px; border-radius: 999px; background: #FCEBD3; display: grid; place-items: center; flex: none"><img class="avi" src="/_blob/f12160152564bafe0360fc2889166f47" alt="Avi having tea" style="width: 60px; height: 60px"></div>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px">
+    <sc-for list="{{stats}}" as="s" hint-placeholder-count="4">
+      <div style="background: #FFFFFF; border: 2px solid #EED9BF; border-radius: 16px; padding: 10px 6px; display: flex; flex-direction: column; align-items: center; gap: 2px"><span style="font: 600 22px 'Pixelify Sans', ui-monospace, monospace; color: {{s.c}}">{{s.v}}</span><span style="font-size: 12px; font-weight: 800; color: #7A5A45; text-align: center">{{s.l}}</span></div>
+    </sc-for>
+  </div>
+  <div style="background: #A0531C; border-radius: 20px; padding: 14px 16px; color: #FFFFFF; display: flex; gap: 12px; align-items: flex-start">
+    <span style="width: 34px; height: 34px; border-radius: 999px; background: #B8692F; display: grid; place-items: center; flex: none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg></span>
+    <div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 13px; font-weight: 900; letter-spacing: .8px; color: #FFE2C4">AVI'S INSIGHT</span><span style="font-size: 15px; line-height: 21px; font-weight: 700">Mila counts confidently to 20 and loves puzzles. Rhyming is still tricky, so this week her dinosaur stories will practise rhymes.</span></div>
+  </div>
+  <div style="background: #FFFFFF; border: 2px solid #EED9BF; border-radius: 20px; padding: 14px 16px; display: flex; flex-direction: column; gap: 12px">
+    <span style="font-size: 17px; font-weight: 900">Skills by world</span>
+    <sc-for list="{{skills}}" as="k" hint-placeholder-count="4">
+      <div style="display: flex; flex-direction: column; gap: 5px">
+        <div style="display: flex; justify-content: space-between; font-size: 14px; font-weight: 800"><span>{{k.name}}</span><span style="color: {{k.tc}}">{{k.state}}</span></div>
+        <div style="height: 10px; border-radius: 999px; background: {{k.soft}}; overflow: hidden"><div style="width: {{k.p}}%; height: 100%; border-radius: 999px; background: {{k.c}}"></div></div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="background: #FFFFFF; border: 2px solid #EED9BF; border-radius: 20px; display: flex; flex-direction: column">
+    <div style="display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-bottom: 2px solid #F5E6D2">
+      <span style="flex-grow: 1; font-size: 15px; font-weight: 800">Weekly summary email</span>
+      <span role="switch" aria-checked="true" aria-label="Weekly summary email" style="width: 52px; height: 32px; border-radius: 999px; background: #4E9F3D; position: relative; flex: none"><span style="position: absolute; right: 3px; top: 3px; width: 26px; height: 26px; border-radius: 999px; background: #FFFFFF"></span></span>
+    </div>
+    <a href="QuizInterests.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-bottom: 2px solid #F5E6D2; text-decoration: none; color: #3B2418"><span style="flex-grow: 1; font-size: 15px; font-weight: 800">Edit Mila's learning profile</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7A5A45" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></a>
+    <a href="#subscription" style="display: flex; align-items: center; gap: 12px; padding: 14px 16px; text-decoration: none; color: #3B2418"><span style="flex-grow: 1; display: flex; flex-direction: column"><span style="font-size: 15px; font-weight: 800">Education+ · Yearly</span><span style="font-size: 13px; font-weight: 600; color: #7A5A45">Free trial: 6 days left</span></span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7A5A45" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></a>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+return {
+stats: [
+{ v: '48', l: 'minutes', c: '#3B2418' },
+{ v: '5', l: 'day streak', c: '#D63B2F' },
+{ v: '14', l: 'activities', c: '#3B2418' },
+{ v: '128', l: 'stars', c: '#A0531C' }
+],
+skills: [
+{ name: 'Math Meadow', state: 'Strong', p: 78, c: '#4E9F3D', soft: '#E3F3DD', tc: '#2F6B23' },
+{ name: 'Reading Forest', state: 'Practising', p: 44, c: '#2F86C9', soft: '#DDEEFB', tc: '#1F5F92' },
+{ name: 'Science Sky', state: 'Just started', p: 22, c: '#8466D6', soft: '#ECE6FB', tc: '#5A40A8' },
+{ name: 'Feelings Cottage', state: 'Growing', p: 56, c: '#E46A8E', soft: '#FCE4EB', tc: '#A3355A' }
+]
+};
+}
+}
+</script>
+</body>
+</html>
+
+
+<!-- ==================== World.dc.html ==================== -->
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>World activities</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&amp;display=swap">
+<style>
+body{margin:0}
+.scroller::-webkit-scrollbar{display:none}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(214,59,47,.4)}50%{box-shadow:0 0 0 8px rgba(214,59,47,0)}}
+.pulse{animation:pulse 1.8s ease-in-out infinite}
+@media (prefers-reduced-motion: reduce){.pulse{animation:none}}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FFF6E8; font-family: Nunito, ui-rounded, system-ui, sans-serif; color: #3B2418; display: flex; flex-direction: column; padding-top: 54px">
+  <div style="display: flex; align-items: center; gap: 12px; padding: 0 18px">
+    <a href="KidHome.dc.html" aria-label="Back home" style="width: 44px; height: 44px; border-radius: 999px; background: #FFFFFF; border: 2px solid #EED9BF; display: grid; place-items: center; flex: none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3B2418" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></a>
+    <span style="font-size: 24px; font-weight: 900; flex-grow: 1">Worlds</span>
+    <span style="font-size: 13px; font-weight: 800; color: #7A5A45">{{total}} activities</span>
+  </div>
+  <div class="scroller" style="display: flex; gap: 8px; overflow-x: auto; padding: 14px 18px 4px; scrollbar-width: none">
+    <sc-for list="{{worlds}}" as="w" hint-placeholder-count="8">
+      <button type="button" onClick="{{w.pick}}" aria-pressed="{{w.pressed}}" style="flex: none; display: flex; align-items: center; gap: 6px; padding: 8px 12px 8px 8px; border-radius: 999px; border: {{w.border}}; background: {{w.bg}}; font: 900 14px Nunito, ui-rounded, system-ui, sans-serif; color: {{w.fg}}; cursor: pointer"><span style="width: 22px; height: 22px; border-radius: 999px; background: {{w.c}}"></span>{{w.name}}</button>
+    </sc-for>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; margin: 10px 18px 0; padding: 4px; border-radius: 999px; background: #FCEBD3">
+    <sc-for list="{{bands}}" as="b" hint-placeholder-count="3">
+      <button type="button" onClick="{{b.pick}}" aria-pressed="{{b.pressed}}" style="height: 38px; border-radius: 999px; border: 0; background: {{b.bg}}; font: 900 13px Nunito, ui-rounded, system-ui, sans-serif; color: {{b.fg}}; cursor: pointer">{{b.label}}</button>
+    </sc-for>
+  </div>
+  <div style="margin: 12px 18px 0; border-radius: 24px; background: {{cur.soft}}; padding: 14px 16px; display: flex; align-items: center; gap: 12px">
+    <span style="width: 48px; height: 48px; border-radius: 999px; background: {{cur.c}}; flex: none"></span>
+    <div style="display: flex; flex-direction: column; flex-grow: 1"><span style="font-size: 20px; font-weight: 900">{{cur.name}}</span><span style="font-size: 13px; font-weight: 800; color: #5C4334">{{bandLabel}} · {{count}} activities · 7 done</span></div>
+  </div>
+  <sc-if value="{{loading}}" hint-placeholder-val="{{false}}"><span style="padding: 24px 18px; font-size: 15px; font-weight: 700; color: #7A5A45">Loading activities…</span></sc-if>
+  <sc-if value="{{failed}}" hint-placeholder-val="{{false}}"><span style="padding: 24px 18px; font-size: 15px; font-weight: 700; color: #A8281E">Couldn't load the activity list. Reopen this screen to try again.</span></sc-if>
+  <div style="flex-grow: 1; min-height: 0; overflow-y: auto; padding: 12px 18px 24px; display: flex; flex-direction: column; gap: 8px">
+    <sc-for list="{{items}}" as="a" hint-placeholder-count="8">
+      <a href="Game.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 18px; background: #FFFFFF; border: 2px solid {{a.border}}; text-decoration: none; color: #3B2418">
+        <span class="{{a.cls}}" style="width: 40px; height: 40px; border-radius: 999px; background: {{a.dotBg}}; color: {{a.dotFg}}; display: grid; place-items: center; flex: none; font-size: 15px; font-weight: 900">{{a.mark}}</span>
+        <span style="display: flex; flex-direction: column; flex-grow: 1; min-width: 0"><span style="font-size: 15px; line-height: 19px; font-weight: 900">{{a.title}}</span><span style="font-size: 12px; font-weight: 700; color: #7A5A45">{{a.meta}}</span></span>
+        <span style="font-size: 13px; font-weight: 900; color: #A0531C; flex: none">{{a.stars}}</span>
+      </a>
+    </sc-for>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+componentDidMount() {
+this.setState({ loading: true });
+fetch('content/activities.json').then((r) => r.json()).then((d) => this.setState({ data: d, loading: false })).catch(() => this.setState({ failed: true, loading: false }));
+}
+renderVals() {
+const s = this.state || {};
+const W = [
+{ id: 'math', name: 'Math Meadow', c: '#4E9F3D', soft: '#E3F3DD' }, { id: 'reading', name: 'Reading Forest', c: '#2F86C9', soft: '#DDEEFB' },
+{ id: 'science', name: 'Science Sky', c: '#8466D6', soft: '#ECE6FB' }, { id: 'feelings', name: 'Feelings Cottage', c: '#E46A8E', soft: '#FCE4EB' },
+{ id: 'logic', name: 'Logic Lane', c: '#2F86C9', soft: '#DDEEFB' }, { id: 'memory', name: 'Memory Pond', c: '#8466D6', soft: '#ECE6FB' },
+{ id: 'creativity', name: 'Creativity Studio', c: '#D63B2F', soft: '#FCE4EB' }, { id: 'wiggle', name: 'Wiggle Park', c: '#D9894A', soft: '#FCEBD3' }
+];
+const B = [['cubs', 'Cubs 3–5', 'Little Cubs'], ['explorers', 'Explorers 6–8', 'Explorers'], ['trailblazers', 'Trailblazers 9–12', 'Trailblazers']];
+const world = s.world || 'math', band = s.band || 'cubs';
+const cur = W.find((w) => w.id === world);
+const E = { count: 'Count & tap', match: 'Match', sort: 'Sort & drag', trace: 'Trace', sound: 'Sounds', pick: 'Quiz', pattern: 'Patterns', changed: 'What changed?', pop: 'Pop & catch', choice: 'Choices', build: 'Build', draw: 'Draw', rhythm: 'Rhythm', motion: 'Move' };
+const all = (s.data && s.data.activities) || [];
+const list = all.filter((a) => a.world === world && a.band === band);
+const items = list.map((a, i) => {
+const done = i < 7, next = i === 7;
+return {
+title: a.title, meta: E[a.engine] + ' · ' + a.skill + ' · ' + a.minutes + ' min',
+mark: done ? '✓' : String(a.order), stars: done ? (i % 3 === 0 ? '★★☆' : '★★★') : '',
+dotBg: done ? cur.c : next ? '#D63B2F' : '#FFF6E8', dotFg: done || next ? '#FFFFFF' : '#7A5A45',
+border: next ? '#D63B2F' : '#EED9BF', cls: next ? 'pulse' : ''
+};
+});
+return {
+total: all.length || 480, loading: !!s.loading, failed: !!s.failed,
+cur: cur, count: list.length, bandLabel: B.find((b) => b[0] === band)[2], items: items,
+worlds: W.map((w) => { const on = w.id === world; return { ...w, pressed: on ? 'true' : 'false', border: on ? '3px solid ' + w.c : '2px solid #EED9BF', bg: on ? w.soft : '#FFFFFF', fg: '#3B2418', pick: () => this.setState({ world: w.id }) }; }),
+bands: B.map((b) => { const on = b[0] === band; return { label: b[1], pressed: on ? 'true' : 'false', bg: on ? '#FFFFFF' : 'transparent', fg: on ? '#3B2418' : '#7A5A45', pick: () => this.setState({ band: b[0] }) }; })
+};
+}
+}
+</script>
+</body>
+</html>
+
+
+<!-- ==================== TrophyRoad.dc.html ==================== -->
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Trophy road</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&amp;display=swap">
+<style>
+body{margin:0}
+.px{image-rendering:pixelated}
+@keyframes pulse{0%,100%{box-shadow:0 6px 0 #A8281E,0 0 0 0 rgba(214,59,47,.4)}50%{box-shadow:0 6px 0 #A8281E,0 0 0 12px rgba(214,59,47,0)}}
+.pulse{animation:pulse 1.8s ease-in-out infinite}
+@keyframes wiggle{0%,100%{transform:rotate(0)}25%{transform:rotate(-8deg)}75%{transform:rotate(8deg)}}
+.wiggle{animation:wiggle .8s ease-in-out infinite}
+@keyframes shakehard{0%,100%{transform:translateX(0) rotate(0)}20%{transform:translateX(-10px) rotate(-6deg)}40%{transform:translateX(10px) rotate(6deg)}60%{transform:translateX(-8px) rotate(-4deg)}80%{transform:translateX(8px) rotate(4deg)}}
+.shakehard{animation:shakehard .5s ease-in-out 2}
+@keyframes spin{to{transform:rotate(360deg)}}
+.rays{animation:spin 9s linear infinite}
+@keyframes rise{0%{transform:translateY(60px) scale(.2);opacity:0}60%{transform:translateY(-14px) scale(1.15);opacity:1}100%{transform:none;opacity:1}}
+.rise{animation:rise .8s cubic-bezier(.2,.9,.3,1.2) both}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.fade{animation:fade .25s ease-out both}
+@keyframes f1{0%{transform:translate(0,0) rotate(0);opacity:1}100%{transform:translate(-120px,260px) rotate(320deg);opacity:0}}
+@keyframes f2{0%{transform:translate(0,0) rotate(0);opacity:1}100%{transform:translate(110px,280px) rotate(-280deg);opacity:0}}
+@keyframes f3{0%{transform:translate(0,0) rotate(0);opacity:1}100%{transform:translate(20px,320px) rotate(200deg);opacity:0}}
+.cf{position:absolute;left:190px;top:300px;width:10px;height:10px;border-radius:2px;opacity:0}
+.f1{animation:f1 1.6s ease-out forwards}.f2{animation:f2 1.8s ease-out forwards}.f3{animation:f3 1.5s ease-out forwards}
+@media (prefers-reduced-motion: reduce){.pulse,.wiggle,.shakehard,.rays,.rise,.f1,.f2,.f3{animation:none}}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FFF6E8; font-family: Nunito, ui-rounded, system-ui, sans-serif; color: #3B2418; display: flex; flex-direction: column; position: relative; overflow: hidden">
+  <div style="display: flex; align-items: center; gap: 12px; padding: 54px 18px 12px; background: #FFF6E8; position: relative; z-index: 2">
+    <a href="KidHome.dc.html" aria-label="Back home" style="width: 44px; height: 44px; border-radius: 999px; background: #FFFFFF; border: 2px solid #EED9BF; display: grid; place-items: center; flex: none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3B2418" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></a>
+    <div style="display: flex; flex-direction: column; flex-grow: 1"><span style="font-size: 24px; line-height: 28px; font-weight: 900">Mila's road</span><span style="font-size: 13px; font-weight: 800; color: #7A5A45">Level 11 · Pancake Valley</span></div>
+    <span style="display: flex; align-items: center; gap: 5px; padding: 6px 11px; border-radius: 999px; background: #FFFFFF; border: 2px solid #EED9BF; font-size: 17px; font-weight: 900"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#F5B53D" d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.9L12 17.6 5.9 20.9l1.2-6.9-5-4.8 6.9-.9z"/></svg>128</span>
+  </div>
+  <div style="flex-grow: 1; min-height: 0; overflow-y: auto; padding-bottom: 30px">
+    <sc-for list="{{rows}}" as="r" hint-placeholder-count="12">
+      <sc-if value="{{r.isZone}}" hint-placeholder-val="{{false}}">
+        <div style="margin: 14px 18px 6px; padding: 14px 16px; border-radius: 24px; background: {{r.bg}}; display: flex; align-items: center; gap: 12px">
+          <span style="width: 46px; height: 46px; border-radius: 14px; background: {{r.c}}; display: grid; place-items: center; flex: none"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{r.d}}"/></svg></span>
+          <div style="display: flex; flex-direction: column"><span style="font-size: 18px; font-weight: 900">{{r.name}}</span><span style="font-size: 13px; font-weight: 800; color: #5C4334">{{r.sub}}</span></div>
+        </div>
+      </sc-if>
+      <sc-if value="{{r.isLevel}}" hint-placeholder-val="{{true}}">
+        <div style="height: 84px; position: relative">
+          <div style="position: absolute; left: {{r.x}}px; top: 6px; display: flex; align-items: center; gap: 10px">
+            <a href="Game.dc.html" class="{{r.cls}}" aria-label="{{r.label}}" style="width: 68px; height: 68px; border-radius: 999px; background: {{r.bg}}; box-shadow: 0 6px 0 {{r.edge}}; display: grid; place-items: center; text-decoration: none; color: {{r.fg}}; font-size: 22px; font-weight: 900">{{r.n}}</a>
+            <sc-if value="{{r.reward}}" hint-placeholder-val="{{false}}"><span style="padding: 5px 9px; border-radius: 999px; background: #FFFFFF; border: 2px solid #EED9BF; font-size: 12px; font-weight: 900; color: #A0531C">{{r.reward}}</span></sc-if>
+            <sc-if value="{{r.here}}" hint-placeholder-val="{{false}}"><img class="px" src="/_blob/485777b8dd40805eecc5714902d6151d" alt="Avi is here" style="width: 58px; height: 40px"></sc-if>
+          </div>
+        </div>
+      </sc-if>
+      <sc-if value="{{r.isChest}}" hint-placeholder-val="{{false}}">
+        <div style="height: 120px; display: grid; place-items: center">
+          <button type="button" onClick="{{r.open}}" class="{{r.cls}}" aria-label="{{r.label}}" style="width: 110px; height: 96px; border: 0; background: none; cursor: pointer; position: relative">
+            <svg width="110" height="90" viewBox="0 0 110 90" aria-hidden="true"><rect x="8" y="34" width="94" height="52" rx="10" fill="{{r.body}}"/><rect x="4" y="14" width="102" height="30" rx="12" fill="{{r.lid}}"/><rect x="47" y="30" width="16" height="22" rx="4" fill="#F5B53D"/><rect x="8" y="58" width="94" height="6" fill="{{r.band}}"/></svg>
+            <span style="position: absolute; left: 50%; bottom: -10px; transform: translateX(-50%); white-space: nowrap; padding: 4px 10px; border-radius: 999px; background: {{r.tagBg}}; color: #FFFFFF; font-size: 12px; font-weight: 900">{{r.tag}}</span>
+          </button>
+        </div>
+      </sc-if>
+    </sc-for>
+  </div>
+  <sc-if value="{{opening}}" hint-placeholder-val="{{false}}">
+    <div class="fade" role="dialog" aria-label="Treasure chest" style="position: absolute; inset: 0; z-index: 20; background: rgba(42, 30, 23, 0.9); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 24px; box-sizing: border-box; text-align: center; color: #FFF6E8">
+      <sc-if value="{{shaking}}" hint-placeholder-val="{{true}}">
+        <svg class="shakehard" width="150" height="124" viewBox="0 0 110 90" aria-hidden="true"><rect x="8" y="34" width="94" height="52" rx="10" fill="#A0531C"/><rect x="4" y="14" width="102" height="30" rx="12" fill="#D9894A"/><rect x="47" y="30" width="16" height="22" rx="4" fill="#F5B53D"/><rect x="8" y="58" width="94" height="6" fill="#7A3E14"/></svg>
+        <span style="font-size: 22px; font-weight: 900">Opening…</span>
+      </sc-if>
+      <sc-if value="{{revealed}}" hint-placeholder-val="{{false}}">
+        <div style="position: relative; width: 260px; height: 260px; display: grid; place-items: center">
+          <svg class="rays" width="260" height="260" viewBox="0 0 260 260" aria-hidden="true" style="position: absolute; inset: 0"><g fill="#F5B53D" opacity=".35"><path d="M130 130 L120 0 L140 0Z"/><path d="M130 130 L260 120 L260 140Z"/><path d="M130 130 L140 260 L120 260Z"/><path d="M130 130 L0 140 L0 120Z"/><path d="M130 130 L215 30 L230 45Z"/><path d="M130 130 L230 215 L215 230Z"/><path d="M130 130 L45 230 L30 215Z"/><path d="M130 130 L30 45 L45 30Z"/></g></svg>
+          <div class="rise" style="width: 170px; height: 170px; border-radius: 999px; background: #FCEBD3; display: grid; place-items: center; position: relative"><img class="px" src="/_blob/6102451b261d68c923278ba8fb95d96a" alt="Wizard hat" style="width: 130px; height: 130px; object-fit: contain"></div>
+        </div>
+        <span style="font-size: 14px; font-weight: 900; letter-spacing: 1px; color: #F7C25A">NEW FOR AVI!</span>
+        <span style="font-size: 32px; font-weight: 900">Wizard hat</span>
+        <span style="font-size: 16px; font-weight: 700; color: #E9D6C2">You finished Rainbow Hills. Put it on Avi in his room!</span>
+        <a href="AviRoom.dc.html" style="width: 100%; display: flex; align-items: center; justify-content: center; height: 58px; border-radius: 999px; background: #D63B2F; color: #FFFFFF; font-size: 19px; font-weight: 900; text-decoration: none; box-shadow: 0 5px 0 #A8281E">Dress up Avi</a>
+        <button type="button" onClick="{{close}}" style="border: 0; background: none; color: #F7C25A; font: 800 15px Nunito, ui-rounded, system-ui, sans-serif; cursor: pointer">Keep going on the road</button>
+        <sc-for list="{{pieces}}" as="p" hint-placeholder-count="0"><span class="cf {{p.k}}" style="background: {{p.c}}; animation-delay: {{p.d}}s"></span></sc-for>
+      </sc-if>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+componentWillUnmount() { clearTimeout(this.t); }
+renderVals() {
+const s = this.state || {};
+const current = 11;
+const zones = [
+{ name: 'Rainbow Hills', sub: 'Levels 1–10 · done!', bg: '#FCE4EB', c: '#E46A8E', d: 'M3 18a9 9 0 0 1 18 0M6.5 18a5.5 5.5 0 0 1 11 0M10 18a2 2 0 0 1 4 0' },
+{ name: 'Pancake Valley', sub: 'Levels 11–20 · chest: hero cape', bg: '#FCEBD3', c: '#D9894A', d: 'M4 10h16M5 14h14M6 18h12M9 6c0-1 1-2 3-2s3 1 3 2' },
+{ name: 'Fruit Forest', sub: 'Levels 21–30 · chest: crown', bg: '#E3F3DD', c: '#4E9F3D', d: 'M12 8a5 5 0 1 0 0 12 5 5 0 0 0 0-12zM12 8c0-2 1-4 3-5' },
+{ name: 'Cloud Castle', sub: 'Levels 31–40 · chest: aviator cap', bg: '#DDEEFB', c: '#2F86C9', d: 'M7 18a4 4 0 0 1 0-8 5 5 0 0 1 9.6-1A3.5 3.5 0 0 1 17 18z' }
+];
+const stickers = { 3: 'Sticker: rainbow', 6: 'Room: lamp', 9: 'Sticker: sun', 13: 'Sticker: syrup', 16: 'Room: rug', 19: 'Sticker: pancake', 23: 'Sticker: apple', 26: 'Room: plant', 29: 'Sticker: cherry' };
+const X = [150, 220, 250, 200, 120, 70, 100, 170, 240, 200];
+const rows = [];
+const chestOpened = !!s.chestOpened;
+zones.forEach((z, zi) => {
+rows.push({ isZone: true, isLevel: false, isChest: false, ...z });
+for (let k = 1; k <= 10; k++) {
+const n = zi * 10 + k;
+const done = n < current, here = n === current;
+rows.push({ isZone: false, isLevel: true, isChest: false, n: done ? '★' : String(n), label: 'Level ' + n,
+x: X[(k - 1) % 10] - 34, here: here, reward: stickers[n] || '',
+bg: done ? '#D9894A' : here ? '#D63B2F' : '#EED9BF', edge: done ? '#A0531C' : here ? '#A8281E' : '#D8C2A6',
+fg: done || here ? '#FFFFFF' : '#7A5A45', cls: here ? 'pulse' : '' });
+}
+const ready = zi === 0 && !chestOpened;
+rows.push({ isZone: false, isLevel: false, isChest: true,
+label: ready ? 'Open the Rainbow Hills chest' : zi === 0 ? 'Chest opened' : 'Locked chest',
+cls: ready ? 'wiggle' : '', open: ready ? () => this.openChest() : () => {},
+body: zi === 0 ? '#A0531C' : '#C9AE92', lid: zi === 0 ? '#D9894A' : '#D8C2A6', band: zi === 0 ? '#7A3E14' : '#B39A80',
+tag: ready ? 'Tap to open!' : zi === 0 ? 'Opened' : 'Level ' + (zi * 10 + 10), tagBg: ready ? '#D63B2F' : '#A08670' });
+});
+const colors = ['#F5B53D', '#D63B2F', '#2F86C9', '#4E9F3D', '#8466D6', '#E46A8E'];
+const pieces = [];
+for (let k = 0; k < 30; k++) pieces.push({ c: colors[k % 6], k: ['f1', 'f2', 'f3'][k % 3], d: ((k * 7) % 10) / 20 });
+return {
+rows: rows, pieces: pieces,
+opening: !!s.opening, shaking: s.opening === 'shake', revealed: s.opening === 'reveal',
+close: () => this.setState({ opening: null })
+};
+}
+openChest() {
+this.setState({ opening: 'shake' });
+clearTimeout(this.t);
+this.t = setTimeout(() => this.setState({ opening: 'reveal', chestOpened: true }), 1100);
+}
+}
+</script>
+</body>
+</html>
+
+
+<!-- ==================== AviRoom.dc.html ==================== -->
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Avi's room</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&amp;display=swap">
+<style>
+body{margin:0}
+.px{image-rendering:pixelated}
+.layer{position:absolute;image-rendering:pixelated;pointer-events:none}
+@keyframes hop{0%,100%{transform:translateY(0)}40%{transform:translateY(-14px)}}
+.hop{animation:hop .45s ease-out}
+@keyframes idle{0%,100%{transform:rotate(-1.5deg)}50%{transform:rotate(1.5deg)}}
+.idle{animation:idle 3.2s ease-in-out infinite;transform-origin:50% 100%}
+@keyframes toast{0%{transform:translateY(-20px);opacity:0}12%,85%{transform:none;opacity:1}100%{opacity:0}}
+.toast{animation:toast 2.2s ease-out both}
+@media (prefers-reduced-motion: reduce){.hop,.idle,.toast{animation:none}}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FFF6E8; font-family: Nunito, ui-rounded, system-ui, sans-serif; color: #3B2418; display: flex; flex-direction: column; position: relative; overflow: hidden">
+  <div style="height: 400px; position: relative; background: #F2C98F; flex: none; overflow: hidden">
+    <div style="position: absolute; left: 0; right: 0; bottom: 0; height: 120px; background: #B8692F"></div>
+    <div style="position: absolute; left: 0; right: 0; bottom: 116px; height: 8px; background: #A0531C"></div>
+    <div style="position: absolute; left: 34px; top: 120px; width: 96px; height: 80px; border-radius: 14px; background: #DDEEFB; border: 6px solid #FFF6E8"></div>
+    <div style="position: absolute; left: 80px; top: 120px; width: 6px; height: 80px; background: #FFF6E8"></div>
+    <div style="position: absolute; right: 36px; top: 150px; width: 14px; height: 140px; background: #7A3E14"></div>
+    <div style="position: absolute; right: 16px; top: 120px; width: 54px; height: 40px; border-radius: 30px 30px 6px 6px; background: #F5B53D"></div>
+    <div style="position: absolute; left: 50%; bottom: 26px; transform: translateX(-50%); width: 250px; height: 46px; border-radius: 999px; background: #D63B2F"></div>
+    <div style="position: absolute; left: 50%; bottom: 34px; transform: translateX(-50%); width: 200px; height: 30px; border-radius: 999px; background: #E8574A"></div>
+    <div style="position: absolute; left: 18px; top: 54px; right: 18px; display: flex; align-items: center; gap: 10px; z-index: 3">
+      <a href="KidHome.dc.html" aria-label="Back home" style="width: 44px; height: 44px; border-radius: 999px; background: #FFFFFF; display: grid; place-items: center; flex: none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3B2418" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></a>
+      <span style="font-size: 24px; font-weight: 900; flex-grow: 1">Avi's room</span>
+      <span style="display: flex; align-items: center; gap: 5px; padding: 6px 11px; border-radius: 999px; background: #FFFFFF; font-size: 17px; font-weight: 900"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#F5B53D" d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.9L12 17.6 5.9 20.9l1.2-6.9-5-4.8 6.9-.9z"/></svg>{{stars}}</span>
+    </div>
+    <div class="{{hopCls}}" style="position: absolute; left: 50%; bottom: 46px; margin-left: -84px; width: 168px; height: 289px">
+      <div class="idle" style="position: absolute; inset: 0">
+        <img class="layer" src="/_blob/7d9d62f29d7d04f9c3e6fc67ffe18fbe" alt="Avi" style="left: 0; top: 0; width: 100%">
+        <sc-for list="{{worn}}" as="w" hint-placeholder-count="1">
+          <img class="layer" src="{{w.src}}" alt="{{w.name}}" style="left: {{w.left}}%; top: {{w.top}}%; width: {{w.width}}%">
+        </sc-for>
+      </div>
+    </div>
+    <sc-if value="{{toast}}" hint-placeholder-val="{{false}}">
+      <div class="toast" style="position: absolute; left: 50%; top: 112px; transform: translateX(-50%); z-index: 4; padding: 8px 14px; border-radius: 999px; background: #3B2418; color: #FFF6E8; font-size: 14px; font-weight: 800; white-space: nowrap">{{toastText}}</div>
+    </sc-if>
+  </div>
+  <div style="flex-grow: 1; min-height: 0; display: flex; flex-direction: column; background: #FFFFFF; border-radius: 28px 28px 0 0; margin-top: -24px; position: relative; z-index: 2; padding: 16px 16px 0">
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; padding: 4px; border-radius: 999px; background: #FCEBD3">
+      <button type="button" onClick="{{tabWardrobe}}" aria-pressed="{{wardrobePressed}}" style="height: 40px; border-radius: 999px; border: 0; background: {{wardrobeBg}}; font: 900 15px Nunito, ui-rounded, system-ui, sans-serif; color: #3B2418; cursor: pointer">My wardrobe · {{ownedCount}}</button>
+      <button type="button" onClick="{{tabShop}}" aria-pressed="{{shopPressed}}" style="height: 40px; border-radius: 999px; border: 0; background: {{shopBg}}; font: 900 15px Nunito, ui-rounded, system-ui, sans-serif; color: #3B2418; cursor: pointer">Star shop</button>
+    </div>
+    <div style="flex-grow: 1; min-height: 0; overflow-y: auto; padding: 14px 0 24px">
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px">
+        <sc-for list="{{shown}}" as="it" hint-placeholder-count="6">
+          <button type="button" onClick="{{it.act}}" aria-label="{{it.aria}}" style="position: relative; height: 128px; border-radius: 20px; border: {{it.border}}; background: {{it.bg}}; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; cursor: pointer; padding: 8px 4px; box-sizing: border-box; font-family: inherit; color: #3B2418; opacity: {{it.op}}">
+            <img class="px" src="{{it.src}}" alt="" style="width: 70px; height: 62px; object-fit: contain">
+            <span style="font-size: 13px; line-height: 15px; font-weight: 900; text-align: center">{{it.name}}</span>
+            <span style="font-size: 11px; font-weight: 900; color: {{it.tagFg}}">{{it.tag}}</span>
+          </button>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+componentWillUnmount() { clearTimeout(this.t); }
+flash(text) {
+clearTimeout(this.t);
+this.setState({ toast: false, hop: false });
+setTimeout(() => this.setState({ toast: text, hop: true }), 20);
+this.t = setTimeout(() => this.setState({ toast: false, hop: false }), 2300);
+}
+renderVals() {
+const s = this.state || {};
+const I = [
+{ id: 'fedora', name: 'Fedora', slot: 'head', src: '/_blob/7fb17821dfd6dd71cde50a5bc0035546', l: 9.2, t: -2.01, w: 82.76, price: 0, from: 'Starter' },
+{ id: 'wizard', name: 'Wizard hat', slot: 'head', src: '/_blob/6102451b261d68c923278ba8fb95d96a', l: 13.79, t: -23.4, w: 73.56, price: 0, from: 'Rainbow Hills chest' },
+{ id: 'beanie', name: 'Beanie', slot: 'head', src: '/_blob/baac7d8aa37636c655def4f6d57e1949', l: 17.93, t: -13.37, w: 65.29, price: 0, from: 'Starter' },
+{ id: 'glasses', name: 'Round glasses', slot: 'face', src: '/_blob/614f788b6a1488047e6720ffbca67c6f', l: 25.29, t: 22.73, w: 50.57, price: 0, from: 'Starter' },
+{ id: 'scarf', name: 'Cozy scarf', slot: 'neck', src: '/_blob/96fca1d07a98b0f3cf9f4e3d5ad16080', l: 25.29, t: 42.78, w: 50.57, price: 0, from: 'Starter' },
+{ id: 'hoodie', name: 'Bear hoodie', slot: 'body', src: '/_blob/c471f4a1ca866f651be0bf8417052c85', l: 6.9, t: 40.11, w: 87.36, price: 0, from: 'Starter' },
+{ id: 'sunglasses', name: 'Sunglasses', slot: 'face', src: '/_blob/cd08fd76545077955312e227b4f0f776', l: 21.84, t: 20.05, w: 57.47, price: 40 },
+{ id: 'headphones', name: 'Headphones', slot: 'ears', src: '/_blob/0db5770972b141e7009696f2276f7cfb', l: -14.25, t: 1.34, w: 128.74, price: 60 },
+{ id: 'satchel', name: 'Satchel', slot: 'side', src: '/_blob/2358adb4f404812af25e54af7ced9901', l: 57.47, t: 57.49, w: 39.08, price: 30 },
+{ id: 'detective', name: 'Detective cap', slot: 'head', src: '/_blob/92b396d92edc28a3a85bc2f37089bda4', l: 13.79, t: -4.01, w: 73.56, price: 50 },
+{ id: 'varsity', name: 'Varsity jacket', slot: 'body', src: '/_blob/cae429343c329d6dca4d184a62122d71', l: 5.75, t: 40.11, w: 89.66, price: 70 },
+{ id: 'cape', name: 'Hero cape', slot: 'body', src: '/_blob/aefa88461e54b74a757cb6c3bdb81469', l: 5.75, t: 44.12, w: 89.66, chest: 'Pancake Valley chest' },
+{ id: 'crown', name: 'Crown', slot: 'head', src: '/_blob/952d84ebfd442120a483bf88ca9e61b8', l: 27.59, t: -5.35, w: 45.98, chest: 'Fruit Forest chest' },
+{ id: 'aviator', name: 'Aviator cap', slot: 'head', src: '/_blob/57e17e0b9a1909f846aff7365ec75491', l: 10.34, t: -9.36, w: 80.46, chest: 'Cloud Castle chest' }
+];
+const owned = s.owned || { fedora: 1, wizard: 1, beanie: 1, glasses: 1, scarf: 1, hoodie: 1 };
+const eq = s.eq || { head: 'fedora' };
+const stars = s.stars === undefined ? 128 : s.stars;
+const tab = s.tab || 'wardrobe';
+const order = ['body', 'neck', 'side', 'face', 'ears', 'head'];
+const worn = order.map((slot) => I.find((i) => i.id === eq[slot])).filter(Boolean).map((i) => ({ src: i.src, name: i.name, left: i.l, top: i.t, width: i.w }));
+const card = (i) => {
+const isOwned = !!owned[i.id], isOn = eq[i.slot] === i.id;
+if (tab === 'wardrobe') {
+return { ...i, op: 1, border: isOn ? '3px solid #D63B2F' : '2px solid #EED9BF', bg: isOn ? '#FCE4EB' : '#FFF6E8',
+tag: isOn ? 'Wearing' : 'Tap to wear', tagFg: isOn ? '#A8281E' : '#7A5A45', aria: (isOn ? 'Take off ' : 'Wear ') + i.name,
+act: () => { const n = { ...eq }; if (isOn) delete n[i.slot]; else n[i.slot] = i.id; this.setState({ eq: n }); this.flash(isOn ? 'Taken off. Saved for Mila.' : 'Saved! Avi wears it everywhere.'); } };
+}
+if (i.chest) return { ...i, op: .55, border: '2px dashed #C9AE92', bg: '#FFF6E8', tag: 'From ' + i.chest, tagFg: '#7A5A45', aria: i.name + ', from ' + i.chest, act: () => this.flash('Find it in the ' + i.chest + '!') };
+if (isOwned) return { ...i, op: 1, border: '2px solid #4E9F3D', bg: '#E3F3DD', tag: 'Owned', tagFg: '#2F6B23', aria: i.name + ', owned', act: () => this.setState({ tab: 'wardrobe' }) };
+const can = stars >= i.price;
+return { ...i, op: can ? 1 : .6, border: '2px solid #EED9BF', bg: '#FFF6E8', tag: '★ ' + i.price, tagFg: can ? '#A0531C' : '#7A5A45', aria: 'Buy ' + i.name + ' for ' + i.price + ' stars',
+act: () => { if (!can) { this.flash('You need ' + (i.price - stars) + ' more stars'); return; } this.setState({ stars: stars - i.price, owned: { ...owned, [i.id]: 1 }, eq: { ...eq, [i.slot]: i.id } }); this.flash('New! ' + i.name + ' is on Avi.'); } };
+};
+const list = tab === 'wardrobe' ? I.filter((i) => owned[i.id]) : I.filter((i) => !i.from || !owned[i.id]).filter((i) => i.price || i.chest);
+return {
+stars: stars, worn: worn, shown: list.map(card), ownedCount: Object.keys(owned).length,
+toast: !!s.toast, toastText: s.toast || '', hopCls: s.hop ? 'hop' : '',
+wardrobePressed: tab === 'wardrobe' ? 'true' : 'false', shopPressed: tab === 'shop' ? 'true' : 'false',
+wardrobeBg: tab === 'wardrobe' ? '#FFFFFF' : 'transparent', shopBg: tab === 'shop' ? '#FFFFFF' : 'transparent',
+tabWardrobe: () => this.setState({ tab: 'wardrobe' }), tabShop: () => this.setState({ tab: 'shop' })
+};
+}
+}
+</script>
+</body>
+</html>
+
+
+<!-- ==================== ChildProfile.dc.html ==================== -->
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Mila's progress</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&amp;display=swap">
+<style>
+body{margin:0}
+.layer{position:absolute;image-rendering:pixelated}
+.grow{transition:width .8s ease}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FFF6E8; font-family: Nunito, ui-rounded, system-ui, sans-serif; color: #3B2418; display: flex; flex-direction: column">
+  <div style="display: flex; align-items: center; gap: 12px; padding: 54px 18px 10px">
+    <a href="KidHome.dc.html" aria-label="Back home" style="width: 44px; height: 44px; border-radius: 999px; background: #FFFFFF; border: 2px solid #EED9BF; display: grid; place-items: center; flex: none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3B2418" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></a>
+    <span style="font-size: 24px; font-weight: 900">My progress</span>
+  </div>
+  <div style="flex-grow: 1; min-height: 0; overflow-y: auto; padding: 4px 18px 28px; display: flex; flex-direction: column; gap: 14px">
+    <div style="background: #8466D6; border-radius: 28px; padding: 16px; display: flex; align-items: flex-end; gap: 14px; color: #FFFFFF; position: relative; overflow: hidden">
+      <div style="position: absolute; right: -30px; top: -30px; width: 130px; height: 130px; border-radius: 999px; background: #9B7BE0"></div>
+      <div style="width: 92px; height: 120px; border-radius: 22px; background: #FCEBD3; display: grid; place-items: end center; padding-bottom: 6px; box-sizing: border-box; overflow: hidden; flex: none; position: relative">
+        <div style="position: relative; width: 58px; height: 100px">
+          <img class="layer" src="/_blob/7d9d62f29d7d04f9c3e6fc67ffe18fbe" alt="Avi in his fedora" style="left: 0; top: 0; width: 100%">
+          <img class="layer" src="/_blob/7fb17821dfd6dd71cde50a5bc0035546" alt="" style="left: 9.2%; top: -2.01%; width: 82.76%">
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 4px; position: relative; padding-bottom: 4px">
+        <span style="font-size: 28px; line-height: 30px; font-weight: 900">Mila, age 5</span>
+        <span style="font-size: 14px; font-weight: 800; color: #F3EEFF">Little Cubs path · The Curious Builder</span>
+        <span style="align-self: flex-start; margin-top: 4px; padding: 5px 10px; border-radius: 999px; background: #FFF6E8; color: #5A40A8; font-size: 13px; font-weight: 900">Road level 11 · Pancake Valley</span>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px">
+      <sc-for list="{{stats}}" as="s" hint-placeholder-count="4">
+        <div style="background: #FFFFFF; border: 2px solid #EED9BF; border-radius: 16px; padding: 10px 4px; display: flex; flex-direction: column; align-items: center; gap: 2px"><span style="font-size: 22px; font-weight: 900; color: {{s.c}}">{{s.v}}</span><span style="font-size: 11.5px; font-weight: 800; color: #7A5A45; text-align: center">{{s.l}}</span></div>
+      </sc-for>
+    </div>
+    <div style="background: #FFFFFF; border: 2px solid #EED9BF; border-radius: 22px; padding: 14px 16px; display: flex; flex-direction: column; gap: 11px">
+      <div style="display: flex; justify-content: space-between; align-items: baseline"><span style="font-size: 17px; font-weight: 900">My 8 worlds</span><span style="font-size: 12px; font-weight: 800; color: #7A5A45">accuracy · speed</span></div>
+      <sc-for list="{{worlds}}" as="w" hint-placeholder-count="8">
+        <div style="display: flex; flex-direction: column; gap: 4px">
+          <div style="display: flex; justify-content: space-between; font-size: 14px; font-weight: 800"><span>{{w.name}} <span style="color: #7A5A45; font-weight: 700">· {{w.done}}/20</span></span><span style="color: {{w.tc}}">{{w.acc}}% · {{w.speed}}</span></div>
+          <div style="height: 10px; border-radius: 999px; background: {{w.soft}}; overflow: hidden"><div class="grow" style="width: {{w.p}}%; height: 100%; border-radius: 999px; background: {{w.c}}"></div></div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="background: #FFFFFF; border: 2px solid #EED9BF; border-radius: 22px; padding: 14px 16px; display: flex; flex-direction: column; gap: 10px">
+      <span style="font-size: 17px; font-weight: 900">Little fingers</span>
+      <sc-for list="{{motor}}" as="m" hint-placeholder-count="3">
+        <div style="display: flex; align-items: center; gap: 10px"><span style="width: 36px; height: 36px; border-radius: 12px; background: #FCEBD3; display: grid; place-items: center; flex: none; font-size: 13px; font-weight: 900; color: #A0531C">{{m.icon}}</span><span style="flex-grow: 1; font-size: 14px; font-weight: 800">{{m.label}}</span><span style="font-size: 15px; font-weight: 900">{{m.v}}</span><span style="font-size: 12px; font-weight: 900; color: #2F6B23">{{m.trend}}</span></div>
+      </sc-for>
+    </div>
+    <div style="background: #FFFFFF; border: 2px solid #EED9BF; border-radius: 22px; padding: 14px 16px; display: flex; flex-direction: column; gap: 10px">
+      <span style="font-size: 17px; font-weight: 900">Avi remembers</span>
+      <span style="font-size: 13px; line-height: 18px; font-weight: 700; color: #7A5A45">Skills come back after 1, 3 and 7 days so they stick.</span>
+      <sc-for list="{{review}}" as="r" hint-placeholder-count="3">
+        <div style="display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-radius: 14px; background: {{r.bg}}"><span style="flex-grow: 1; font-size: 14px; font-weight: 800">{{r.skill}}</span><span style="font-size: 12px; font-weight: 900; color: {{r.fg}}">{{r.when}}</span></div>
+      </sc-for>
+    </div>
+    <div style="background: #FFFFFF; border: 2px solid #EED9BF; border-radius: 22px; padding: 14px 16px; display: flex; flex-direction: column; gap: 10px">
+      <span style="font-size: 17px; font-weight: 900">Badges</span>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px">
+        <sc-for list="{{badges}}" as="b" hint-placeholder-count="5"><span style="padding: 7px 11px; border-radius: 999px; background: {{b.bg}}; color: {{b.fg}}; font-size: 13px; font-weight: 900">{{b.t}}</span></sc-for>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+return {
+stats: [{ v: '5', l: 'day streak', c: '#D63B2F' }, { v: '128', l: 'stars', c: '#A0531C' }, { v: '61', l: 'activities', c: '#3B2418' }, { v: '48m', l: 'this week', c: '#3B2418' }],
+worlds: [
+{ name: 'Math Meadow', done: 12, acc: 91, speed: 'fast', p: 62, c: '#4E9F3D', soft: '#E3F3DD', tc: '#2F6B23' },
+{ name: 'Reading Forest', done: 8, acc: 74, speed: 'steady', p: 40, c: '#2F86C9', soft: '#DDEEFB', tc: '#1F5F92' },
+{ name: 'Science Sky', done: 5, acc: 85, speed: 'steady', p: 25, c: '#8466D6', soft: '#ECE6FB', tc: '#5A40A8' },
+{ name: 'Feelings Cottage', done: 10, acc: 88, speed: 'calm', p: 50, c: '#E46A8E', soft: '#FCE4EB', tc: '#A3355A' },
+{ name: 'Logic Lane', done: 6, acc: 80, speed: 'fast', p: 30, c: '#2F86C9', soft: '#DDEEFB', tc: '#1F5F92' },
+{ name: 'Memory Pond', done: 7, acc: 83, speed: 'steady', p: 35, c: '#8466D6', soft: '#ECE6FB', tc: '#5A40A8' },
+{ name: 'Creativity Studio', done: 9, acc: 100, speed: 'free play', p: 45, c: '#D63B2F', soft: '#FCE4EB', tc: '#A8281E' },
+{ name: 'Wiggle Park', done: 14, acc: 86, speed: 'fast', p: 70, c: '#D9894A', soft: '#FCEBD3', tc: '#A0531C' }
+],
+motor: [
+{ icon: 'TAP', label: 'Tap accuracy', v: '86%', trend: '+6%' },
+{ icon: 'RT', label: 'Reaction time', v: '0.9 s', trend: '-0.2 s' },
+{ icon: 'LINE', label: 'Tracing precision', v: '78%', trend: '+9%' }
+],
+review: [
+{ skill: 'Letter sounds A–E', when: 'Today', bg: '#FCE4EB', fg: '#A8281E' },
+{ skill: 'Count to 10', when: 'In 2 days', bg: '#FFF6E8', fg: '#7A5A45' },
+{ skill: 'Shapes: triangles', when: 'In 6 days', bg: '#FFF6E8', fg: '#7A5A45' }
+],
+badges: [
+{ t: 'First week', bg: '#FCEBD3', fg: '#A0531C' }, { t: 'Counting star', bg: '#E3F3DD', fg: '#2F6B23' },
+{ t: 'Kind heart', bg: '#FCE4EB', fg: '#A3355A' }, { t: 'Rainbow Hills', bg: '#ECE6FB', fg: '#5A40A8' }, { t: 'Speedy fingers', bg: '#DDEEFB', fg: '#1F5F92' }
+]
+};
+}
+}
+</script>
+</body>
+</html>

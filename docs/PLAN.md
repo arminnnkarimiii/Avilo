@@ -4,7 +4,7 @@
 
 AI-native learning app for kids aged 3–12. Parents describe their child, and Avilo builds a personal learning path of games, subjects, skills and stories. The feel is "Duolingo for early development": daily habits, visible progress, and the parent's confidence that their child is growing.
 
-- **Mascot:** Avi, a cozy pixel-art teddy bear with a red bow. Logo = `Design/Avi/avi-logo-head.webp`.
+- **Mascot:** Avi, a cozy pixel-art teddy bear with a red bow. Logo = `assets/avi/poses/avi-logo-head.webp`.
 - **Platform:** native iOS (SwiftUI). English only at launch.
 - **Contact:** avilo.education@gmail.com · Instagram @avilo.app · X @AviloApp
 
@@ -75,7 +75,7 @@ Palette (derived from Avi):
 
 Type: SF Pro Rounded (friendly, Dynamic Type), plus a pixel display font only for stars, levels and badges.
 Shape: large radii (20–28), soft shadows, 56pt+ tap targets for kids, and generous spacing.
-Avi placement: every screen uses the pose that fits it (see `Design/Avi/`). Never cropped awkwardly, always on a clean background, and kept large enough to read the pixels (keep integer scaling where possible).
+Avi placement: every screen uses the pose that fits it (see `assets/avi/poses/`). Never cropped awkwardly, always on a clean background, and kept large enough to read the pixels (keep integer scaling where possible).
 
 ## 6. Technical architecture
 
@@ -128,7 +128,7 @@ Avi placement: every screen uses the pose that fits it (see `Design/Avi/`). Neve
 | Feedback | Right: subtle confetti + happy sound. Wrong: gentle confetti ("great try!") + the button turns red and shakes, then Avi encourages |
 | Tips | Every question has a **Tip** button. Avi pops up with a hint, never the answer |
 | Trophy road | Zones of 10 levels (Rainbow Hills → Pancake Valley → Fruit Forest → …). Stars each level, a sticker or room decoration every 3rd level, a **treasure chest** at each zone end unlocks an outfit with a big reveal animation |
-| Avi's room | Real dress-up with the wardrobe (`Design/Avi/wardrobe/`, 14 items). Outfits come from road chests + a small **star shop** for basics. The chosen outfit is saved to the database and Avi wears it **everywhere** in the app (not before onboarding) |
+| Avi's room | Real dress-up with the wardrobe (`assets/avi/wardrobe/`, 14 items). Outfits come from road chests + a small **star shop** for basics. The chosen outfit is saved to the database and Avi wears it **everywhere** in the app (not before onboarding) |
 | Avi peek | Every 3–6 min at random, his head slides out of a random corner for ~1.5 s, no words, then he ducks away. Never during timers or page turns |
 | Onboarding quiz | ~15 skippable questions (~3 min): name, age, broad interests (+ "other"), favourite animals/characters/colours, personality, how they learn, what's hard, routines, goals, quick skill checks |
 | Tracking (for insights) | Accuracy & speed · persistence & focus · tap & trace precision · memory over time (spaced review at 1, 3, 7 days). No photos, voice recordings or location |
@@ -163,6 +163,6 @@ Every activity is data: `{world, band, engine, skill, difficulty, content, theme
 
 ## 15. Art files
 
-- `Design/Avi/*.webp`: the original poses (white background).
-- `Design/Avi/transparent/`: the same poses with transparent backgrounds (use these in the app and in dark mode).
-- `Design/Avi/wardrobe/`: `avi-base.png` + 14 accessories. `placements.json` gives each item's position as a percent of `avi-base.png`, plus its slot (head, face, ears, neck, body, side). One item per slot.
+- `assets/avi/poses/*.webp`: the original poses (white background).
+- `assets/avi/poses-transparent/`: the same poses with transparent backgrounds (use these in the app and in dark mode).
+- `assets/avi/wardrobe/`: `avi-base.png` + 14 accessories. `placements.json` gives each item's position as a percent of `avi-base.png`, plus its slot (head, face, ears, neck, body, side). One item per slot.

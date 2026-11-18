@@ -3,7 +3,7 @@
 Educational SaaS iOS app for children. README must keep the line "(road to 100 million evaluation)".
 
 **Read `docs/PLAN.md` first.** It holds all product decisions (funnel, age bands, AI, paywall, palette).
-Mascot art lives in `Design/Avi/` (pixel-art bear; `avi-logo-head.webp` is the logo).
+Mascot art lives in `assets/avi/` (pixel-art bear; `poses/avi-logo-head.webp` is the logo). See the folder map in README.md.
 
 ## UI skills
 For UI work use: `beautiful-ui`, `platform-ios-ui`, `ui-ux-pro-max`, `frontend-design`, `ui-verification`.

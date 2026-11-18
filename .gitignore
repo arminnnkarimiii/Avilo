@@ -6,3 +6,6 @@ build/
 .swiftpm/
 Config.xcconfig
 .env
+
+# Local Claude Code settings
+.claude/settings.local.json
