@@ -16,4 +16,3 @@ Educational SaaS iOS app for children. README must keep the line "(road to 100 m
 ## Workflow
 - Never commit directly to `main`; branch per task (`name/short-description`), open a PR.
 - `git pull` before starting. Keep PRs small.
-- Note: Xcode builds need macOS; on Windows, write code and let the Mac collaborator/CI build.
