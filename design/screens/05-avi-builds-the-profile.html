@@ -51,7 +51,7 @@ body{margin:0}
   </div>
   <div style="flex-grow: 1"></div>
   <sc-if value="{{finished}}" hint-placeholder-val="{{false}}">
-    <a href="Profile.dc.html" class="popin" style="width: 100%; display: flex; align-items: center; justify-content: center; height: 56px; border-radius: 999px; background: #D63B2F; color: #FFFFFF; font-size: 19px; font-weight: 800; text-decoration: none; box-shadow: 0 5px 0 #A8281E">See {{kidPos}} profile</a>
+    <a href="Profile.dc.html" class="popin" style="width: 100%; display: flex; align-items: center; justify-content: center; height: 56px; border-radius: 999px; background: #D63B2F; color: #FFFFFF; font-size: 19px; font-weight: 800; text-decoration: none; box-shadow: 0 5px 0 #A8281E">{{txt1}}</a>
     <button type="button" onClick="{{replay}}" style="border: 0; background: none; font: 800 14px Nunito, ui-rounded, system-ui, sans-serif; color: #A0531C; cursor: pointer">Replay</button>
   </sc-if>
 </div>
@@ -78,7 +78,7 @@ return { K: K, KC: KC, KP: KP, KPC: KPC, KPU: KP.toUpperCase(), KI: has ? v.char
 }
 renderVals() {
 const n = this.kidNames();
-return Object.assign({ kid: n.K, kidCap: n.KC, kidPos: n.KP, kidPosCap: n.KPC, kidPosUpper: n.KPU, kidInitial: n.KI }, this._rv());
+return Object.assign({ txt1: ("See " + n.KP + " profile").trim(), kid: n.K, kidCap: n.KC, kidPos: n.KP, kidPosCap: n.KPC, kidPosUpper: n.KPU, kidInitial: n.KI }, this._rv());
 }
 _rv() {
 const { K, KC, KP, KPC } = this.kidNames();

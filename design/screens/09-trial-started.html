@@ -24,14 +24,14 @@ body{margin:0}
   <div class="pop" style="width: 280px; height: 280px; border-radius: 999px; background: #FCEBD3; display: grid; place-items: center; position: relative"><img class="avi" src="/_blob/906e3900b0bb3de6052376ac615ce99f" alt="Avi winking with a thumbs up" style="width: 260px; height: 260px"></div>
   <div style="display: flex; flex-direction: column; gap: 8px; text-align: center; position: relative">
     <h1 style="margin: 0; font-size: 30px; line-height: 36px; font-weight: 900">Yay! You're all set</h1>
-    <p style="margin: 0; font-size: 16px; line-height: 23px; font-weight: 600; color: #7A5A45">Your 7-day free trial has started. {{kidPosCap}} first adventure is waiting.</p>
+    <p style="margin: 0; font-size: 16px; line-height: 23px; font-weight: 600; color: #7A5A45">{{txt1}}</p>
   </div>
   <div style="width: 100%; display: flex; align-items: center; gap: 12px; background: #FFFFFF; border: 2px solid #EED9BF; border-radius: 20px; padding: 12px 14px; box-sizing: border-box; position: relative">
     <span style="width: 40px; height: 40px; border-radius: 12px; background: #DDEEFB; display: grid; place-items: center; flex: none"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F5F92" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span>
-    <span style="font-size: 14px; line-height: 19px; font-weight: 700">Grown-up area is locked with a parent check, so {{kid}} can't change settings or buy anything.</span>
+    <span style="font-size: 14px; line-height: 19px; font-weight: 700">{{txt2}}</span>
   </div>
   <div style="flex-grow: 1"></div>
-  <a href="KidHome.dc.html" style="width: 100%; display: flex; align-items: center; justify-content: center; height: 58px; border-radius: 999px; background: #D63B2F; color: #FFFFFF; font-size: 19px; font-weight: 800; text-decoration: none; box-shadow: 0 5px 0 #A8281E; position: relative">Hand the phone to {{kid}}</a>
+  <a href="KidHome.dc.html" style="width: 100%; display: flex; align-items: center; justify-content: center; height: 58px; border-radius: 999px; background: #D63B2F; color: #FFFFFF; font-size: 19px; font-weight: 800; text-decoration: none; box-shadow: 0 5px 0 #A8281E; position: relative">{{txt3}}</a>
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
@@ -48,7 +48,7 @@ return { K: K, KC: KC, KP: KP, KPC: KPC, KPU: KP.toUpperCase(), KI: has ? v.char
 }
 renderVals() {
 const n = this.kidNames();
-return Object.assign({ kid: n.K, kidCap: n.KC, kidPos: n.KP, kidPosCap: n.KPC, kidPosUpper: n.KPU, kidInitial: n.KI }, this._rv());
+return Object.assign({ txt1: ("Your 7-day free trial has started. " + n.KPC + " first adventure is waiting.").trim(), txt2: ("Grown-up area is locked with a parent check, so " + n.K + " can't change settings or buy anything.").trim(), txt3: ("Hand the phone to " + n.K).trim(), kid: n.K, kidCap: n.KC, kidPos: n.KP, kidPosCap: n.KPC, kidPosUpper: n.KPU, kidInitial: n.KI }, this._rv());
 }
 _rv() {
 const { K, KC, KP, KPC } = this.kidNames();

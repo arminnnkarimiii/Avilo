@@ -48,6 +48,9 @@ W = {
 "trailblazers": "Reflex lab;pop;reaction time|Precision drawing;draw;fine motor|Rhythm master;rhythm;timing|Speed typing letters;pop;keyboard skills|Laser maze;trace;control|Juggling taps;pop;coordination|Archery aim;build;aiming|Moving maze;trace;tracking|Two-thumb race;pop;two-hand coordination|Draw a perfect circle;draw;control|Beat drop;rhythm;timing|Ninja slice;pop;swiping accuracy|Tower stacker pro;build;precision|Dodge ball;pop;reaction time|Pendulum timing;rhythm;timing|Calligraphy strokes;trace;fine motor|Speed memory taps;pattern;motor planning|Goalkeeper;pop;anticipation|Tilt maze pro;motion;motor control|Stretch break;rhythm;body movement"}),
 }
 
+_ov_path = pathlib.Path(__file__).resolve().parent.parent / "content" / "engine_overrides.json"
+OVERRIDES = json.loads(_ov_path.read_text(encoding="utf-8")) if _ov_path.exists() else {}
+
 out = {"version": 1, "bands": BANDS, "engines": ENGINES, "worlds": [], "activities": []}
 for wid, (name, bands) in W.items():
     out["worlds"].append({"id": wid, "name": name})
@@ -55,6 +58,7 @@ for wid, (name, bands) in W.items():
         rows = [r.split(";") for r in bands[band].split("|")]
         assert len(rows) == 20, (wid, band, len(rows))
         for i, (title, engine, skill) in enumerate(rows):
+            engine = OVERRIDES.get(f"{wid}-{band}-{i + 1:02d}", engine)
             assert engine in ENGINES, (wid, band, title, engine)
             out["activities"].append({
                 "id": f"{wid}-{band}-{i + 1:02d}", "world": wid, "band": band, "order": i + 1,

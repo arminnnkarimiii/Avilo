@@ -35,8 +35,8 @@ body{margin:0}
 <div style="width: 390px; height: 844px; box-sizing: border-box; background: #FFF6E8; font-family: Nunito, ui-rounded, system-ui, sans-serif; color: #3B2418; display: flex; flex-direction: column; position: relative; overflow: hidden">
   <div style="display: flex; align-items: center; gap: 12px; padding: 54px 18px 12px; background: #FFF6E8; position: relative; z-index: 2">
     <a href="KidHome.dc.html" aria-label="Back home" style="width: 44px; height: 44px; border-radius: 999px; background: #FFFFFF; border: 2px solid #EED9BF; display: grid; place-items: center; flex: none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3B2418" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></a>
-    <div style="display: flex; flex-direction: column; flex-grow: 1"><span style="font-size: 24px; line-height: 28px; font-weight: 900">{{kidPosCap}} road</span><span style="font-size: 13px; font-weight: 800; color: #7A5A45">Level 11 · Pancake Valley</span></div>
-    <span style="display: flex; align-items: center; gap: 5px; padding: 6px 11px; border-radius: 999px; background: #FFFFFF; border: 2px solid #EED9BF; font-size: 17px; font-weight: 900"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#F5B53D" d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.9L12 17.6 5.9 20.9l1.2-6.9-5-4.8 6.9-.9z"/></svg>128</span>
+    <div style="display: flex; flex-direction: column; flex-grow: 1"><span style="font-size: 24px; line-height: 28px; font-weight: 900">{{txt1}}</span><span style="font-size: 13px; font-weight: 800; color: #7A5A45">Level 11 · Pancake Valley</span></div>
+    <span style="padding: 6px 11px; border-radius: 999px; background: #FFFFFF; border: 2px solid #EED9BF; font-size: 14px; font-weight: 900">{{badgeCount}}</span>
   </div>
   <div style="flex-grow: 1; min-height: 0; overflow-y: auto; padding-bottom: 30px">
     <sc-for list="{{rows}}" as="r" hint-placeholder-count="12">
@@ -74,12 +74,13 @@ body{margin:0}
       <sc-if value="{{revealed}}" hint-placeholder-val="{{false}}">
         <div style="position: relative; width: 260px; height: 260px; display: grid; place-items: center">
           <svg class="rays" width="260" height="260" viewBox="0 0 260 260" aria-hidden="true" style="position: absolute; inset: 0"><g fill="#F5B53D" opacity=".35"><path d="M130 130 L120 0 L140 0Z"/><path d="M130 130 L260 120 L260 140Z"/><path d="M130 130 L140 260 L120 260Z"/><path d="M130 130 L0 140 L0 120Z"/><path d="M130 130 L215 30 L230 45Z"/><path d="M130 130 L230 215 L215 230Z"/><path d="M130 130 L45 230 L30 215Z"/><path d="M130 130 L30 45 L45 30Z"/></g></svg>
-          <div class="rise" style="width: 170px; height: 170px; border-radius: 999px; background: #FCEBD3; display: grid; place-items: center; position: relative"><img class="px" src="/_blob/6102451b261d68c923278ba8fb95d96a" alt="Wizard hat" style="width: 130px; height: 130px; object-fit: contain"></div>
+          <div class="rise" style="width: 170px; height: 170px; border-radius: 999px; background: #FCEBD3; display: grid; place-items: center; position: relative"><svg width="120" height="120" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 14.4l-4.8 2.5.9-5.4L4.2 7.7l5.4-.8z" fill="#F5B53D"/><path d="M8 15l-2 7 6-3 6 3-2-7" fill="#E46A8E"/></svg></div>
         </div>
-        <span style="font-size: 14px; font-weight: 900; letter-spacing: 1px; color: #F7C25A">NEW FOR AVI!</span>
-        <span style="font-size: 32px; font-weight: 900">Wizard hat</span>
-        <span style="font-size: 16px; font-weight: 700; color: #E9D6C2">You finished Rainbow Hills. Put it on Avi in his room!</span>
-        <a href="AviRoom.dc.html" style="width: 100%; display: flex; align-items: center; justify-content: center; height: 58px; border-radius: 999px; background: #D63B2F; color: #FFFFFF; font-size: 19px; font-weight: 900; text-decoration: none; box-shadow: 0 5px 0 #A8281E">Dress up Avi</a>
+        <span style="font-size: 14px; font-weight: 900; letter-spacing: 1px; color: #F7C25A">RAINBOW HILLS BADGE</span>
+        <span style="font-size: 28px; line-height: 32px; font-weight: 900">New story unlocked!</span>
+        <span style="font-size: 17px; font-weight: 800; color: #FCEFDF">{{unlockTitle}}</span>
+        <span style="font-size: 14px; font-weight: 700; color: #E9D6C2">{{unlockText}}</span>
+        <a href="Stories.dc.html" style="width: 100%; display: flex; align-items: center; justify-content: center; height: 58px; border-radius: 999px; background: #D63B2F; color: #FFFFFF; font-size: 19px; font-weight: 900; text-decoration: none; box-shadow: 0 5px 0 #A8281E">Read it now</a>
         <button type="button" onClick="{{close}}" style="border: 0; background: none; color: #F7C25A; font: 800 15px Nunito, ui-rounded, system-ui, sans-serif; cursor: pointer">Keep going on the road</button>
         <sc-for list="{{pieces}}" as="p" hint-placeholder-count="0"><span class="cf {{p.k}}" style="background: {{p.c}}; animation-delay: {{p.d}}s"></span></sc-for>
       </sc-if>
@@ -102,17 +103,20 @@ return { K: K, KC: KC, KP: KP, KPC: KPC, KPU: KP.toUpperCase(), KI: has ? v.char
 }
 renderVals() {
 const n = this.kidNames();
-return Object.assign({ kid: n.K, kidCap: n.KC, kidPos: n.KP, kidPosCap: n.KPC, kidPosUpper: n.KPU, kidInitial: n.KI }, this._rv());
+return Object.assign({ txt1: (n.KPC + " road").trim(), kid: n.K, kidCap: n.KC, kidPos: n.KP, kidPosCap: n.KPC, kidPosUpper: n.KPU, kidInitial: n.KI }, this._rv());
 }
 _rv() {
 const { K, KC, KP, KPC } = this.kidNames();
 const s = this.state || {};
 const current = 11;
+const age = (() => { try { return parseInt(localStorage.getItem('avilo.age') || '5', 10); } catch (e) { return 5; } })();
+const band = age <= 5 ? 'cubs' : age <= 8 ? 'explorers' : 'trailblazers';
+const UNLOCK = { cubs: ['cubs-ocean-splash', '{name}’s Big Ocean Splash'], explorers: ['exp-volcano-mystery', '{name} and the Volcano Mystery'], trailblazers: ['tb-whispering-woods', '{name} and the Secret of Whispering Woods'] }[band];
 const zones = [
 { name: 'Rainbow Hills', sub: 'Levels 1–10 · done!', bg: '#FCE4EB', c: '#E46A8E', d: 'M3 18a9 9 0 0 1 18 0M6.5 18a5.5 5.5 0 0 1 11 0M10 18a2 2 0 0 1 4 0' },
-{ name: 'Pancake Valley', sub: 'Levels 11–20 · chest: hero cape', bg: '#FCEBD3', c: '#D9894A', d: 'M4 10h16M5 14h14M6 18h12M9 6c0-1 1-2 3-2s3 1 3 2' },
-{ name: 'Fruit Forest', sub: 'Levels 21–30 · chest: crown', bg: '#E3F3DD', c: '#4E9F3D', d: 'M12 8a5 5 0 1 0 0 12 5 5 0 0 0 0-12zM12 8c0-2 1-4 3-5' },
-{ name: 'Cloud Castle', sub: 'Levels 31–40 · chest: aviator cap', bg: '#DDEEFB', c: '#2F86C9', d: 'M7 18a4 4 0 0 1 0-8 5 5 0 0 1 9.6-1A3.5 3.5 0 0 1 17 18z' }
+{ name: 'Pancake Valley', sub: 'Levels 11–20 · chest: badge + new story', bg: '#FCEBD3', c: '#D9894A', d: 'M4 10h16M5 14h14M6 18h12M9 6c0-1 1-2 3-2s3 1 3 2' },
+{ name: 'Fruit Forest', sub: 'Levels 21–30 · chest: badge + new story', bg: '#E3F3DD', c: '#4E9F3D', d: 'M12 8a5 5 0 1 0 0 12 5 5 0 0 0 0-12zM12 8c0-2 1-4 3-5' },
+{ name: 'Cloud Castle', sub: 'Levels 31–40 · chest: badge + new story', bg: '#DDEEFB', c: '#2F86C9', d: 'M7 18a4 4 0 0 1 0-8 5 5 0 0 1 9.6-1A3.5 3.5 0 0 1 17 18z' }
 ];
 const stickers = { 3: 'Sticker: rainbow', 6: 'Room: lamp', 9: 'Sticker: sun', 13: 'Sticker: syrup', 16: 'Room: rug', 19: 'Sticker: pancake', 23: 'Sticker: apple', 26: 'Room: plant', 29: 'Sticker: cherry' };
 const X = [150, 220, 250, 200, 120, 70, 100, 170, 240, 200];
@@ -123,7 +127,7 @@ rows.push({ isZone: true, isLevel: false, isChest: false, ...z });
 for (let k = 1; k <= 10; k++) {
 const n = zi * 10 + k;
 const done = n < current, here = n === current;
-rows.push({ isZone: false, isLevel: true, isChest: false, n: done ? '★' : String(n), label: 'Level ' + n,
+rows.push({ isZone: false, isLevel: true, isChest: false, n: done ? '✓' : String(n), label: 'Level ' + n,
 x: X[(k - 1) % 10] - 34, here: here, reward: stickers[n] || '',
 bg: done ? '#D9894A' : here ? '#D63B2F' : '#EED9BF', edge: done ? '#A0531C' : here ? '#A8281E' : '#D8C2A6',
 fg: done || here ? '#FFFFFF' : '#7A5A45', cls: here ? 'pulse' : '' });
@@ -139,7 +143,8 @@ const colors = ['#F5B53D', '#D63B2F', '#2F86C9', '#4E9F3D', '#8466D6', '#E46A8E'
 const pieces = [];
 for (let k = 0; k < 30; k++) pieces.push({ c: colors[k % 6], k: ['f1', 'f2', 'f3'][k % 3], d: ((k * 7) % 10) / 20 });
 return {
-rows: rows, pieces: pieces,
+rows: rows, pieces: pieces, badgeCount: (chestOpened ? 1 : 0) + ' badge' + (chestOpened ? '' : 's'),
+unlockTitle: UNLOCK[1].replace('{name}', KC), unlockText: 'You finished Rainbow Hills! The new book is waiting in your story library.',
 opening: !!s.opening, shaking: s.opening === 'shake', revealed: s.opening === 'reveal',
 close: () => this.setState({ opening: null })
 };
@@ -147,7 +152,7 @@ close: () => this.setState({ opening: null })
 openChest() {
 this.setState({ opening: 'shake' });
 clearTimeout(this.t);
-this.t = setTimeout(() => this.setState({ opening: 'reveal', chestOpened: true }), 1100);
+this.t = setTimeout(() => { this.setState({ opening: 'reveal', chestOpened: true }); try { const age = parseInt(localStorage.getItem('avilo.age') || '5', 10); const id = age <= 5 ? 'cubs-ocean-splash' : age <= 8 ? 'exp-volcano-mystery' : 'tb-whispering-woods'; const u = JSON.parse(localStorage.getItem('avilo.unlocked') || '[]'); if (!u.includes(id)) u.push(id); localStorage.setItem('avilo.unlocked', JSON.stringify(u)); } catch (e) {} }, 1100);
 }
 }
 </script>

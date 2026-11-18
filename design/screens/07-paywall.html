@@ -20,7 +20,7 @@ a{color:#7A5A45}
     <div style="width: 96px; height: 96px; border-radius: 999px; background: #FCEBD3; display: grid; place-items: center; flex: none"><img class="avi" src="/_blob/02ed70c93c5cdb78ced2aded4bf8695b" alt="Avi giving a thumbs up" style="width: 90px; height: 90px"></div>
     <div style="display: flex; flex-direction: column; gap: 4px">
       <span style="font-size: 13px; font-weight: 900; letter-spacing: 1px; color: #A0531C">AVILO EDUCATION+</span>
-      <h1 style="margin: 0; font-size: 25px; line-height: 30px; font-weight: 900; text-wrap: balance">{{kidPosCap}} plan is ready. Try it free for 7 days.</h1>
+      <h1 style="margin: 0; font-size: 25px; line-height: 30px; font-weight: 900; text-wrap: balance">{{txt1}}</h1>
     </div>
   </div>
   <div style="display: flex; flex-direction: column; gap: 9px; padding: 4px 2px">
@@ -76,7 +76,7 @@ return { K: K, KC: KC, KP: KP, KPC: KPC, KPU: KP.toUpperCase(), KI: has ? v.char
 }
 renderVals() {
 const n = this.kidNames();
-return Object.assign({ kid: n.K, kidCap: n.KC, kidPos: n.KP, kidPosCap: n.KPC, kidPosUpper: n.KPU, kidInitial: n.KI }, this._rv());
+return Object.assign({ txt1: (n.KPC + " plan is ready. Try it free for 7 days.").trim(), kid: n.K, kidCap: n.KC, kidPos: n.KP, kidPosCap: n.KPC, kidPosUpper: n.KPU, kidInitial: n.KI }, this._rv());
 }
 _rv() {
 const { K, KC, KP, KPC } = this.kidNames();
