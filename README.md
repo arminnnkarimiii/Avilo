@@ -28,7 +28,7 @@ avilo/
 ├── content/
 │   └── activities.json      480 activities (8 worlds × 3 age bands × 20)
 ├── design/
-│   └── canvas-screens.html  read-only copy of the 17 canvas screens
+│   └── screens/             the 17 canvas screens, numbered in app order (read-only copies)
 ├── docs/
 │   └── PLAN.md              all product decisions
 ├── scripts/

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Quiz: personality, learning and goals</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&amp;display=swap">
+<style>
+body{margin:0}
+.avi{image-rendering:pixelated;mix-blend-mode:multiply;object-fit:contain}
+@keyframes slidein{from{transform:translateX(24px);opacity:0}to{transform:none;opacity:1}}
+.slidein{animation:slidein .3s ease-out both}
+.bar{transition:width .4s ease}
+textarea:focus{outline:3px solid #D9894A;outline-offset:2px}
+@media (prefers-reduced-motion: reduce){.slidein{animation:none}.bar{transition:none}}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FFF6E8; font-family: Nunito, ui-rounded, system-ui, sans-serif; color: #3B2418; display: flex; flex-direction: column; padding: 58px 18px 30px; gap: 18px">
+  <div style="display: flex; align-items: center; gap: 14px">
+    <button type="button" onClick="{{back}}" aria-label="Back" style="width: 44px; height: 44px; border-radius: 999px; background: #FFFFFF; border: 2px solid #EED9BF; display: grid; place-items: center; flex: none; cursor: pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3B2418" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <div style="flex-grow: 1; height: 14px; border-radius: 999px; background: #EED9BF; overflow: hidden"><div class="bar" style="width: {{pct}}%; height: 100%; border-radius: 999px; background: #D9894A"></div></div>
+    <span style="font-size: 14px; font-weight: 800; color: #7A5A45">{{n}}/15</span>
+  </div>
+  <div class="slidein" style="display: flex; flex-direction: column; gap: 16px">
+    <div style="display: flex; align-items: flex-end; gap: 10px">
+      <div style="width: 84px; height: 84px; border-radius: 999px; background: #FCEBD3; display: grid; place-items: center; flex: none"><img class="avi" src="/_blob/2689b009c7d552d9f0bd44bebc7b4054" alt="Avi thinking" style="width: 78px; height: 78px"></div>
+      <div style="background: #FFFFFF; border: 2px solid #EED9BF; border-radius: 18px 18px 18px 6px; padding: 10px 12px; font-size: 14px; line-height: 19px; font-weight: 700">{{q.why}}</div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 4px">
+      <h1 style="margin: 0; font-size: 24px; line-height: 30px; font-weight: 900; text-wrap: balance">{{q.title}}</h1>
+      <span style="font-size: 14px; font-weight: 600; color: #7A5A45">{{q.sub}}</span>
+    </div>
+    <sc-if value="{{q.isChips}}" hint-placeholder-val="{{true}}">
+      <div style="display: flex; flex-wrap: wrap; gap: 9px">
+        <sc-for list="{{q.opts}}" as="o" hint-placeholder-count="8">
+          <button type="button" onClick="{{o.pick}}" aria-pressed="{{o.pressed}}" style="padding: 12px 16px; border-radius: 999px; border: {{o.border}}; background: {{o.bg}}; color: {{o.fg}}; font: 800 16px Nunito, ui-rounded, system-ui, sans-serif; cursor: pointer">{{o.label}}</button>
+        </sc-for>
+      </div>
+    </sc-if>
+    <sc-if value="{{q.isCards}}" hint-placeholder-val="{{false}}">
+      <div style="display: flex; flex-direction: column; gap: 9px">
+        <sc-for list="{{q.opts}}" as="o" hint-placeholder-count="4">
+          <button type="button" onClick="{{o.pick}}" aria-pressed="{{o.pressed}}" style="display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-radius: 18px; border: {{o.border}}; background: {{o.bg}}; color: #3B2418; font: 800 17px Nunito, ui-rounded, system-ui, sans-serif; text-align: left; cursor: pointer"><span style="width: 22px; height: 22px; border-radius: 999px; border: {{o.dot}}; box-sizing: border-box; flex: none"></span>{{o.label}}</button>
+        </sc-for>
+      </div>
+    </sc-if>
+    <sc-if value="{{q.isColors}}" hint-placeholder-val="{{false}}">
+      <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px">
+        <sc-for list="{{q.opts}}" as="o" hint-placeholder-count="8">
+          <button type="button" onClick="{{o.pick}}" aria-label="{{o.label}}" aria-pressed="{{o.pressed}}" style="height: 72px; border-radius: 20px; border: {{o.ring}}; background: {{o.swatch}}; cursor: pointer; box-sizing: border-box"></button>
+        </sc-for>
+      </div>
+    </sc-if>
+    <sc-if value="{{q.isText}}" hint-placeholder-val="{{false}}">
+      <label for="special" style="position: absolute; width: 1px; height: 1px; overflow: hidden">Tell Avi about Mila</label>
+      <textarea id="special" rows="5" style="width: 100%; box-sizing: border-box; border-radius: 18px; border: 2px solid #EED9BF; background: #FFFFFF; padding: 14px; font: 700 16px/23px Nunito, ui-rounded, system-ui, sans-serif; color: #3B2418; resize: none">She names every toy, sings in the bath and asks why the moon follows the car.</textarea>
+    </sc-if>
+  </div>
+  <div style="flex-grow: 1"></div>
+  <div style="display: flex; flex-direction: column; gap: 6px">
+    <sc-if value="{{notLast}}" hint-placeholder-val="{{true}}">
+      <button type="button" onClick="{{next}}" style="height: 56px; border-radius: 999px; border: 0; background: #D63B2F; color: #FFFFFF; font: 800 19px Nunito, ui-rounded, system-ui, sans-serif; box-shadow: 0 5px 0 #A8281E; cursor: pointer">Continue</button>
+      <button type="button" onClick="{{next}}" style="height: 40px; border: 0; background: none; color: #A0531C; font: 800 15px Nunito, ui-rounded, system-ui, sans-serif; cursor: pointer">Skip this one</button>
+    </sc-if>
+    <sc-if value="{{last}}" hint-placeholder-val="{{false}}">
+      <a href="Building.dc.html" style="display: flex; align-items: center; justify-content: center; height: 56px; border-radius: 999px; background: #D63B2F; color: #FFFFFF; font-size: 19px; font-weight: 800; text-decoration: none; box-shadow: 0 5px 0 #A8281E">Make Mila's plan</a>
+      <span style="height: 40px; display: grid; place-items: center; font-size: 13px; font-weight: 700; color: #7A5A45">Optional. You can change all answers later.</span>
+    </sc-if>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+const st = this.state || {};
+const i = st.i || 0;
+const ans = st.ans || { personality: { curious: 1, creative: 1 }, learn: { stories: 1 }, animal: { dino: 1 }, color: { purple: 1 } };
+const Q = [
+{ id: 'personality', kind: 'chips', multi: true, title: 'Which words sound like Mila?', sub: 'Pick all that fit.', why: 'This helps me pick the right kind of games for her.', opts: [['curious','Curious'],['energetic','Full of energy'],['shy','Shy at first'],['creative','Creative'],['chatty','Chatty'],['careful','Careful'],['silly','Silly'],['determined','Determined'],['gentle','Gentle'],['leader','Likes to lead']] },
+{ id: 'learn', kind: 'chips', multi: true, title: 'How does Mila learn best?', sub: 'Think of when she gets really into something.', why: 'Some kids love stories, others love to move. I will mix in more of what works.', opts: [['stories','Stories'],['puzzles','Puzzles'],['moving','Moving around'],['making','Drawing and making'],['songs','Songs and music'],['talking','Talking it through'],['screens','Watching first']] },
+{ id: 'animal', kind: 'chips', multi: false, title: "What's her favourite animal?", sub: 'It may star in her stories.', why: 'Her favourite animal can be her story sidekick!', opts: [['dino','Dinosaur'],['cat','Cat'],['dog','Dog'],['bunny','Bunny'],['lion','Lion'],['penguin','Penguin'],['unicorn','Unicorn'],['octopus','Octopus'],['horse','Horse']] },
+{ id: 'color', kind: 'colors', multi: false, title: "What's her favourite colour?", sub: 'Tap one.', why: 'I will use it for her avatar and her road.', opts: [['red','Red','#D63B2F'],['orange','Orange','#E9873A'],['yellow','Yellow','#F5B53D'],['green','Green','#4E9F3D'],['blue','Blue','#2F86C9'],['purple','Purple','#8466D6'],['pink','Pink','#E46A8E'],['brown','Brown','#A0531C']] },
+{ id: 'characters', kind: 'chips', multi: true, title: 'Which kinds of characters does she like?', sub: 'Pick any.', why: 'Characters make every lesson feel like an adventure.', opts: [['heroes','Superheroes'],['royals','Princesses and knights'],['pirates','Pirates'],['robots','Robots'],['fairies','Fairies'],['detectives','Detectives'],['astronauts','Astronauts'],['chefs','Chefs'],['explorers','Explorers']] },
+{ id: 'tricky', kind: 'chips', multi: true, title: 'What feels tricky for Mila right now?', sub: 'No wrong answers. This stays private.', why: 'I will make these extra fun and go slowly.', opts: [['still','Sitting still'],['letters','Letters'],['numbers','Numbers'],['feelings','Big feelings'],['sharing','Sharing'],['new','Trying new things'],['sleep','Bedtime'],['nothing','Nothing really']] },
+{ id: 'letters', kind: 'cards', multi: false, title: 'Does Mila know her letters?', sub: 'A rough guess is fine.', why: 'This tells me where to start reading.', opts: [['no','Not yet'],['some','Some letters'],['most','Most letters'],['words','She reads simple words']] },
+{ id: 'count', kind: 'cards', multi: false, title: 'How high can Mila count?', sub: 'Out loud, without help.', why: 'This tells me where to start math.', opts: [['5','Up to 5'],['10','Up to 10'],['20','Up to 20'],['more','Beyond 20']] },
+{ id: 'when', kind: 'cards', multi: false, title: 'When will Mila usually play?', sub: 'I will send gentle reminders then.', why: 'Calmer games before bed, energetic ones in the morning.', opts: [['morning','In the morning'],['after','After school or daycare'],['evening','Before bed'],['varies','It varies']] },
+{ id: 'minutes', kind: 'cards', multi: false, title: 'How long each day?', sub: 'You can change this any time.', why: 'Short and regular beats long and rare.', opts: [['5','5 minutes'],['10','10 minutes'],['15','15 minutes'],['20','20 minutes']] },
+{ id: 'goals', kind: 'chips', multi: true, title: 'What matters most to you?', sub: 'Pick up to 3.', why: 'I will focus her path and your reports on these.', opts: [['school','Ready for school'],['reading','Reading confidence'],['math','Math confidence'],['focus','Focus and memory'],['feelings','Feelings and friends'],['creative','Creativity'],['motor','Fine motor skills']] },
+{ id: 'special', kind: 'text', multi: false, title: 'Anything that makes Mila special?', sub: 'Optional. Pets, siblings, favourite toys, funny habits.', why: 'Little details make her stories feel like hers.', opts: [] }
+];
+const q = Q[i];
+const sel = ans[q.id] || {};
+const set = (id) => {
+const cur = { ...(ans[q.id] || {}) };
+if (q.multi) { cur[id] = !cur[id]; } else { Object.keys(cur).forEach((k) => delete cur[k]); cur[id] = 1; }
+this.setState({ ans: { ...ans, [q.id]: cur } });
+};
+const opts = q.opts.map((o) => {
+const on = !!sel[o[0]];
+return { label: o[1], swatch: o[2], pressed: on ? 'true' : 'false', pick: () => set(o[0]),
+border: on ? '3px solid #D9894A' : '2px solid #EED9BF', bg: on ? '#FCEBD3' : '#FFFFFF', fg: '#3B2418',
+dot: on ? '7px solid #D63B2F' : '2px solid #C9AE92', ring: on ? '4px solid #3B2418' : '4px solid #FFF6E8' };
+});
+const n = i + 4;
+return {
+q: { ...q, opts: opts, isChips: q.kind === 'chips', isCards: q.kind === 'cards', isColors: q.kind === 'colors', isText: q.kind === 'text' },
+n: n, pct: Math.round(n / 15 * 100),
+last: i === Q.length - 1, notLast: i < Q.length - 1,
+next: () => this.setState({ i: Math.min(Q.length - 1, i + 1) }),
+back: () => this.setState({ i: Math.max(0, i - 1) })
+};
+}
+}
+</script>
+</body>
+</html>

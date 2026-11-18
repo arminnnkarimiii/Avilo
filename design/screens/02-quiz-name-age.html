@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Quiz: about your child</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&amp;display=swap">
+<style>
+body{margin:0}
+.avi{image-rendering:pixelated;mix-blend-mode:multiply;object-fit:contain}
+input:focus{outline:3px solid #D9894A;outline-offset:2px}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FFF6E8; font-family: Nunito, ui-rounded, system-ui, sans-serif; color: #3B2418; display: flex; flex-direction: column; padding: 60px 20px 36px; gap: 22px">
+  <div style="display: flex; align-items: center; gap: 14px">
+    <a href="Main.dc.html" aria-label="Back" style="width: 44px; height: 44px; border-radius: 999px; background: #FFFFFF; border: 2px solid #EED9BF; display: grid; place-items: center; flex: none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3B2418" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></a>
+    <div style="flex-grow: 1; height: 14px; border-radius: 999px; background: #EED9BF; overflow: hidden"><div style="width: 7%; height: 100%; border-radius: 999px; background: #D9894A"></div></div>
+    <span style="font-size: 14px; font-weight: 800; color: #7A5A45">1/15</span>
+  </div>
+  <div style="display: flex; align-items: flex-end; gap: 12px">
+    <div style="width: 104px; height: 104px; border-radius: 999px; background: #FCEBD3; display: grid; place-items: center; flex: none"><img class="avi" src="/_blob/2689b009c7d552d9f0bd44bebc7b4054" alt="Avi thinking" style="width: 96px; height: 96px"></div>
+    <div style="background: #FFFFFF; border: 2px solid #EED9BF; border-radius: 20px 20px 20px 6px; padding: 12px 14px; font-size: 16px; font-weight: 700; line-height: 22px">Tell me about your little one so I can make everything just for them!</div>
+  </div>
+  <div style="display: flex; flex-direction: column; gap: 10px">
+    <label for="kidname" style="font-size: 24px; font-weight: 900; line-height: 30px">What's your child's name?</label>
+    <input id="kidname" type="text" value="Mila" style="height: 58px; border-radius: 20px; border: 2px solid #D9894A; background: #FFFFFF; padding: 0 18px; font: 800 20px Nunito, ui-rounded, system-ui, sans-serif; color: #3B2418; box-sizing: border-box">
+    <span style="font-size: 13px; font-weight: 600; color: #7A5A45">A first name or nickname is perfect. We never ask for a last name.</span>
+  </div>
+  <div style="display: flex; flex-direction: column; gap: 12px">
+    <span style="font-size: 24px; font-weight: 900; line-height: 30px">How old is Mila?</span>
+    <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px">
+      <sc-for list="{{ages}}" as="a" hint-placeholder-count="10">
+        <sc-if value="{{a.on}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{a.pick}}" aria-pressed="true" style="height: 52px; border-radius: 16px; font: 900 20px Nunito, ui-rounded, system-ui, sans-serif; cursor: pointer; width: 100%; background: #D9894A; color: #FFFFFF; border: 2px solid #A0531C">{{a.n}}</button></sc-if>
+        <sc-if value="{{a.off}}" hint-placeholder-val="{{true}}"><button type="button" onClick="{{a.pick}}" aria-pressed="false" style="height: 52px; width: 100%; border-radius: 16px; font: 900 20px Nunito, ui-rounded, system-ui, sans-serif; cursor: pointer; background: #FFFFFF; color: #3B2418; border: 2px solid #EED9BF">{{a.n}}</button></sc-if>
+      </sc-for>
+    </div>
+    <div style="display: flex; align-items: center; gap: 8px; background: #E3F3DD; border-radius: 12px; padding: 10px 12px; font-size: 14px; font-weight: 700; color: #2F6B23"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2F6B23" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>{{band}}</div>
+  </div>
+  <div style="flex-grow: 1"></div>
+  <a href="QuizInterests.dc.html" style="display: flex; align-items: center; justify-content: center; height: 56px; border-radius: 999px; background: #D63B2F; color: #FFFFFF; font-size: 19px; font-weight: 800; text-decoration: none; box-shadow: 0 5px 0 #A8281E">Continue</a>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+const sel = (this.state && this.state.age) || 5;
+const ages = [3,4,5,6,7,8,9,10,11,12].map((n) => ({
+n: n,
+on: n === sel,
+off: n !== sel,
+pick: () => this.setState({ age: n })
+}));
+const band = sel <= 5 ? 'Little Cubs path (ages 3–5)' : sel <= 8 ? 'Explorers path (ages 6–8)' : 'Trailblazers path (ages 9–12)';
+return { ages: ages, band: band };
+}
+}
+</script>
+</body>
+</html>
