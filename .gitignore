@@ -6,3 +6,11 @@ build/
 .swiftpm/
 Config.xcconfig
 .env
+
+# Local Claude Code settings
+.claude/settings.local.json
+
+# unlazy working files
+GATES.md
+.unlazy/
+.unlazy-hook-state.json
