@@ -6,6 +6,7 @@ Tokens: plain text, or "@icon", "@icon:color", "@icon*3" (three of the icon),
 """
 import math
 import random
+#new file
 
 ICONS = ["apple", "star", "egg", "fish", "car", "ball", "flower", "heart", "rocket", "dino", "cat", "dog",
          "sun", "moon", "tree", "leaf", "duck", "cookie", "balloon", "shell", "block", "bug", "cloud", "drop",
